@@ -3,7 +3,7 @@ FROM node:22-alpine AS dependencies
 WORKDIR /app
 COPY package*.json ./
 # --include=dev overrides any NODE_ENV=production or .npmrc setting that would otherwise skip devDependencies
-RUN npm install --include=dev
+RUN npm ci 
 
 # 2. Source stage
 FROM dependencies AS source
