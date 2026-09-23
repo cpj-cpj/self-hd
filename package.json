@@ -44,7 +44,8 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "jest-junit": "^17.0.0"
+    "jest-junit": "^17.0.0",
+    "supertest": "^7.3.0"
   },
   "allowScripts": {
     "fsevents@2.3.3": true
