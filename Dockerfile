@@ -13,7 +13,7 @@ RUN npm run build
 
 FROM source AS test
 ENV CI=true
-RUN npm test -- --coverage --watchAll=false --passWithNoTests
+RUN npx test -- --coverage --watchAll=false --passWithNoTests
 
 FROM source AS code-quality
 RUN npx eslint src test scripts --format json --output-file eslint-report.json || true
