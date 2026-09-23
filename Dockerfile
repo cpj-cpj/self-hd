@@ -2,8 +2,8 @@
 FROM node:22-alpine AS dependencies
 WORKDIR /app
 COPY package*.json ./
-# Use npm install instead of npm ci to ensure devDependencies are fully written
-RUN npm install
+# --include=dev overrides any NODE_ENV=production or .npmrc setting that would otherwise skip devDependencies
+RUN npm install --include=dev
 
 # 2. Source stage
 FROM dependencies AS source
@@ -15,7 +15,7 @@ RUN npm run build
 
 # 4. Test stage - RUN JEST DIRECTLY VIA NPX TO BYPASS SHELL ALIASES
 FROM source AS test
-RUN npx jest --runInBand --coverage --watchAll=false --passWithNoTests
+RUN npm jest 
 
 # 5. Code quality stage
 FROM source AS code-quality
