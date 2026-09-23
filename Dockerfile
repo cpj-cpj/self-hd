@@ -12,6 +12,7 @@ FROM source AS build-check
 RUN npm run build
 
 FROM source AS test
+ENV CI=true
 RUN npm test -- --coverage --watchAll=false --passWithNoTests
 
 FROM source AS code-quality
