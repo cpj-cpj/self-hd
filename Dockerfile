@@ -15,7 +15,7 @@ RUN npm run build
 
 # 4. Test stage - RUN JEST DIRECTLY VIA NPX TO BYPASS SHELL ALIASES
 FROM source AS test
-RUN npm jest 
+RUN npx jest --runInBand --coverage --watchAll=false --passWithNoTests
 
 # 5. Code quality stage
 FROM source AS code-quality
@@ -36,6 +36,6 @@ COPY --from=build-check /app/dist ./dist
 
 EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
-  CMD wget -qO- http://127.0.0 || exit 1
+  CMD wget -qO- http://127.0.0.1:3000 || exit 1
 
 CMD ["node", "src/server.js"]
