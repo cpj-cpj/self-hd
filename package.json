@@ -12,6 +12,9 @@
     "quality": "npm run lint && npm test -- --coverage=false",
     "security:audit": "npm audit --audit-level=high"
   },
+  "jest": {
+    "reporters": ["default", ["jest-junit", { "outputName": "junit.xml" }]]
+  },
   "keywords": [
     "jenkins",
     "docker",
@@ -27,7 +30,11 @@
   "devDependencies": {
     "eslint": "^8.57.0",
     "jest": "^29.7.0",
+<<<<<<< HEAD
     "jest-junit": "^17.0.0",
+=======
+    "jest-junit": "^16.0.0",
+>>>>>>> 8ea2fc0047e237954b2a593a75f9ae922a0402e7
     "nodemon": "^3.1.4",
     "supertest": "^7.0.0"
   },

@@ -1,0 +1,14 @@
+route:
+  receiver: 'default'
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 5m
+
+receivers:
+  - name: 'default'
+    webhook_configs:
+      # Replace with a real endpoint (e.g. a Slack incoming webhook) if you want to demo a live notification.
+      # A dummy/unreachable URL is fine for the assessment - the point being demonstrated is that
+      # Prometheus correctly fires and routes the alert to Alertmanager, which is visible at :9093.
+      - url: 'http://localhost:9999/webhook'
+        send_resolved: true

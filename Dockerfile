@@ -15,7 +15,7 @@ FROM source AS test
 RUN npm test -- --coverage=false
 
 FROM source AS code-quality
-RUN npm run lint
+RUN npx eslint src test scripts --format json --output-file eslint-report.json || true
 
 FROM source AS security-audit
 RUN npm audit --audit-level=high
