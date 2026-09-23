@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="0.404">
+  <testsuite name="self-hd service" errors="0" failures="0" skipped="0" timestamp="2026-09-23T11:10:11" time="0.357" tests="5">
+    <testcase classname="self-hd service returns service health" name="self-hd service returns service health" time="0.026">
+    </testcase>
+    <testcase classname="self-hd service lists existing tasks" name="self-hd service lists existing tasks" time="0.005">
+    </testcase>
+    <testcase classname="self-hd service creates a task with validation" name="self-hd service creates a task with validation" time="0.008">
+    </testcase>
+    <testcase classname="self-hd service rejects invalid task titles" name="self-hd service rejects invalid task titles" time="0.001">
+    </testcase>
+    <testcase classname="self-hd service exposes Prometheus metrics" name="self-hd service exposes Prometheus metrics" time="0.003">
+    </testcase>
+  </testsuite>
+</testsuites>
