@@ -15,7 +15,7 @@ RUN npm run build
 
 # 4. Test stage - RUN JEST DIRECTLY VIA NPM TO BYPASS SHELL ALIASES
 FROM source AS test
-RUN npm jest --runInBand --coverage --watchAll=false --passWithNoTests
+RUN npm test 
 
 # 5. Code quality stage
 FROM source AS code-quality
