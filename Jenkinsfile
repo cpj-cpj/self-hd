@@ -37,7 +37,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh """
-                     docker build --no-cache --target test -t ${APP_NAME}:test-${IMAGE_TAG} .
+                     docker build --no-cache --target test -t ${env.APP_NAME}:test-${env.IMAGE_TAG} .
                      id=\$(docker create \${APP_NAME}:test-\${IMAGE_TAG})
                      docker cp \${id}:/app/coverage ./coverage || true
                      docker cp \${id}:/app/junit.xml ./junit.xml || true
