@@ -12,7 +12,9 @@ FROM source AS build-check
 RUN npm run build
 
 FROM source AS test
+RUN npm install
 RUN npm test
+
 
 FROM source AS code-quality
 RUN npx eslint src test scripts --format json --output-file eslint-report.json || true
