@@ -1,0 +1,2 @@
+# Ignore Jenkins master/agent global npm tar dependency vulnerability
+CVE-2026-59873
