@@ -62,17 +62,19 @@ pipeline {
                     docker rm ${id}
                 '''
                 // Quality gate: fail the build if ESLint reports any error-level (not warning-level) issues.
-                // This turns "a linter ran" into an explained, enforced threshold.
+                // Uses grep/awk (always present on the Jenkins agent) instead of node, which isn't installed there.
                 sh '''
-                    node -e "
-                        const fs = require('fs');
-                        if (!fs.existsSync('eslint-report.json')) { console.log('No ESLint report found, skipping gate'); process.exit(0); }
-                        const report = JSON.parse(fs.readFileSync('eslint-report.json', 'utf8'));
-                        const errors = report.reduce((sum, f) => sum + f.errorCount, 0);
-                        const warnings = report.reduce((sum, f) => sum + f.warningCount, 0);
-                        console.log('ESLint errors=' + errors + ' warnings=' + warnings);
-                        if (errors > 0) { console.error('Quality gate failed: ' + errors + ' ESLint error(s) found'); process.exit(1); }
-                    "
+                    if [ -f eslint-report.json ]; then
+                        ERRORS=$(grep -o "\\"errorCount\\":[0-9]*" eslint-report.json | awk -F: "{sum+=\\$2} END {print sum+0}")
+                        WARNINGS=$(grep -o "\\"warningCount\\":[0-9]*" eslint-report.json | awk -F: "{sum+=\\$2} END {print sum+0}")
+                        echo "ESLint errors=${ERRORS} warnings=${WARNINGS}"
+                        if [ "${ERRORS}" -gt 0 ]; then
+                            echo "Quality gate failed: ${ERRORS} ESLint error(s) found"
+                            exit 1
+                        fi
+                    else
+                        echo "No ESLint report found, skipping gate"
+                    fi
                 '''
             }
             post {
