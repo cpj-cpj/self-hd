@@ -36,13 +36,13 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh '''
+                sh """
                     docker build --target test -t ${APP_NAME}:test-${IMAGE_TAG} .
                     id=$(docker create ${APP_NAME}:test-${IMAGE_TAG})
                     docker cp ${id}:/app/coverage ./coverage || true
                     docker cp ${id}:/app/junit.xml ./junit.xml || true
                     docker rm ${id}
-                '''
+                """
             }
             post {
                 always {
