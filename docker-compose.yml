@@ -1,0 +1,47 @@
+services:
+  staging:
+    build:
+      context: .
+    image: self-hd:${APP_VERSION:-local}
+    container_name: self-hd-staging
+    environment:
+      APP_VERSION: ${APP_VERSION:-local}
+      NODE_ENV: staging
+      PORT: 3000
+    ports:
+      - "3001:3000"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/health"]
+      interval: 15s
+      timeout: 3s
+      retries: 5
+
+  production:
+    image: self-hd:${APP_VERSION:-local}
+    container_name: self-hd-production
+    environment:
+      APP_VERSION: ${APP_VERSION:-local}
+      NODE_ENV: production
+      PORT: 3000
+    ports:
+      - "3002:3000"
+    depends_on:
+      staging:
+        condition: service_healthy
+    profiles:
+      - release
+
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    container_name: self-hd-prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9091:9090"
+    depends_on:
+      - production
+    profiles:
+      - release
+
