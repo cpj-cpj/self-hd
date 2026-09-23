@@ -9,7 +9,7 @@
     "build": "node scripts/build.js",
     "test": "jest --runInBand --coverage",
     "lint": "eslint src test scripts",
-    "quality": "npm run lint && npm test -- --coverage=false",
+    "quality": "npm run lint && npm test -- --coverage",
     "security:audit": "npm audit --audit-level=high"
   },
   "jest": {
