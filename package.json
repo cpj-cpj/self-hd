@@ -7,7 +7,7 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "build": "node scripts/build.js",
-    "test": "jest",
+    "test": "npx jest",
     "lint": "eslint src test scripts",
     "quality": "npm run lint && npm test",
     "security:audit": "npm audit --audit-level=high"
@@ -41,5 +41,9 @@
     "express": "^4.19.2",
     "helmet": "^7.1.0",
     "prom-client": "^15.1.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0"
   }
 }
