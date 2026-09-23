@@ -1,0 +1,20 @@
+groups:
+  - name: self-hd-alerts
+    rules:
+      - alert: ServiceDown
+        expr: up{job="self-hd-production"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "self-hd production is down"
+          description: "Prometheus has not been able to scrape the production /metrics endpoint for over 30 seconds."
+
+      - alert: HighErrorRate
+        expr: rate(http_requests_total{job="self-hd-production", status=~"5.."}[5m]) > 0.1
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Elevated 5xx rate on self-hd production"
+          description: "More than 10% of requests in the last 5 minutes returned a 5xx status."
