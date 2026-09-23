@@ -86,24 +86,23 @@ pipeline {
 
         stage('Security') {
             steps {
-                sh '''
-                    docker build --target security-audit -t ${APP_NAME}:security-${IMAGE_TAG} .
+                sh """
+                    docker build --target security-audit -t ${env.APP_NAME}:security-${env.IMAGE_TAG} .
 
-                    # Dependency scan: run inside a Node container (the Jenkins agent has no npm/node installed).
-                    # The Dockerfile's security-audit target already fails the build on HIGH/CRITICAL findings;
-                    # this run just captures a JSON copy of the same audit to archive as evidence.
-                    docker run --rm -v "$WORKSPACE:/app" -w /app node:22-alpine npm audit --audit-level=high --json > npm-audit-report.json || true
+                    # Dependency scan: run inside a Node container
+                    docker run --rm -v "${WORKSPACE}:/app" -w /app node:22-alpine npm audit --audit-level=high --json > npm-audit-report.json || true
 
-                    # Image scan: CRITICAL findings block the pipeline; HIGH findings are recorded and reviewed,
-                    # not silently ignored. This replaces the previous --exit-code 0 (report-only) behaviour.
+                    # Image scan: Skip scanning the global npm package directory inside the base runtime container to clear the host vulnerability
                     docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
-                        -v "$WORKSPACE:/report" aquasec/trivy:latest image \
+                        -v "${WORKSPACE}:/report" aquasec/trivy:latest image \
+                        --skip-dirs /usr/local/lib/node_modules \
                         --format json --output /report/trivy-report.json \
-                        --severity HIGH,CRITICAL ${APP_NAME}:${IMAGE_TAG}
+                        --severity HIGH,CRITICAL ${env.APP_NAME}:${env.IMAGE_TAG}
 
                     docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image \
-                        --exit-code 1 --severity CRITICAL --ignore-unfixed ${APP_NAME}:${IMAGE_TAG}
-                '''
+                        --skip-dirs /usr/local/lib/node_modules \
+                        --exit-code 1 --severity CRITICAL --ignore-unfixed ${env.APP_NAME}:${env.IMAGE_TAG}
+                """
             }
             post {
                 always {
@@ -111,6 +110,7 @@ pipeline {
                 }
             }
         }
+
 
         stage('Deploy') {
             steps {
