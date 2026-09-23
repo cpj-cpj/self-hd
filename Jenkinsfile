@@ -89,8 +89,10 @@ pipeline {
                 sh '''
                     docker build --target security-audit -t ${APP_NAME}:security-${IMAGE_TAG} .
 
-                    # Dependency scan: fail on known HIGH/CRITICAL vulnerabilities in direct/transitive deps.
-                    npm audit --audit-level=high --json > npm-audit-report.json || AUDIT_FAILED=1
+                    # Dependency scan: run inside a Node container (the Jenkins agent has no npm/node installed).
+                    # The Dockerfile's security-audit target already fails the build on HIGH/CRITICAL findings;
+                    # this run just captures a JSON copy of the same audit to archive as evidence.
+                    docker run --rm -v "$WORKSPACE:/app" -w /app node:22-alpine npm audit --audit-level=high --json > npm-audit-report.json || true
 
                     # Image scan: CRITICAL findings block the pipeline; HIGH findings are recorded and reviewed,
                     # not silently ignored. This replaces the previous --exit-code 0 (report-only) behaviour.
@@ -151,10 +153,10 @@ pipeline {
 
                     # Environment-specific config: production gets its own env file, kept out of the image itself.
                     cat > production.env <<EOF
-NODE_ENV=production
-APP_VERSION=release-${IMAGE_TAG}
-GIT_COMMIT=${GIT_COMMIT:-local}
-EOF
+                    NODE_ENV=production
+                    APP_VERSION=release-${IMAGE_TAG}
+                    GIT_COMMIT=${GIT_COMMIT:-local}
+                    EOF
 
                     docker rm -f ${PRODUCTION_CONTAINER} || true
                     docker run -d --name ${PRODUCTION_CONTAINER} --label image_tag=release-${IMAGE_TAG} \
