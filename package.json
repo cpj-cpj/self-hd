@@ -11,7 +11,9 @@
     "lint": "eslint src test scripts",
     "quality": "npm run lint && npm test -- --coverage=false",
     "security:audit": "npm audit --audit-level=high"
-    "jest": {"reporters": ["default", ["jest-junit", { "outputName": "junit.xml" }]]}
+  },
+  "jest": {
+    "reporters": ["default", ["jest-junit", { "outputName": "junit.xml" }]]
   },
   "keywords": [
     "jenkins",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "eslint": "^8.57.0",
     "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
     "nodemon": "^3.1.4",
     "supertest": "^7.0.0"
   },
@@ -35,4 +38,3 @@
     "node": ">=20"
   }
 }
-
