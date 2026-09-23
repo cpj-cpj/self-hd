@@ -12,8 +12,7 @@ FROM source AS build-check
 RUN npm run build
 
 FROM source AS test
-ENV CI=true
-RUN npx test -- --coverage --watchAll=false --passWithNoTests
+RUN npm test
 
 FROM source AS code-quality
 RUN npx eslint src test scripts --format json --output-file eslint-report.json || true
