@@ -18,7 +18,10 @@ pipeline {
     stage('Build') {
       steps {
         sh '''
-          docker run --rm -v "$PWD":/app -w /app node:22-alpine sh -lc "npm install && npm run build"
+          mkdir -p dist
+          printf '{"name":"%s","version":"%s","commit":"%s","builtAt":"%s"}\\n' \
+            "${APP_NAME}" "${IMAGE_TAG}" "${GIT_COMMIT:-local}" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            > dist/build-info.json
           docker build -t ${APP_NAME}:${IMAGE_TAG} .
         '''
         archiveArtifacts artifacts: 'dist/build-info.json', fingerprint: true
@@ -27,7 +30,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'docker run --rm -v "$PWD":/app -w /app node:22-alpine sh -lc "npm test"'
+        sh 'docker build --target test -t ${APP_NAME}:test-${IMAGE_TAG} .'
       }
       post {
         always {
@@ -38,14 +41,14 @@ pipeline {
 
     stage('Code Quality') {
       steps {
-        sh 'docker run --rm -v "$PWD":/app -w /app node:22-alpine sh -lc "npm run lint"'
+        sh 'docker build --target code-quality -t ${APP_NAME}:quality-${IMAGE_TAG} .'
       }
     }
 
     stage('Security') {
       steps {
         sh '''
-          docker run --rm -v "$PWD":/app -w /app node:22-alpine sh -lc "npm audit --audit-level=high"
+          docker build --target security-audit -t ${APP_NAME}:security-${IMAGE_TAG} .
           docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --exit-code 0 --severity HIGH,CRITICAL ${APP_NAME}:${IMAGE_TAG}
         '''
       }
@@ -78,10 +81,11 @@ pipeline {
       steps {
         sh '''
           docker rm -f ${PROMETHEUS_CONTAINER} || true
-          docker run -d --name ${PROMETHEUS_CONTAINER} -p 9091:9090 \
+          docker create --name ${PROMETHEUS_CONTAINER} -p 9091:9090 \
             --link ${PRODUCTION_CONTAINER}:production \
-            -v "$PWD/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro" \
             prom/prometheus:v2.55.1 --config.file=/etc/prometheus/prometheus.yml
+          docker cp monitoring/prometheus.yml ${PROMETHEUS_CONTAINER}:/etc/prometheus/prometheus.yml
+          docker start ${PROMETHEUS_CONTAINER}
           sleep 5
           docker run --rm --network container:${PRODUCTION_CONTAINER} curlimages/curl:8.10.1 -fsS http://127.0.0.1:3000/metrics | head
         '''
@@ -95,4 +99,3 @@ pipeline {
     }
   }
 }
-
