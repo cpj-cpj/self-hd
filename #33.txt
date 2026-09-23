@@ -1,0 +1,769 @@
+Started by user admin
+Obtained Jenkinsfile from git https://github.com/cpj-cpj/self-hd.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/self-hd-pipeline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/self-hd-pipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/cpj-cpj/self-hd.git # timeout=10
+Fetching upstream changes from https://github.com/cpj-cpj/self-hd.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/cpj-cpj/self-hd.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision d31224c346268c3662b3c55c4d57e933cd72bb01 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d31224c346268c3662b3c55c4d57e933cd72bb01 # timeout=10
+Commit message: "Merge branch 'main' of https://github.com/cpj-cpj/self-hd"
+ > git rev-list --no-walk d31224c346268c3662b3c55c4d57e933cd72bb01 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
+[2026-09-23T17:10:26.135Z] + mkdir -p dist
+[2026-09-23T17:10:26.136Z] + date -u +%Y-%m-%dT%H:%M:%SZ
+[2026-09-23T17:10:26.137Z] + printf {"name":"%s","version":"%s","commit":"%s","builtAt":"%s"}\n self-hd 33 d31224c346268c3662b3c55c4d57e933cd72bb01 2026-09-23T17:10:25Z
+[2026-09-23T17:10:26.137Z] + docker build -t self-hd:33 .
+[2026-09-23T17:10:26.390Z] DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+[2026-09-23T17:10:26.390Z]             Install the buildx component to build images with BuildKit:
+[2026-09-23T17:10:26.390Z]             https://docs.docker.com/go/buildx/
+[2026-09-23T17:10:26.390Z] 
+[2026-09-23T17:10:26.390Z] Sending build context to Docker daemon  224.8kB[2026-09-23T17:10:26.390Z] 
+[2026-09-23T17:10:26.645Z] Step 1/25 : FROM node:22-alpine AS dependencies
+[2026-09-23T17:10:26.646Z]  ---> b6f26b36c8ff
+[2026-09-23T17:10:26.646Z] Step 2/25 : WORKDIR /app
+[2026-09-23T17:10:26.898Z]  ---> Using cache
+[2026-09-23T17:10:26.898Z]  ---> 52ecf49a8a9f
+[2026-09-23T17:10:26.898Z] Step 3/25 : RUN npm install -g npm@latest
+[2026-09-23T17:10:26.898Z]  ---> Using cache
+[2026-09-23T17:10:26.898Z]  ---> 430ea7a912b4
+[2026-09-23T17:10:26.898Z] Step 4/25 : COPY package*.json ./
+[2026-09-23T17:10:27.153Z]  ---> Using cache
+[2026-09-23T17:10:27.155Z]  ---> 29650a53debb
+[2026-09-23T17:10:27.155Z] Step 5/25 : RUN npm ci
+[2026-09-23T17:10:27.155Z]  ---> Using cache
+[2026-09-23T17:10:27.155Z]  ---> 83fb9dbeb14e
+[2026-09-23T17:10:27.155Z] Step 6/25 : FROM dependencies AS source
+[2026-09-23T17:10:27.155Z]  ---> 83fb9dbeb14e
+[2026-09-23T17:10:27.155Z] Step 7/25 : COPY . .
+[2026-09-23T17:10:37.186Z]  ---> 1b0e8f03b89e
+[2026-09-23T17:10:37.188Z] Step 8/25 : FROM source AS build-check
+[2026-09-23T17:10:37.188Z]  ---> 1b0e8f03b89e
+[2026-09-23T17:10:37.190Z] Step 9/25 : RUN npm run build
+[2026-09-23T17:10:37.190Z]  ---> Running in 78c123af41c2
+[2026-09-23T17:10:37.190Z] [91mnpm notice run self-hd@1.0.0 build
+[2026-09-23T17:10:37.190Z] [0m[91mnpm notice run node scripts/build.js
+[2026-09-23T17:10:37.190Z] [0mBuild artefact created at /app/dist/build-info.json
+[2026-09-23T17:10:40.448Z]  ---> Removed intermediate container 78c123af41c2
+[2026-09-23T17:10:40.450Z]  ---> 1c0fc49f7aee
+[2026-09-23T17:10:40.450Z] Step 10/25 : FROM source AS test
+[2026-09-23T17:10:40.450Z]  ---> 1b0e8f03b89e
+[2026-09-23T17:10:40.450Z] Step 11/25 : RUN npm test
+[2026-09-23T17:10:40.450Z]  ---> Running in 78108360fe2d
+[2026-09-23T17:10:41.007Z] [91mnpm notice run self-hd@1.0.0 test
+[2026-09-23T17:10:41.007Z] [0m[91mnpm notice run npx jest
+[2026-09-23T17:10:41.923Z] [0m[91mnpm notice run self-hd@1.0.0 npx
+[2026-09-23T17:10:41.923Z] [0m[91mnpm notice run 'jest'
+[2026-09-23T17:10:43.789Z] [0m[91mPASS test/app.test.js
+[2026-09-23T17:10:43.789Z]   self-hd service
+[2026-09-23T17:10:43.789Z] [0m[91m    ✓ returns service health (50 ms)
+[2026-09-23T17:10:43.789Z]     ✓ lists existing tasks (6 ms)
+[2026-09-23T17:10:43.789Z]     ✓ creates a task with validation (16 ms)
+[2026-09-23T17:10:43.789Z]     ✓ rejects invalid task titles (5 ms)
+[2026-09-23T17:10:43.789Z]     ✓ exposes Prometheus metrics (8 ms)
+[2026-09-23T17:10:43.789Z] 
+[2026-09-23T17:10:43.789Z] [0m----------|---------|----------|---------|---------|-------------------
+[2026-09-23T17:10:43.789Z] File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+[2026-09-23T17:10:43.789Z] ----------|---------|----------|---------|---------|-------------------
+[2026-09-23T17:10:43.789Z] All files |     100 |       70 |     100 |     100 |                   
+[2026-09-23T17:10:43.789Z]  app.js   |     100 |       70 |     100 |     100 | 36,48-57          
+[2026-09-23T17:10:43.789Z] ----------|---------|----------|---------|---------|-------------------
+[2026-09-23T17:10:43.789Z] [91mTest Suites: 1 passed, 1 total
+[2026-09-23T17:10:43.789Z] Tests:       5 passed, 5 total
+[2026-09-23T17:10:43.789Z] Snapshots:   0 total
+[2026-09-23T17:10:43.789Z] Time:        1.371 s
+[2026-09-23T17:10:43.789Z] Ran all test suites.
+[2026-09-23T17:10:46.373Z] [0m ---> Removed intermediate container 78108360fe2d
+[2026-09-23T17:10:46.374Z]  ---> 10a8bea9df57
+[2026-09-23T17:10:46.374Z] Step 12/25 : FROM source AS code-quality
+[2026-09-23T17:10:46.374Z]  ---> 1b0e8f03b89e
+[2026-09-23T17:10:46.374Z] Step 13/25 : RUN npx eslint src test scripts --format json --output-file eslint-report.json || true
+[2026-09-23T17:10:47.776Z]  ---> Running in 321fac494c17
+[2026-09-23T17:10:51.065Z] [91mnpm warn exec The following package was not found and will be installed: eslint@10.11.0
+[2026-09-23T17:10:56.276Z] [0m[91mnpm notice run self-hd@1.0.0 npx
+[2026-09-23T17:10:56.276Z] npm notice run 'eslint' src test scripts --format json --output-file eslint-report.json
+[2026-09-23T17:10:56.276Z] [0m[91m
+[2026-09-23T17:10:56.276Z] Oops! Something went wrong! :(
+[2026-09-23T17:10:56.276Z] 
+[2026-09-23T17:10:56.276Z] ESLint: 10.11.0
+[2026-09-23T17:10:56.276Z] 
+[2026-09-23T17:10:56.276Z] ESLint couldn't find an eslint.config.* file.
+[2026-09-23T17:10:56.276Z] 
+[2026-09-23T17:10:56.276Z] From ESLint v9.0.0, the default configuration file is now eslint.config.*.
+[2026-09-23T17:10:56.276Z] If you are using a .eslintrc.* file, please follow the migration guide
+[2026-09-23T17:10:56.276Z] to update your configuration file to the new format:
+[2026-09-23T17:10:56.276Z] 
+[2026-09-23T17:10:56.276Z] https://eslint.org/docs/latest/use/configure/migration-guide
+[2026-09-23T17:10:56.276Z] 
+[2026-09-23T17:10:56.276Z] If you still have problems after following the migration guide, please stop by
+[2026-09-23T17:10:56.276Z] https://eslint.org/chat/help to chat with the team.
+[2026-09-23T17:10:56.276Z] 
+[2026-09-23T17:11:02.788Z] [0m ---> Removed intermediate container 321fac494c17
+[2026-09-23T17:11:02.789Z]  ---> 7f1609c1aad9
+[2026-09-23T17:11:02.789Z] Step 14/25 : FROM source AS security-audit
+[2026-09-23T17:11:02.789Z]  ---> 1b0e8f03b89e
+[2026-09-23T17:11:02.789Z] Step 15/25 : RUN npm audit --audit-level=high
+[2026-09-23T17:11:03.349Z]  ---> Running in 626b807c8f81
+[2026-09-23T17:11:06.666Z] found 0 vulnerabilities
+[2026-09-23T17:11:11.462Z]  ---> Removed intermediate container 626b807c8f81
+[2026-09-23T17:11:11.463Z]  ---> ca4b02e5b5be
+[2026-09-23T17:11:11.463Z] Step 16/25 : FROM node:22-alpine AS runtime
+[2026-09-23T17:11:11.463Z]  ---> b6f26b36c8ff
+[2026-09-23T17:11:11.463Z] Step 17/25 : ENV NODE_ENV=production
+[2026-09-23T17:11:11.712Z]  ---> Using cache
+[2026-09-23T17:11:11.712Z]  ---> 0803a45995d1
+[2026-09-23T17:11:11.712Z] Step 18/25 : WORKDIR /app
+[2026-09-23T17:11:11.963Z]  ---> Using cache
+[2026-09-23T17:11:11.963Z]  ---> 6f951acdf265
+[2026-09-23T17:11:11.963Z] Step 19/25 : COPY package*.json ./
+[2026-09-23T17:11:11.963Z]  ---> Using cache
+[2026-09-23T17:11:11.963Z]  ---> ac5f9d851276
+[2026-09-23T17:11:11.963Z] Step 20/25 : RUN npm ci --omit=dev
+[2026-09-23T17:11:11.963Z]  ---> Using cache
+[2026-09-23T17:11:11.963Z]  ---> 0c60ea88160a
+[2026-09-23T17:11:11.963Z] Step 21/25 : COPY src ./src
+[2026-09-23T17:11:11.963Z]  ---> Using cache
+[2026-09-23T17:11:11.963Z]  ---> d3fc6f876365
+[2026-09-23T17:11:11.963Z] Step 22/25 : COPY --from=build-check /app/dist ./dist
+[2026-09-23T17:11:14.482Z]  ---> 5474f67e382a
+[2026-09-23T17:11:14.484Z] Step 23/25 : EXPOSE 3000
+[2026-09-23T17:11:14.818Z]  ---> Running in e082e631b0bc
+[2026-09-23T17:11:20.057Z]  ---> Removed intermediate container e082e631b0bc
+[2026-09-23T17:11:20.059Z]  ---> 279974f4f9b2
+[2026-09-23T17:11:20.059Z] Step 24/25 : HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3   CMD wget -qO- http://127.0.0.1:3000 || exit 1
+[2026-09-23T17:11:20.059Z]  ---> Running in 41e4518bdff7
+[2026-09-23T17:11:23.402Z]  ---> Removed intermediate container 41e4518bdff7
+[2026-09-23T17:11:23.412Z]  ---> 1d8b0c2254cc
+[2026-09-23T17:11:23.412Z] Step 25/25 : CMD ["node", "src/server.js"]
+[2026-09-23T17:11:23.712Z]  ---> Running in 53ab803b6746
+[2026-09-23T17:11:29.074Z]  ---> Removed intermediate container 53ab803b6746
+[2026-09-23T17:11:29.075Z]  ---> f70c44e3fd79
+[2026-09-23T17:11:29.075Z] Successfully built f70c44e3fd79
+[2026-09-23T17:11:29.075Z] Successfully tagged self-hd:33
+[Pipeline] archiveArtifacts
+[2026-09-23T17:11:29.734Z] Archiving artifacts
+[2026-09-23T17:11:29.807Z] Recording fingerprints
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
+[2026-09-23T17:11:30.957Z] + docker build --no-cache --target test -t self-hd:test-33 .
+[2026-09-23T17:11:30.957Z] DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+[2026-09-23T17:11:30.957Z]             Install the buildx component to build images with BuildKit:
+[2026-09-23T17:11:30.957Z]             https://docs.docker.com/go/buildx/
+[2026-09-23T17:11:30.957Z] 
+[2026-09-23T17:11:31.213Z] Sending build context to Docker daemon  224.8kB[2026-09-23T17:11:31.213Z] 
+[2026-09-23T17:11:31.213Z] Step 1/11 : FROM node:22-alpine AS dependencies
+[2026-09-23T17:11:31.213Z]  ---> b6f26b36c8ff
+[2026-09-23T17:11:31.213Z] Step 2/11 : WORKDIR /app
+[2026-09-23T17:11:31.782Z]  ---> Running in 2d6f8f45783d
+[2026-09-23T17:11:35.035Z]  ---> Removed intermediate container 2d6f8f45783d
+[2026-09-23T17:11:35.036Z]  ---> 286453a9bf33
+[2026-09-23T17:11:35.036Z] Step 3/11 : RUN npm install -g npm@latest
+[2026-09-23T17:11:35.037Z]  ---> Running in 9b157f64c038
+[2026-09-23T17:11:53.050Z] 
+[2026-09-23T17:11:53.051Z] removed 65 packages, and changed 92 packages in 16s
+[2026-09-23T17:11:53.051Z] 
+[2026-09-23T17:11:53.051Z] 15 packages are looking for funding
+[2026-09-23T17:11:53.051Z]   run `npm fund` for details
+[2026-09-23T17:11:59.616Z]  ---> Removed intermediate container 9b157f64c038
+[2026-09-23T17:11:59.616Z]  ---> caab3fa3b3c8
+[2026-09-23T17:11:59.616Z] Step 4/11 : COPY package*.json ./
+[2026-09-23T17:12:00.973Z]  ---> 997c8036608f
+[2026-09-23T17:12:00.974Z] Step 5/11 : RUN npm ci
+[2026-09-23T17:12:00.974Z]  ---> Running in 52e2f4b8ef34
+[2026-09-23T17:12:05.104Z] [91mnpm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[2026-09-23T17:12:05.104Z] [0m[91mnpm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+[2026-09-23T17:12:05.104Z] [0m[91mnpm warn deprecated prom-client@15.1.3: prom-client has been replaced by @prometheus-io/client
+[2026-09-23T17:12:06.450Z] [0m
+[2026-09-23T17:12:06.451Z] added 374 packages, and audited 375 packages in 5s
+[2026-09-23T17:12:06.451Z] 
+[2026-09-23T17:12:06.451Z] 52 packages are looking for funding
+[2026-09-23T17:12:06.451Z]   run `npm fund` for details
+[2026-09-23T17:12:06.451Z] 
+[2026-09-23T17:12:06.451Z] found 0 vulnerabilities
+[2026-09-23T17:12:12.967Z]  ---> Removed intermediate container 52e2f4b8ef34
+[2026-09-23T17:12:12.971Z]  ---> 17f48a7d999a
+[2026-09-23T17:12:12.971Z] Step 6/11 : FROM dependencies AS source
+[2026-09-23T17:12:12.971Z]  ---> 17f48a7d999a
+[2026-09-23T17:12:12.971Z] Step 7/11 : COPY . .
+[2026-09-23T17:12:19.634Z]  ---> d9de39d919cb
+[2026-09-23T17:12:19.637Z] Step 8/11 : FROM source AS build-check
+[2026-09-23T17:12:19.637Z]  ---> d9de39d919cb
+[2026-09-23T17:12:19.637Z] Step 9/11 : RUN npm run build
+[2026-09-23T17:12:19.904Z]  ---> Running in 476f2aec9a62
+[2026-09-23T17:12:21.814Z] [91mnpm notice run self-hd@1.0.0 build
+[2026-09-23T17:12:21.815Z] [0m[91mnpm notice run node scripts/build.js
+[2026-09-23T17:12:22.068Z] [0mBuild artefact created at /app/dist/build-info.json
+[2026-09-23T17:12:27.341Z]  ---> Removed intermediate container 476f2aec9a62
+[2026-09-23T17:12:27.341Z]  ---> 9ced784459ea
+[2026-09-23T17:12:27.341Z] Step 10/11 : FROM source AS test
+[2026-09-23T17:12:27.341Z]  ---> d9de39d919cb
+[2026-09-23T17:12:27.341Z] Step 11/11 : RUN npm test
+[2026-09-23T17:12:27.341Z]  ---> Running in 93080bf79e76
+[2026-09-23T17:12:29.312Z] [91mnpm notice run self-hd@1.0.0 test
+[2026-09-23T17:12:29.317Z] [0m[91mnpm notice run npx jest
+[2026-09-23T17:12:30.671Z] [0m[91mnpm notice run self-hd@1.0.0 npx
+[2026-09-23T17:12:30.671Z] [0m[91mnpm notice run 'jest'
+[2026-09-23T17:12:33.950Z] [0m[91mPASS test/app.test.js
+[2026-09-23T17:12:33.951Z]   self-hd service
+[2026-09-23T17:12:33.951Z] [0m[91m    ✓ returns service health (49 ms)
+[2026-09-23T17:12:33.951Z]     ✓ lists existing tasks (11 ms)
+[2026-09-23T17:12:33.951Z]     ✓ creates a task with validation (21 ms)
+[2026-09-23T17:12:33.951Z] [0m[91m    ✓ rejects invalid task titles (6 ms)
+[2026-09-23T17:12:33.951Z] [0m[91m    ✓ exposes Prometheus metrics (11 ms)
+[2026-09-23T17:12:33.951Z] 
+[2026-09-23T17:12:33.951Z] [0m----------|---------|----------|---------|---------|-------------------
+[2026-09-23T17:12:33.951Z] File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+[2026-09-23T17:12:33.951Z] ----------|---------|----------|---------|---------|-------------------
+[2026-09-23T17:12:33.951Z] All files |     100 |       70 |     100 |     100 |                   
+[2026-09-23T17:12:33.951Z]  app.js   |     100 |       70 |     100 |     100 | 36,48-57          
+[2026-09-23T17:12:33.951Z] ----------|---------|----------|---------|---------|-------------------
+[2026-09-23T17:12:33.951Z] [91mTest Suites: 1 passed, 1 total
+[2026-09-23T17:12:33.951Z] Tests:       5 passed, 5 total
+[2026-09-23T17:12:33.951Z] Snapshots:   0 total
+[2026-09-23T17:12:33.951Z] Time:        1.835 s
+[2026-09-23T17:12:33.951Z] Ran all test suites.
+[2026-09-23T17:12:38.156Z] [0m ---> Removed intermediate container 93080bf79e76
+[2026-09-23T17:12:38.157Z]  ---> a9be2e80e25a
+[2026-09-23T17:12:38.157Z] Successfully built a9be2e80e25a
+[2026-09-23T17:12:38.157Z] Successfully tagged self-hd:test-33
+[2026-09-23T17:12:38.157Z] + docker create self-hd:test-33
+[2026-09-23T17:12:39.086Z] + id=1b34fa06c08dd9c8036f07815a0bdfcdb0d118291908e7e2a457d4200fa204bc
+[2026-09-23T17:12:39.087Z] + docker cp 1b34fa06c08dd9c8036f07815a0bdfcdb0d118291908e7e2a457d4200fa204bc:/app/coverage ./coverage
+[2026-09-23T17:12:39.087Z] + docker cp 1b34fa06c08dd9c8036f07815a0bdfcdb0d118291908e7e2a457d4200fa204bc:/app/junit.xml ./junit.xml
+[2026-09-23T17:12:39.346Z] + docker rm 1b34fa06c08dd9c8036f07815a0bdfcdb0d118291908e7e2a457d4200fa204bc
+[2026-09-23T17:12:39.598Z] 1b34fa06c08dd9c8036f07815a0bdfcdb0d118291908e7e2a457d4200fa204bc
+Post stage
+[Pipeline] junit
+[2026-09-23T17:12:39.910Z] Recording test results
+[2026-09-23T17:12:40.050Z] [Checks API] No suitable checks publisher found.
+[Pipeline] archiveArtifacts
+[2026-09-23T17:12:40.097Z] Archiving artifacts
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Code Quality)
+[Pipeline] sh
+[2026-09-23T17:12:41.397Z] + docker build --target code-quality -t self-hd:quality-33 .
+[2026-09-23T17:12:41.651Z] DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+[2026-09-23T17:12:41.651Z]             Install the buildx component to build images with BuildKit:
+[2026-09-23T17:12:41.651Z]             https://docs.docker.com/go/buildx/
+[2026-09-23T17:12:41.651Z] 
+[2026-09-23T17:12:41.651Z] Sending build context to Docker daemon  224.8kB[2026-09-23T17:12:41.652Z] 
+[2026-09-23T17:12:41.652Z] Step 1/13 : FROM node:22-alpine AS dependencies
+[2026-09-23T17:12:41.652Z]  ---> b6f26b36c8ff
+[2026-09-23T17:12:41.652Z] Step 2/13 : WORKDIR /app
+[2026-09-23T17:12:41.903Z]  ---> Using cache
+[2026-09-23T17:12:41.903Z]  ---> 286453a9bf33
+[2026-09-23T17:12:41.903Z] Step 3/13 : RUN npm install -g npm@latest
+[2026-09-23T17:12:42.155Z]  ---> Using cache
+[2026-09-23T17:12:42.155Z]  ---> caab3fa3b3c8
+[2026-09-23T17:12:42.155Z] Step 4/13 : COPY package*.json ./
+[2026-09-23T17:12:42.155Z]  ---> Using cache
+[2026-09-23T17:12:42.155Z]  ---> 997c8036608f
+[2026-09-23T17:12:42.155Z] Step 5/13 : RUN npm ci
+[2026-09-23T17:12:42.155Z]  ---> Using cache
+[2026-09-23T17:12:42.155Z]  ---> 17f48a7d999a
+[2026-09-23T17:12:42.155Z] Step 6/13 : FROM dependencies AS source
+[2026-09-23T17:12:42.155Z]  ---> 17f48a7d999a
+[2026-09-23T17:12:42.155Z] Step 7/13 : COPY . .
+[2026-09-23T17:12:47.462Z]  ---> 60ff736d3961
+[2026-09-23T17:12:47.462Z] Step 8/13 : FROM source AS build-check
+[2026-09-23T17:12:47.462Z]  ---> 60ff736d3961
+[2026-09-23T17:12:47.462Z] Step 9/13 : RUN npm run build
+[2026-09-23T17:12:47.462Z]  ---> Running in 27c350e23798
+[2026-09-23T17:12:49.369Z] [91mnpm notice run self-hd@1.0.0 build
+[2026-09-23T17:12:49.381Z] npm notice run node scripts/build.js
+[2026-09-23T17:12:49.381Z] [0mBuild artefact created at /app/dist/build-info.json
+[2026-09-23T17:12:52.651Z]  ---> Removed intermediate container 27c350e23798
+[2026-09-23T17:12:52.652Z]  ---> bf739b828935
+[2026-09-23T17:12:52.652Z] Step 10/13 : FROM source AS test
+[2026-09-23T17:12:52.652Z]  ---> 60ff736d3961
+[2026-09-23T17:12:52.652Z] Step 11/13 : RUN npm test
+[2026-09-23T17:12:52.652Z]  ---> Running in 5711f4ef37e5
+[2026-09-23T17:12:53.572Z] [91mnpm notice run self-hd@1.0.0 test
+[2026-09-23T17:12:53.572Z] [0m[91mnpm notice run npx jest
+[2026-09-23T17:12:54.125Z] [0m[91mnpm notice run self-hd@1.0.0 npx
+[2026-09-23T17:12:54.125Z] [0m[91mnpm notice run 'jest'
+[2026-09-23T17:12:55.989Z] [0m[91mPASS test/app.test.js
+[2026-09-23T17:12:55.990Z] [0m[91m  self-hd service
+[2026-09-23T17:12:55.990Z] [0m[91m    ✓ returns service health (31 ms)
+[2026-09-23T17:12:55.990Z]     ✓ lists existing tasks (4 ms)
+[2026-09-23T17:12:55.990Z]     ✓ creates a task with validation (17 ms)
+[2026-09-23T17:12:55.990Z]     ✓ rejects invalid task titles (3 ms)
+[2026-09-23T17:12:55.990Z] [0m[91m    ✓ exposes Prometheus metrics (7 ms)
+[2026-09-23T17:12:55.990Z] 
+[2026-09-23T17:12:55.990Z] [0m----------|---------|----------|---------|---------|-------------------
+[2026-09-23T17:12:55.990Z] File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+[2026-09-23T17:12:55.990Z] ----------|---------|----------|---------|---------|-------------------
+[2026-09-23T17:12:55.990Z] All files |     100 |       70 |     100 |     100 |                   
+[2026-09-23T17:12:55.990Z]  app.js   |     100 |       70 |     100 |     100 | 36,48-57          
+[2026-09-23T17:12:55.990Z] ----------|---------|----------|---------|---------|-------------------
+[2026-09-23T17:12:55.990Z] [91mTest Suites: 1 passed, 1 total
+[2026-09-23T17:12:55.990Z] Tests:       5 passed, 5 total
+[2026-09-23T17:12:55.990Z] Snapshots:   0 total
+[2026-09-23T17:12:55.990Z] Time:        0.966 s
+[2026-09-23T17:12:55.990Z] Ran all test suites.
+[2026-09-23T17:12:57.858Z] [0m ---> Removed intermediate container 5711f4ef37e5
+[2026-09-23T17:12:57.860Z]  ---> a078a3fbb1f4
+[2026-09-23T17:12:57.860Z] Step 12/13 : FROM source AS code-quality
+[2026-09-23T17:12:57.860Z]  ---> 60ff736d3961
+[2026-09-23T17:12:57.860Z] Step 13/13 : RUN npx eslint src test scripts --format json --output-file eslint-report.json || true
+[2026-09-23T17:12:58.113Z]  ---> Running in 519826665a66
+[2026-09-23T17:12:59.977Z] [91mnpm warn exec The following package was not found and will be installed: eslint@10.11.0
+[2026-09-23T17:13:04.106Z] [0m[91mnpm notice run self-hd@1.0.0 npx
+[2026-09-23T17:13:04.106Z] npm notice run 'eslint' src test scripts --format json --output-file eslint-report.json
+[2026-09-23T17:13:04.106Z] [0m[91m
+[2026-09-23T17:13:04.106Z] Oops! Something went wrong! :(
+[2026-09-23T17:13:04.106Z] 
+[2026-09-23T17:13:04.106Z] ESLint: 10.11.0
+[2026-09-23T17:13:04.106Z] 
+[2026-09-23T17:13:04.106Z] ESLint couldn't find an eslint.config.* file.
+[2026-09-23T17:13:04.106Z] 
+[2026-09-23T17:13:04.106Z] From ESLint v9.0.0, the default configuration file is now eslint.config.*.
+[2026-09-23T17:13:04.106Z] If you are using a .eslintrc.* file, please follow the migration guide
+[2026-09-23T17:13:04.106Z] to update your configuration file to the new format:
+[2026-09-23T17:13:04.106Z] 
+[2026-09-23T17:13:04.106Z] https://eslint.org/docs/latest/use/configure/migration-guide
+[2026-09-23T17:13:04.106Z] 
+[2026-09-23T17:13:04.106Z] If you still have problems after following the migration guide, please stop by
+[2026-09-23T17:13:04.106Z] https://eslint.org/chat/help to chat with the team.
+[2026-09-23T17:13:04.106Z] 
+[2026-09-23T17:13:08.243Z] [0m ---> Removed intermediate container 519826665a66
+[2026-09-23T17:13:08.244Z]  ---> 6aa6ea117be9
+[2026-09-23T17:13:08.244Z] Successfully built 6aa6ea117be9
+[2026-09-23T17:13:08.244Z] Successfully tagged self-hd:quality-33
+[2026-09-23T17:13:08.244Z] + docker create self-hd:quality-33
+[2026-09-23T17:13:08.244Z] + id=575921e57370943071844992ce7bdd317161b7c1ad50db91d0fea4551e2f2303
+[2026-09-23T17:13:08.244Z] + docker cp 575921e57370943071844992ce7bdd317161b7c1ad50db91d0fea4551e2f2303:/app/eslint-report.json ./eslint-report.json
+[2026-09-23T17:13:08.244Z] + docker rm 575921e57370943071844992ce7bdd317161b7c1ad50db91d0fea4551e2f2303
+[2026-09-23T17:13:08.244Z] 575921e57370943071844992ce7bdd317161b7c1ad50db91d0fea4551e2f2303
+[Pipeline] sh
+[2026-09-23T17:13:08.635Z] + [ -f eslint-report.json ]
+[2026-09-23T17:13:08.636Z] + grep -o "errorCount":[0-9]* eslint-report.json
+[2026-09-23T17:13:08.636Z] + awk -F: {sum+=$2} END {print sum+0}
+[2026-09-23T17:13:08.636Z] + ERRORS=0
+[2026-09-23T17:13:08.636Z] + grep -o "warningCount":[0-9]* eslint-report.json
+[2026-09-23T17:13:08.636Z] + awk -F: {sum+=$2} END {print sum+0}
+[2026-09-23T17:13:08.636Z] + WARNINGS=0
+[2026-09-23T17:13:08.636Z] + echo ESLint errors=0 warnings=0
+[2026-09-23T17:13:08.636Z] ESLint errors=0 warnings=0
+[2026-09-23T17:13:08.636Z] + [ 0 -gt 0 ]
+Post stage
+[Pipeline] archiveArtifacts
+[2026-09-23T17:13:08.712Z] Archiving artifacts
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Security)
+[Pipeline] sh
+[2026-09-23T17:13:09.240Z] + docker build --target security-audit -t self-hd:security-33 .
+[2026-09-23T17:13:09.241Z] DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+[2026-09-23T17:13:09.241Z]             Install the buildx component to build images with BuildKit:
+[2026-09-23T17:13:09.241Z]             https://docs.docker.com/go/buildx/
+[2026-09-23T17:13:09.241Z] 
+[2026-09-23T17:13:09.241Z] Sending build context to Docker daemon  224.8kB[2026-09-23T17:13:09.241Z] 
+[2026-09-23T17:13:09.241Z] Step 1/15 : FROM node:22-alpine AS dependencies
+[2026-09-23T17:13:09.241Z]  ---> b6f26b36c8ff
+[2026-09-23T17:13:09.241Z] Step 2/15 : WORKDIR /app
+[2026-09-23T17:13:09.500Z]  ---> Using cache
+[2026-09-23T17:13:09.500Z]  ---> 286453a9bf33
+[2026-09-23T17:13:09.500Z] Step 3/15 : RUN npm install -g npm@latest
+[2026-09-23T17:13:09.500Z]  ---> Using cache
+[2026-09-23T17:13:09.500Z]  ---> caab3fa3b3c8
+[2026-09-23T17:13:09.500Z] Step 4/15 : COPY package*.json ./
+[2026-09-23T17:13:09.751Z]  ---> Using cache
+[2026-09-23T17:13:09.751Z]  ---> 997c8036608f
+[2026-09-23T17:13:09.751Z] Step 5/15 : RUN npm ci
+[2026-09-23T17:13:09.751Z]  ---> Using cache
+[2026-09-23T17:13:09.751Z]  ---> 17f48a7d999a
+[2026-09-23T17:13:09.751Z] Step 6/15 : FROM dependencies AS source
+[2026-09-23T17:13:09.751Z]  ---> 17f48a7d999a
+[2026-09-23T17:13:09.751Z] Step 7/15 : COPY . .
+[2026-09-23T17:13:09.751Z]  ---> Using cache
+[2026-09-23T17:13:09.751Z]  ---> 60ff736d3961
+[2026-09-23T17:13:09.751Z] Step 8/15 : FROM source AS build-check
+[2026-09-23T17:13:09.751Z]  ---> 60ff736d3961
+[2026-09-23T17:13:09.751Z] Step 9/15 : RUN npm run build
+[2026-09-23T17:13:10.001Z]  ---> Using cache
+[2026-09-23T17:13:10.002Z]  ---> bf739b828935
+[2026-09-23T17:13:10.002Z] Step 10/15 : FROM source AS test
+[2026-09-23T17:13:10.002Z]  ---> 60ff736d3961
+[2026-09-23T17:13:10.002Z] Step 11/15 : RUN npm test
+[2026-09-23T17:13:10.002Z]  ---> Using cache
+[2026-09-23T17:13:10.002Z]  ---> a078a3fbb1f4
+[2026-09-23T17:13:10.002Z] Step 12/15 : FROM source AS code-quality
+[2026-09-23T17:13:10.002Z]  ---> 60ff736d3961
+[2026-09-23T17:13:10.002Z] Step 13/15 : RUN npx eslint src test scripts --format json --output-file eslint-report.json || true
+[2026-09-23T17:13:10.002Z]  ---> Using cache
+[2026-09-23T17:13:10.002Z]  ---> 6aa6ea117be9
+[2026-09-23T17:13:10.002Z] Step 14/15 : FROM source AS security-audit
+[2026-09-23T17:13:10.002Z]  ---> 60ff736d3961
+[2026-09-23T17:13:10.002Z] Step 15/15 : RUN npm audit --audit-level=high
+[2026-09-23T17:13:10.254Z]  ---> Running in 7724208452de
+[2026-09-23T17:13:12.126Z] found 0 vulnerabilities
+[2026-09-23T17:13:14.000Z]  ---> Removed intermediate container 7724208452de
+[2026-09-23T17:13:14.000Z]  ---> 0467181998d3
+[2026-09-23T17:13:14.000Z] Successfully built 0467181998d3
+[2026-09-23T17:13:14.000Z] Successfully tagged self-hd:security-33
+[2026-09-23T17:13:14.000Z] + docker run --rm -v /var/jenkins_home/workspace/self-hd-pipeline:/app -w /app node:22-alpine npm audit --audit-level=high --json
+[2026-09-23T17:13:16.500Z] + docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /var/jenkins_home/workspace/self-hd-pipeline:/report aquasec/trivy:latest image --skip-dirs /usr/local/lib/node_modules --format json --output /report/trivy-report.json --severity HIGH,CRITICAL self-hd:33
+[2026-09-23T17:13:17.864Z] 2026-09-23T17:13:17Z	INFO	[vulndb] Need to update DB
+[2026-09-23T17:13:17.864Z] 2026-09-23T17:13:17Z	INFO	[vulndb] Downloading vulnerability DB...
+[2026-09-23T17:13:17.864Z] 2026-09-23T17:13:17Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+[2026-09-23T17:14:16.041Z] 31.26 KiB / 116.44 MiB [>____________________________________________________________] 0.03% ? p/s ?79.25 KiB / 116.44 MiB [>____________________________________________________________] 0.07% ? p/s ?127.25 KiB / 116.44 MiB [>___________________________________________________________] 0.11% ? p/s ?468.08 KiB / 116.44 MiB [>__________________________________________] 0.39% 726.69 KiB p/s ETA 2m43s516.08 KiB / 116.44 MiB [>__________________________________________] 0.43% 726.69 KiB p/s ETA 2m43s1.60 MiB / 116.44 MiB [>____________________________________________] 1.37% 726.69 KiB p/s ETA 2m41s2.90 MiB / 116.44 MiB [->____________________________________________] 2.49% 942.70 KiB p/s ETA 2m3s5.61 MiB / 116.44 MiB [-->___________________________________________] 4.82% 942.70 KiB p/s ETA 2m0s8.10 MiB / 116.44 MiB [--->_________________________________________] 6.96% 942.70 KiB p/s ETA 1m57s10.60 MiB / 116.44 MiB [---->__________________________________________] 9.11% 1.71 MiB p/s ETA 1m1s13.02 MiB / 116.44 MiB [----->________________________________________] 11.18% 1.71 MiB p/s ETA 1m0s15.45 MiB / 116.44 MiB [------>________________________________________] 13.27% 1.71 MiB p/s ETA 59s17.29 MiB / 116.44 MiB [------>________________________________________] 14.85% 2.32 MiB p/s ETA 42s18.91 MiB / 116.44 MiB [------->_______________________________________] 16.24% 2.32 MiB p/s ETA 42s20.80 MiB / 116.44 MiB [-------->______________________________________] 17.87% 2.32 MiB p/s ETA 41s22.49 MiB / 116.44 MiB [--------->_____________________________________] 19.31% 2.73 MiB p/s ETA 34s24.52 MiB / 116.44 MiB [--------->_____________________________________] 21.06% 2.73 MiB p/s ETA 33s26.24 MiB / 116.44 MiB [---------->____________________________________] 22.54% 2.73 MiB p/s ETA 33s27.86 MiB / 116.44 MiB [----------->___________________________________] 23.93% 3.13 MiB p/s ETA 28s29.36 MiB / 116.44 MiB [----------->___________________________________] 25.22% 3.13 MiB p/s ETA 27s30.91 MiB / 116.44 MiB [------------>__________________________________] 26.55% 3.13 MiB p/s ETA 27s32.43 MiB / 116.44 MiB [------------->_________________________________] 27.85% 3.42 MiB p/s ETA 24s34.22 MiB / 116.44 MiB [------------->_________________________________] 29.39% 3.42 MiB p/s ETA 24s35.84 MiB / 116.44 MiB [-------------->________________________________] 30.78% 3.42 MiB p/s ETA 23s37.47 MiB / 116.44 MiB [--------------->_______________________________] 32.18% 3.74 MiB p/s ETA 21s39.15 MiB / 116.44 MiB [--------------->_______________________________] 33.63% 3.74 MiB p/s ETA 20s41.00 MiB / 116.44 MiB [---------------->______________________________] 35.21% 3.74 MiB p/s ETA 20s42.81 MiB / 116.44 MiB [----------------->_____________________________] 36.77% 4.07 MiB p/s ETA 18s44.96 MiB / 116.44 MiB [------------------>____________________________] 38.61% 4.07 MiB p/s ETA 17s45.68 MiB / 116.44 MiB [------------------>____________________________] 39.23% 4.07 MiB p/s ETA 17s45.68 MiB / 116.44 MiB [------------------>____________________________] 39.23% 4.12 MiB p/s ETA 17s49.11 MiB / 116.44 MiB [------------------->___________________________] 42.18% 4.12 MiB p/s ETA 16s50.64 MiB / 116.44 MiB [-------------------->__________________________] 43.49% 4.12 MiB p/s ETA 15s51.37 MiB / 116.44 MiB [-------------------->__________________________] 44.12% 4.46 MiB p/s ETA 14s51.37 MiB / 116.44 MiB [-------------------->__________________________] 44.12% 4.46 MiB p/s ETA 14s55.37 MiB / 116.44 MiB [---------------------->________________________] 47.56% 4.46 MiB p/s ETA 13s55.76 MiB / 116.44 MiB [---------------------->________________________] 47.89% 4.65 MiB p/s ETA 13s57.56 MiB / 116.44 MiB [----------------------->_______________________] 49.43% 4.65 MiB p/s ETA 12s59.89 MiB / 116.44 MiB [------------------------>______________________] 51.43% 4.65 MiB p/s ETA 12s62.00 MiB / 116.44 MiB [------------------------->_____________________] 53.24% 5.02 MiB p/s ETA 10s64.66 MiB / 116.44 MiB [-------------------------->____________________] 55.53% 5.02 MiB p/s ETA 10s67.22 MiB / 116.44 MiB [--------------------------->____________________] 57.73% 5.02 MiB p/s ETA 9s69.63 MiB / 116.44 MiB [---------------------------->___________________] 59.80% 5.52 MiB p/s ETA 8s72.19 MiB / 116.44 MiB [----------------------------->__________________] 62.00% 5.52 MiB p/s ETA 8s74.63 MiB / 116.44 MiB [------------------------------>_________________] 64.09% 5.52 MiB p/s ETA 7s77.10 MiB / 116.44 MiB [------------------------------->________________] 66.22% 5.97 MiB p/s ETA 6s79.55 MiB / 116.44 MiB [-------------------------------->_______________] 68.32% 5.97 MiB p/s ETA 6s81.98 MiB / 116.44 MiB [--------------------------------->______________] 70.41% 5.97 MiB p/s ETA 5s84.24 MiB / 116.44 MiB [---------------------------------->_____________] 72.35% 6.35 MiB p/s ETA 5s86.78 MiB / 116.44 MiB [----------------------------------->____________] 74.53% 6.35 MiB p/s ETA 4s89.27 MiB / 116.44 MiB [------------------------------------>___________] 76.67% 6.35 MiB p/s ETA 4s91.75 MiB / 116.44 MiB [------------------------------------->__________] 78.79% 6.74 MiB p/s ETA 3s94.22 MiB / 116.44 MiB [-------------------------------------->_________] 80.92% 6.74 MiB p/s ETA 3s96.32 MiB / 116.44 MiB [--------------------------------------->________] 82.73% 6.74 MiB p/s ETA 2s98.11 MiB / 116.44 MiB [---------------------------------------->_______] 84.26% 6.99 MiB p/s ETA 2s99.80 MiB / 116.44 MiB [----------------------------------------->______] 85.71% 6.99 MiB p/s ETA 2s101.62 MiB / 116.44 MiB [----------------------------------------->_____] 87.28% 6.99 MiB p/s ETA 2s103.02 MiB / 116.44 MiB [----------------------------------------->_____] 88.48% 7.07 MiB p/s ETA 1s104.47 MiB / 116.44 MiB [------------------------------------------>____] 89.72% 7.07 MiB p/s ETA 1s105.22 MiB / 116.44 MiB [------------------------------------------>____] 90.36% 7.07 MiB p/s ETA 1s106.39 MiB / 116.44 MiB [------------------------------------------>____] 91.37% 6.98 MiB p/s ETA 1s107.95 MiB / 116.44 MiB [------------------------------------------->___] 92.71% 6.98 MiB p/s ETA 1s109.89 MiB / 116.44 MiB [-------------------------------------------->__] 94.38% 6.98 MiB p/s ETA 0s111.70 MiB / 116.44 MiB [--------------------------------------------->_] 95.93% 7.10 MiB p/s ETA 0s113.13 MiB / 116.44 MiB [--------------------------------------------->_] 97.16% 7.10 MiB p/s ETA 0s114.60 MiB / 116.44 MiB [---------------------------------------------->] 98.42% 7.10 MiB p/s ETA 0s116.01 MiB / 116.44 MiB [---------------------------------------------->] 99.63% 7.10 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 7.10 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 7.10 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.69 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.69 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.69 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.86 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.86 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.86 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.48 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.48 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.48 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.12 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.12 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.12 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.79 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.79 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.79 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.48 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.48 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.48 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.20 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.20 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.20 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.92 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.92 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.92 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.67 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.67 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.67 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.43 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.43 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.43 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.21 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.21 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.21 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.01 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.01 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.01 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.81 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.81 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.81 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.63 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.63 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.63 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.46 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.46 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.46 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.30 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.30 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.30 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.15 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.15 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.15 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.01 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.01 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.01 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.88 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.88 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.88 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.76 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.76 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.76 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.65 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.65 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.65 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.54 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.54 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.54 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.44 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.44 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.44 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.35 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.35 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.35 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.18 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.18 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.18 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.11 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.11 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.11 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.03 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.03 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.03 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 990.52 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 990.52 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 990.52 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 926.61 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 926.61 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 926.61 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 866.83 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 866.83 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 866.83 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 810.91 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 810.91 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 810.91 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 758.59 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 758.59 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 758.59 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 709.65 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 709.65 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 709.65 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 663.86 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 663.86 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 663.86 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 621.03 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 621.03 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 621.03 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 580.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 580.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 580.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 543.49 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 543.49 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 543.49 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 508.42 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 508.42 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 508.42 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 475.62 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 475.62 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 475.62 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 444.94 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 444.94 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 444.94 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 416.23 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 416.23 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 416.23 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 389.38 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 389.38 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 389.38 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 364.25 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 364.25 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 364.25 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 340.75 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 340.75 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 340.75 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 318.77 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 318.77 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 318.77 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 298.21 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 298.21 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 298.21 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 278.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 278.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 278.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 260.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 260.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 260.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 244.13 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 244.13 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 244.13 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 228.38 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 228.38 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 228.38 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 213.65 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 213.65 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 213.65 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 199.86 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 199.86 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 199.86 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 186.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 186.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 186.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 174.91 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 174.91 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 174.91 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 163.62 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 163.62 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 163.62 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 153.07 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 153.07 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 153.07 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 153.07 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 143.19 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 143.19 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 143.19 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 133.95 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 133.95 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 133.95 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 125.31 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 125.31 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 125.31 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 117.23 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 117.23 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 117.23 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 109.66 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 109.66 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 109.66 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 102.59 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 102.59 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [------------------------------------------->] 100.00% 102.59 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 95.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 95.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 95.97 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 89.78 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 89.78 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 89.78 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 83.99 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 83.99 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 83.99 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 78.57 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 78.57 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 78.57 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 73.50 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 73.50 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 73.50 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------->] 100.00% 68.76 KiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------------] 100.00% 2.10 MiB p/s 56s2026-09-23T17:14:15Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+[2026-09-23T17:14:16.042Z] 2026-09-23T17:14:15Z	INFO	[vuln] Vulnerability scanning is enabled
+[2026-09-23T17:14:16.042Z] 2026-09-23T17:14:15Z	INFO	[secret] Secret scanning is enabled
+[2026-09-23T17:14:16.042Z] 2026-09-23T17:14:15Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+[2026-09-23T17:14:16.042Z] 2026-09-23T17:14:15Z	INFO	[secret] Please see https://trivy.dev/docs/v0.74/guide/scanner/secret#recommendation for faster secret detection
+[2026-09-23T17:14:34.332Z] 2026-09-23T17:14:31Z	INFO	Detected OS	family="alpine" version="3.24.2"
+[2026-09-23T17:14:34.336Z] 2026-09-23T17:14:31Z	WARN	This OS version is not on the EOL list	family="alpine" version="3.24"
+[2026-09-23T17:14:34.336Z] 2026-09-23T17:14:31Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=18
+[2026-09-23T17:14:34.336Z] 2026-09-23T17:14:31Z	INFO	Number of language-specific files	num=1
+[2026-09-23T17:14:34.336Z] 2026-09-23T17:14:31Z	INFO	[node-pkg] Detecting vulnerabilities...
+[2026-09-23T17:14:34.336Z] + docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image --skip-dirs /usr/local/lib/node_modules --exit-code 1 --severity CRITICAL --ignore-unfixed self-hd:33
+[2026-09-23T17:14:36.867Z] 2026-09-23T17:14:36Z	INFO	[vulndb] Need to update DB
+[2026-09-23T17:14:36.868Z] 2026-09-23T17:14:36Z	INFO	[vulndb] Downloading vulnerability DB...
+[2026-09-23T17:14:36.869Z] 2026-09-23T17:14:36Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+[2026-09-23T17:15:09.521Z] 31.26 KiB / 116.44 MiB [>____________________________________________________________] 0.03% ? p/s ?95.25 KiB / 116.44 MiB [>____________________________________________________________] 0.08% ? p/s ?223.25 KiB / 116.44 MiB [>___________________________________________________________] 0.19% ? p/s ?503.23 KiB / 116.44 MiB [>__________________________________________] 0.42% 788.10 KiB p/s ETA 2m30s1007.21 KiB / 116.44 MiB [>_________________________________________] 0.84% 788.10 KiB p/s ETA 2m30s1.76 MiB / 116.44 MiB [>____________________________________________] 1.51% 788.10 KiB p/s ETA 2m29s2.90 MiB / 116.44 MiB [->___________________________________________] 2.49% 997.63 KiB p/s ETA 1m56s3.74 MiB / 116.44 MiB [->___________________________________________] 3.21% 997.63 KiB p/s ETA 1m55s7.66 MiB / 116.44 MiB [-->__________________________________________] 6.58% 997.63 KiB p/s ETA 1m51s9.41 MiB / 116.44 MiB [--->____________________________________________] 8.08% 1.62 MiB p/s ETA 1m5s11.70 MiB / 116.44 MiB [---->_________________________________________] 10.05% 1.62 MiB p/s ETA 1m4s13.55 MiB / 116.44 MiB [----->________________________________________] 11.63% 1.62 MiB p/s ETA 1m3s15.30 MiB / 116.44 MiB [------>________________________________________] 13.14% 2.15 MiB p/s ETA 46s16.96 MiB / 116.44 MiB [------>________________________________________] 14.57% 2.15 MiB p/s ETA 46s18.74 MiB / 116.44 MiB [------->_______________________________________] 16.10% 2.15 MiB p/s ETA 45s20.74 MiB / 116.44 MiB [-------->______________________________________] 17.81% 2.60 MiB p/s ETA 36s21.72 MiB / 116.44 MiB [-------->______________________________________] 18.65% 2.60 MiB p/s ETA 36s23.86 MiB / 116.44 MiB [--------->_____________________________________] 20.49% 2.60 MiB p/s ETA 35s25.75 MiB / 116.44 MiB [---------->____________________________________] 22.11% 2.97 MiB p/s ETA 30s27.84 MiB / 116.44 MiB [----------->___________________________________] 23.91% 2.97 MiB p/s ETA 29s29.66 MiB / 116.44 MiB [----------->___________________________________] 25.48% 2.97 MiB p/s ETA 29s31.41 MiB / 116.44 MiB [------------>__________________________________] 26.98% 3.39 MiB p/s ETA 25s33.52 MiB / 116.44 MiB [------------->_________________________________] 28.78% 3.39 MiB p/s ETA 24s35.68 MiB / 116.44 MiB [-------------->________________________________] 30.64% 3.39 MiB p/s ETA 23s37.59 MiB / 116.44 MiB [--------------->_______________________________] 32.28% 3.83 MiB p/s ETA 20s39.70 MiB / 116.44 MiB [---------------->______________________________] 34.10% 3.83 MiB p/s ETA 20s41.57 MiB / 116.44 MiB [---------------->______________________________] 35.70% 3.83 MiB p/s ETA 19s43.62 MiB / 116.44 MiB [----------------->_____________________________] 37.46% 4.23 MiB p/s ETA 17s44.73 MiB / 116.44 MiB [------------------>____________________________] 38.42% 4.23 MiB p/s ETA 16s45.62 MiB / 116.44 MiB [------------------>____________________________] 39.18% 4.23 MiB p/s ETA 16s47.58 MiB / 116.44 MiB [------------------->___________________________] 40.87% 4.39 MiB p/s ETA 15s49.54 MiB / 116.44 MiB [------------------->___________________________] 42.54% 4.39 MiB p/s ETA 15s51.38 MiB / 116.44 MiB [-------------------->__________________________] 44.13% 4.39 MiB p/s ETA 14s53.28 MiB / 116.44 MiB [--------------------->_________________________] 45.76% 4.72 MiB p/s ETA 13s55.39 MiB / 116.44 MiB [---------------------->________________________] 47.57% 4.72 MiB p/s ETA 12s57.39 MiB / 116.44 MiB [----------------------->_______________________] 49.29% 4.72 MiB p/s ETA 12s59.44 MiB / 116.44 MiB [----------------------->_______________________] 51.04% 5.07 MiB p/s ETA 11s61.48 MiB / 116.44 MiB [------------------------>______________________] 52.80% 5.07 MiB p/s ETA 10s63.47 MiB / 116.44 MiB [------------------------->_____________________] 54.51% 5.07 MiB p/s ETA 10s65.40 MiB / 116.44 MiB [-------------------------->_____________________] 56.17% 5.39 MiB p/s ETA 9s67.40 MiB / 116.44 MiB [--------------------------->____________________] 57.88% 5.39 MiB p/s ETA 9s69.35 MiB / 116.44 MiB [---------------------------->___________________] 59.56% 5.39 MiB p/s ETA 8s71.17 MiB / 116.44 MiB [----------------------------->__________________] 61.12% 5.66 MiB p/s ETA 7s73.11 MiB / 116.44 MiB [------------------------------>_________________] 62.79% 5.66 MiB p/s ETA 7s75.33 MiB / 116.44 MiB [------------------------------->________________] 64.70% 5.66 MiB p/s ETA 7s77.52 MiB / 116.44 MiB [------------------------------->________________] 66.58% 5.98 MiB p/s ETA 6s79.59 MiB / 116.44 MiB [-------------------------------->_______________] 68.36% 5.98 MiB p/s ETA 6s81.06 MiB / 116.44 MiB [--------------------------------->______________] 69.62% 5.98 MiB p/s ETA 5s81.06 MiB / 116.44 MiB [--------------------------------->______________] 69.62% 5.97 MiB p/s ETA 5s82.99 MiB / 116.44 MiB [---------------------------------->_____________] 71.27% 5.97 MiB p/s ETA 5s85.76 MiB / 116.44 MiB [----------------------------------->____________] 73.65% 5.97 MiB p/s ETA 5s87.78 MiB / 116.44 MiB [------------------------------------>___________] 75.39% 6.31 MiB p/s ETA 4s89.73 MiB / 116.44 MiB [------------------------------------>___________] 77.07% 6.31 MiB p/s ETA 4s91.97 MiB / 116.44 MiB [------------------------------------->__________] 78.98% 6.31 MiB p/s ETA 3s93.78 MiB / 116.44 MiB [-------------------------------------->_________] 80.54% 6.55 MiB p/s ETA 3s96.00 MiB / 116.44 MiB [--------------------------------------->________] 82.45% 6.55 MiB p/s ETA 3s96.28 MiB / 116.44 MiB [--------------------------------------->________] 82.69% 6.55 MiB p/s ETA 3s97.49 MiB / 116.44 MiB [---------------------------------------->_______] 83.73% 6.53 MiB p/s ETA 2s99.57 MiB / 116.44 MiB [----------------------------------------->______] 85.51% 6.53 MiB p/s ETA 2s101.76 MiB / 116.44 MiB [----------------------------------------->_____] 87.39% 6.53 MiB p/s ETA 2s103.61 MiB / 116.44 MiB [----------------------------------------->_____] 88.98% 6.76 MiB p/s ETA 1s105.97 MiB / 116.44 MiB [------------------------------------------>____] 91.01% 6.76 MiB p/s ETA 1s108.05 MiB / 116.44 MiB [------------------------------------------->___] 92.80% 6.76 MiB p/s ETA 1s109.93 MiB / 116.44 MiB [-------------------------------------------->__] 94.41% 7.01 MiB p/s ETA 0s111.90 MiB / 116.44 MiB [--------------------------------------------->_] 96.11% 7.01 MiB p/s ETA 0s114.06 MiB / 116.44 MiB [---------------------------------------------->] 97.96% 7.01 MiB p/s ETA 0s116.29 MiB / 116.44 MiB [---------------------------------------------->] 99.87% 7.24 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 7.24 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 7.24 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.79 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.79 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.79 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.35 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.35 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 6.35 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.94 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.94 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.94 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.56 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.56 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.56 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.20 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.20 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 5.20 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.86 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.86 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.86 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.55 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.55 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.55 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 4.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.98 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.98 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.98 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.72 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.72 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.72 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.48 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.48 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.48 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.26 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.05 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.05 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 3.05 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.85 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.85 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.85 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.67 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.67 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.67 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.50 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.50 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.50 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.33 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.33 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.33 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.18 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.18 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.18 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.04 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.04 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 2.04 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.91 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.91 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.91 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.79 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.79 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.79 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.67 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.67 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.67 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.56 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.56 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.56 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.46 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.46 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.46 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.37 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.37 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.37 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.28 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.28 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.28 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.20 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.20 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [--------------------------------------------->] 100.00% 1.20 MiB p/s ETA 0s116.44 MiB / 116.44 MiB [-------------------------------------------------] 100.00% 3.90 MiB p/s 30s2026-09-23T17:15:09Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+[2026-09-23T17:15:09.521Z] 2026-09-23T17:15:09Z	INFO	[vuln] Vulnerability scanning is enabled
+[2026-09-23T17:15:09.521Z] 2026-09-23T17:15:09Z	INFO	[secret] Secret scanning is enabled
+[2026-09-23T17:15:09.521Z] 2026-09-23T17:15:09Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+[2026-09-23T17:15:09.521Z] 2026-09-23T17:15:09Z	INFO	[secret] Please see https://trivy.dev/docs/v0.74/guide/scanner/secret#recommendation for faster secret detection
+[2026-09-23T17:15:31.558Z] 2026-09-23T17:15:29Z	INFO	Detected OS	family="alpine" version="3.24.2"
+[2026-09-23T17:15:31.558Z] 2026-09-23T17:15:29Z	WARN	This OS version is not on the EOL list	family="alpine" version="3.24"
+[2026-09-23T17:15:31.558Z] 2026-09-23T17:15:29Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.24" repository="3.24" pkg_num=18
+[2026-09-23T17:15:31.558Z] 2026-09-23T17:15:29Z	INFO	Number of language-specific files	num=1
+[2026-09-23T17:15:31.558Z] 2026-09-23T17:15:29Z	INFO	[node-pkg] Detecting vulnerabilities...
+[2026-09-23T17:15:31.558Z] 
+[2026-09-23T17:15:31.558Z] Report Summary
+[2026-09-23T17:15:31.558Z] 
+[2026-09-23T17:15:31.558Z] ┌───────────────────────────────────────────────────────────────────────┬──────────┬─────────────────┬─────────┐
+[2026-09-23T17:15:31.558Z] │                                Target                                 │   Type   │ Vulnerabilities │ Secrets │
+[2026-09-23T17:15:31.558Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.558Z] │ self-hd:33 (alpine 3.24.2)                                            │  alpine  │        0        │    -    │
+[2026-09-23T17:15:31.558Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.558Z] │ app/node_modules/@isaacs/fs-minipass/package.json                     │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.558Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.558Z] │ app/node_modules/@opentelemetry/api/package.json                      │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/accepts/package.json                                 │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/array-flatten/package.json                           │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/bintrees/package.json                                │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/body-parser/node_modules/debug/package.json          │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/body-parser/node_modules/ms/package.json             │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/body-parser/package.json                             │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/bytes/package.json                                   │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/call-bind-apply-helpers/package.json                 │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/call-bound/package.json                              │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/chownr/package.json                                  │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/content-disposition/package.json                     │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/content-type/package.json                            │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/cookie-signature/package.json                        │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/cookie/package.json                                  │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/depd/package.json                                    │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/destroy/package.json                                 │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/dunder-proto/package.json                            │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/ee-first/package.json                                │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/encodeurl/package.json                               │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/es-define-property/package.json                      │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/es-errors/package.json                               │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/es-object-atoms/package.json                         │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/escape-html/package.json                             │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/etag/package.json                                    │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/express/node_modules/debug/package.json              │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/express/node_modules/ms/package.json                 │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.559Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.559Z] │ app/node_modules/express/package.json                                 │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/finalhandler/node_modules/debug/package.json         │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/finalhandler/node_modules/ms/package.json            │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/finalhandler/package.json                            │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/forwarded/package.json                               │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/fresh/package.json                                   │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/function-bind/package.json                           │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/get-intrinsic/package.json                           │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/get-proto/package.json                               │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/gopd/package.json                                    │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/has-symbols/package.json                             │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/hasown/package.json                                  │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/helmet/package.json                                  │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/http-errors/package.json                             │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/iconv-lite/package.json                              │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/inherits/package.json                                │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/ipaddr.js/package.json                               │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/math-intrinsics/package.json                         │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/media-typer/package.json                             │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/merge-descriptors/package.json                       │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/methods/package.json                                 │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/mime-db/package.json                                 │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/mime-types/package.json                              │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/mime/package.json                                    │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/minipass/package.json                                │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/minizlib/package.json                                │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/ms/package.json                                      │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/negotiator/package.json                              │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/object-inspect/package.json                          │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/on-finished/package.json                             │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/parseurl/package.json                                │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/path-to-regexp/package.json                          │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/prom-client/package.json                             │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/proxy-addr/package.json                              │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/qs/package.json                                      │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/range-parser/package.json                            │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/raw-body/package.json                                │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/safe-buffer/package.json                             │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/safer-buffer/package.json                            │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/send/node_modules/debug/node_modules/ms/package.json │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/send/node_modules/debug/package.json                 │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/send/package.json                                    │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/serve-static/package.json                            │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/setprototypeof/package.json                          │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/side-channel-list/package.json                       │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/side-channel-map/package.json                        │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/side-channel-weakmap/package.json                    │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/side-channel/package.json                            │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/statuses/package.json                                │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/tar/node_modules/yallist/package.json                │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/tar/package.json                                     │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/tdigest/package.json                                 │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/toidentifier/package.json                            │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/type-is/package.json                                 │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/unpipe/package.json                                  │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/utils-merge/package.json                             │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/node_modules/vary/package.json                                    │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ app/package.json                                                      │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] ├───────────────────────────────────────────────────────────────────────┼──────────┼─────────────────┼─────────┤
+[2026-09-23T17:15:31.560Z] │ opt/yarn-v1.22.22/package.json                                        │ node-pkg │        0        │    -    │
+[2026-09-23T17:15:31.560Z] └───────────────────────────────────────────────────────────────────────┴──────────┴─────────────────┴─────────┘
+[2026-09-23T17:15:31.560Z] Legend:
+[2026-09-23T17:15:31.560Z] - '-': Not scanned
+[2026-09-23T17:15:31.560Z] - '0': Clean (no security findings detected)
+[2026-09-23T17:15:31.560Z] 
+Post stage
+[Pipeline] archiveArtifacts
+[2026-09-23T17:15:31.853Z] Archiving artifacts
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[2026-09-23T17:15:32.427Z] + docker inspect -f {{ index .Config.Labels "image_tag" }} self-hd-staging
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] sh
+[2026-09-23T17:15:32.878Z] + docker rm -f self-hd-staging
+[2026-09-23T17:15:33.434Z] self-hd-staging
+[2026-09-23T17:15:33.434Z] + docker run -d --name self-hd-staging --label image_tag=33 -p 3001:3000 -e NODE_ENV=staging -e APP_VERSION=33 self-hd:33
+[2026-09-23T17:15:33.686Z] 028a76b1219495c7e5962dc23ab069419010edfb5266fbe2f16afeb3ba27af54
+[2026-09-23T17:15:34.605Z] + sleep 5
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+[2026-09-23T17:15:40.267Z] + docker run --rm --network container:self-hd-staging curlimages/curl:8.10.1 -fsS http://127.0.0.1:3000/health
+[2026-09-23T17:15:41.454Z] {"status":"ok","service":"self-hd","version":"33","environment":"staging"}
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Release)
+[Pipeline] sh
+[2026-09-23T17:15:41.966Z] + docker tag self-hd:33 self-hd:release-33
+[2026-09-23T17:15:41.967Z] + cat
+[Pipeline] archiveArtifacts
+[2026-09-23T17:15:42.025Z] Archiving artifacts
+[2026-09-23T17:15:42.033Z] Recording fingerprints
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Monitoring)
+[Pipeline] sh
+[2026-09-23T17:15:42.796Z] + docker rm -f self-hd-prometheus self-hd-alertmanager
+[2026-09-23T17:15:43.781Z] self-hd-prometheus
+[2026-09-23T17:15:43.782Z] self-hd-alertmanager
+[2026-09-23T17:15:44.041Z] + docker create --name self-hd-alertmanager -p 9093:9093 prom/alertmanager:v0.27.0
+[2026-09-23T17:15:44.293Z] 9803a77151f0487efea01f4d9e3bf9f42e33da11880551d554c54c0a657ce29e
+[2026-09-23T17:15:44.293Z] + docker cp monitoring/alertmanager.yml self-hd-alertmanager:/etc/alertmanager/alertmanager.yml
+[2026-09-23T17:15:44.544Z] + docker start self-hd-alertmanager
+[2026-09-23T17:15:44.801Z] self-hd-alertmanager
+[2026-09-23T17:15:44.801Z] + docker create --name self-hd-prometheus -p 9091:9090 --link self-hd-production:production --link self-hd-alertmanager:alertmanager prom/prometheus:v2.55.1 --config.file=/etc/prometheus/prometheus.yml
+[2026-09-23T17:15:45.057Z] WARNING: Links on the default bridge network are deprecated and will be removed in a future release. Use a custom network instead.
+[2026-09-23T17:15:45.058Z] dfa59ddb9b3932008ba747f71e5272719b07ad96f7fbae407b805949bc043552
+[2026-09-23T17:15:45.058Z] + docker cp monitoring/prometheus.yml self-hd-prometheus:/etc/prometheus/prometheus.yml
+[2026-09-23T17:15:45.321Z] + docker cp monitoring/alert.rules.yml self-hd-prometheus:/etc/prometheus/alert.rules.yml
+[2026-09-23T17:15:45.322Z] + docker start self-hd-prometheus
+[2026-09-23T17:15:45.877Z] self-hd-prometheus
+[2026-09-23T17:15:45.878Z] + sleep 8
+[2026-09-23T17:15:53.944Z] + docker run --rm --network container:self-hd-production curlimages/curl:8.10.1 -fsS http://127.0.0.1:3000/metrics
+[2026-09-23T17:15:53.944Z] + head
+[2026-09-23T17:15:54.197Z] # HELP process_cpu_user_seconds_total Total user CPU time spent in seconds.
+[2026-09-23T17:15:54.197Z] # TYPE process_cpu_user_seconds_total counter
+[2026-09-23T17:15:54.197Z] process_cpu_user_seconds_total 38.621305
+[2026-09-23T17:15:54.197Z] 
+[2026-09-23T17:15:54.197Z] # HELP process_cpu_system_seconds_total Total system CPU time spent in seconds.
+[2026-09-23T17:15:54.197Z] # TYPE process_cpu_system_seconds_total counter
+[2026-09-23T17:15:54.197Z] process_cpu_system_seconds_total 10.368887999999993
+[2026-09-23T17:15:54.197Z] 
+[2026-09-23T17:15:54.197Z] # HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+[2026-09-23T17:15:54.197Z] # TYPE process_cpu_seconds_total counter
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Incident Simulation)
+[Pipeline] sh
+[2026-09-23T17:15:54.859Z] + echo Stopping production container to simulate an outage...
+[2026-09-23T17:15:54.859Z] Stopping production container to simulate an outage...
+[2026-09-23T17:15:54.859Z] + docker stop self-hd-production
+[2026-09-23T17:15:59.028Z] self-hd-production
+[2026-09-23T17:15:59.028Z] + echo Waiting for Prometheus to evaluate the ServiceDown rule...
+[2026-09-23T17:15:59.028Z] Waiting for Prometheus to evaluate the ServiceDown rule...
+[2026-09-23T17:15:59.028Z] + sleep 45
+[2026-09-23T17:16:45.621Z] + docker run --rm --network container:self-hd-prometheus curlimages/curl:8.10.1 -fsS http://127.0.0.1:9090/api/v1/alerts
+[2026-09-23T17:16:45.622Z] + grep -c "state":"firing"
+[2026-09-23T17:16:45.622Z] + true
+[2026-09-23T17:16:45.622Z] + FIRED=0
+[2026-09-23T17:16:45.622Z] + echo Restarting production container...
+[2026-09-23T17:16:45.622Z] Restarting production container...
+[2026-09-23T17:16:45.622Z] + docker start self-hd-production
+[2026-09-23T17:16:45.622Z] self-hd-production
+[2026-09-23T17:16:45.622Z] + sleep 5
+[2026-09-23T17:16:50.856Z] + docker run --rm --network container:self-hd-production curlimages/curl:8.10.1 -fsS http://127.0.0.1:3000/health
+[2026-09-23T17:16:50.857Z] {"status":"ok","service":"self-hd","version":"release-2","environment":"production"}+ echo Alerts firing during simulated outage: 0
+[2026-09-23T17:16:50.857Z] Alerts firing during simulated outage: 0
+[2026-09-23T17:16:50.858Z] + [ 0 -lt 1 ]
+[2026-09-23T17:16:50.858Z] + echo WARNING: no alert fired during the simulated outage - review alert.rules.yml
+[2026-09-23T17:16:50.858Z] WARNING: no alert fired during the simulated outage - review alert.rules.yml
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] sh
+[2026-09-23T17:16:51.977Z] + docker ps --filter name=self-hd --format table {{.Names}}\t{{.Status}}\t{{.Ports}}
+[2026-09-23T17:16:51.980Z] NAMES                  STATUS                          PORTS
+[2026-09-23T17:16:51.980Z] self-hd-prometheus     Up About a minute               0.0.0.0:9091->9090/tcp, :::9091->9090/tcp
+[2026-09-23T17:16:51.980Z] self-hd-alertmanager   Up About a minute               0.0.0.0:9093->9093/tcp, :::9093->9093/tcp
+[2026-09-23T17:16:51.980Z] self-hd-staging        Up About a minute (unhealthy)   0.0.0.0:3001->3000/tcp, :::3001->3000/tcp
+[2026-09-23T17:16:51.980Z] self-hd-production     Up 7 seconds (healthy)          0.0.0.0:3002->3000/tcp, :::3002->3000/tcp
+[2026-09-23T17:16:51.980Z] self-hd-jenkins        Up 10 hours                     0.0.0.0:8090->8080/tcp, :::8090->8080/tcp, 0.0.0.0:50001->50000/tcp, :::50001->50000/tcp
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
