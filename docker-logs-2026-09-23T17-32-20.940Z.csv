@@ -1,0 +1,1306 @@
+﻿timestamp,object,message
+2026-09-10T12:03:10.792Z,jenkins,Running from: /usr/share/jenkins/jenkins.war
+2026-09-10T12:03:10.792Z,jenkins,webroot: /var/jenkins_home/war
+2026-09-10T12:03:11.053Z,jenkins,2026-09-10 12:03:11.037+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-09-10T12:03:11.577Z,jenkins,2026-09-10 12:03:11.576+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-09-10T12:03:11.612Z,jenkins,2026-09-10 12:03:11.612+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.12; built: 2026-08-03T22:37:55.389Z; git: 10dd3948f37767b84cc2c62358364f042e51dbbe; jvm 21.0.12.1+1-LTS
+2026-09-10T12:03:11.892Z,jenkins,"2026-09-10 12:03:11.892+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet"
+2026-09-10T12:03:11.920Z,jenkins,2026-09-10 12:03:11.920+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-09-10T12:03:12.156Z,jenkins,"2026-09-10 12:03:12.155+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get(""JENKINS_HOME"")"
+2026-09-10T12:03:12.219Z,jenkins,"2026-09-10 12:03:12.218+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@692e028d{Jenkins v2.568.3,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@6629ad09{STARTED}}"
+2026-09-10T12:03:12.225Z,jenkins,"2026-09-10 12:03:12.225+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@2af46afd{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}"
+2026-09-10T12:03:12.225Z,jenkins,"2026-09-10 12:03:12.225+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@31ceba99{STARTING}[12.1.12,sto=0] @616ms"
+2026-09-10T12:03:12.226Z,jenkins,2026-09-10 12:03:12.226+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-09-10T12:03:12.293Z,jenkins,2026-09-10 12:03:12.293+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.568.3
+2026-09-10T12:03:12.345Z,jenkins,2026-09-10 12:03:12.345+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-09-10T12:03:12.358Z,jenkins,2026-09-10 12:03:12.357+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-09-10T12:03:12.760Z,jenkins,2026-09-10 12:03:12.760+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-09-10T12:03:12.763Z,jenkins,2026-09-10 12:03:12.763+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-09-10T12:03:12.764Z,jenkins,2026-09-10 12:03:12.763+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-09-10T12:03:12.848Z,jenkins,2026-09-10 12:03:12.847+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-09-10T12:03:12.848Z,jenkins,2026-09-10 12:03:12.848+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-09-10T12:03:12.848Z,jenkins,2026-09-10 12:03:12.848+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-09-10T12:03:12.849Z,jenkins,2026-09-10 12:03:12.849+0000 [id=61]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-09-10T12:03:12.860Z,jenkins,2026-09-10 12:03:12.859+0000 [id=75]	INFO	hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2026-09-10T12:03:13.107Z,jenkins,2026-09-10 12:03:13.106+0000 [id=46]	INFO	jenkins.install.SetupWizard#init: 
+2026-09-10T12:03:13.107Z,jenkins,[LF]> 
+2026-09-10T12:03:13.107Z,jenkins,[LF]> *************************************************************
+2026-09-10T12:03:13.107Z,jenkins,[LF]> *************************************************************
+2026-09-10T12:03:13.107Z,jenkins,[LF]> *************************************************************
+2026-09-10T12:03:13.107Z,jenkins,[LF]> 
+2026-09-10T12:03:13.107Z,jenkins,[LF]> Jenkins initial setup is required. An admin user has been created and a password generated.
+2026-09-10T12:03:13.107Z,jenkins,[LF]> Please use the following password to proceed to installation:
+2026-09-10T12:03:13.107Z,jenkins,[LF]> 
+2026-09-10T12:03:13.107Z,jenkins,[LF]> 271a2df3af154368843c1389a52ff7e6
+2026-09-10T12:03:13.107Z,jenkins,[LF]> 
+2026-09-10T12:03:13.107Z,jenkins,[LF]> This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+2026-09-10T12:03:13.107Z,jenkins,[LF]> 
+2026-09-10T12:03:13.107Z,jenkins,[LF]> *************************************************************
+2026-09-10T12:03:13.107Z,jenkins,[LF]> *************************************************************
+2026-09-10T12:03:13.107Z,jenkins,[LF]> *************************************************************
+2026-09-10T12:03:13.107Z,jenkins,
+2026-09-10T12:03:20.623Z,jenkins,2026-09-10 12:03:20.617+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-09-10T12:03:20.630Z,jenkins,2026-09-10 12:03:20.630+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2026-09-10T12:03:22.841Z,jenkins,2026-09-10 12:03:22.840+0000 [id=75]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+2026-09-10T12:03:22.842Z,jenkins,2026-09-10 12:03:22.841+0000 [id=75]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+2026-09-10T12:05:29.258Z,jenkins,2026-09-10 12:05:29.256+0000 [id=29]	INFO	hudson.PluginManager#install: Starting installation of a batch of 19 plugins plus their dependencies
+2026-09-10T12:05:29.259Z,jenkins,2026-09-10 12:05:29.258+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of ionicons-api for plugin cloudbees-folder
+2026-09-10T12:05:29.259Z,jenkins,2026-09-10 12:05:29.258+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of commons-lang3-api for plugin ionicons-api
+2026-09-10T12:05:29.260Z,jenkins,2026-09-10 12:05:29.259+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of commons-lang3-api on behalf of admin
+2026-09-10T12:05:29.260Z,jenkins,2026-09-10 12:05:29.260+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of json-path-api for plugin build-timeout
+2026-09-10T12:05:29.261Z,jenkins,2026-09-10 12:05:29.260+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of asm-api for plugin json-path-api
+2026-09-10T12:05:29.261Z,jenkins,2026-09-10 12:05:29.261+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of token-macro for plugin build-timeout
+2026-09-10T12:05:29.262Z,jenkins,2026-09-10 12:05:29.262+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-step-api for plugin token-macro
+2026-09-10T12:05:29.263Z,jenkins,2026-09-10 12:05:29.262+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of structs for plugin workflow-step-api
+2026-09-10T12:05:29.263Z,jenkins,2026-09-10 12:05:29.262+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of commons-text-api for plugin token-macro
+2026-09-10T12:05:29.263Z,jenkins,2026-09-10 12:05:29.263+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of plain-credentials for plugin credentials-binding
+2026-09-10T12:05:29.263Z,jenkins,2026-09-10 12:05:29.263+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of credentials for plugin plain-credentials
+2026-09-10T12:05:29.264Z,jenkins,2026-09-10 12:05:29.264+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of bouncycastle-api for plugin credentials
+2026-09-10T12:05:29.265Z,jenkins,2026-09-10 12:05:29.264+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of ssh-credentials for plugin credentials-binding
+2026-09-10T12:05:29.266Z,jenkins,2026-09-10 12:05:29.266+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of variant for plugin ssh-credentials
+2026-09-10T12:05:29.269Z,jenkins,2026-09-10 12:05:29.267+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-api for plugin timestamper
+2026-09-10T12:05:29.271Z,jenkins,2026-09-10 12:05:29.268+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of scm-api for plugin workflow-api
+2026-09-10T12:05:29.271Z,jenkins,2026-09-10 12:05:29.271+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of matrix-project for plugin ws-cleanup
+2026-09-10T12:05:29.272Z,jenkins,2026-09-10 12:05:29.272+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of script-security for plugin matrix-project
+2026-09-10T12:05:29.272Z,jenkins,2026-09-10 12:05:29.272+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of caffeine-api for plugin script-security
+2026-09-10T12:05:29.273Z,jenkins,2026-09-10 12:05:29.272+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of junit for plugin matrix-project
+2026-09-10T12:05:29.274Z,jenkins,2026-09-10 12:05:29.273+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of bootstrap5-api for plugin junit
+2026-09-10T12:05:29.274Z,jenkins,2026-09-10 12:05:29.273+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of font-awesome-api for plugin bootstrap5-api
+2026-09-10T12:05:29.274Z,jenkins,2026-09-10 12:05:29.273+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of plugin-util-api for plugin font-awesome-api
+2026-09-10T12:05:29.274Z,jenkins,2026-09-10 12:05:29.273+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-support for plugin plugin-util-api
+2026-09-10T12:05:29.274Z,jenkins,2026-09-10 12:05:29.274+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of echarts-api for plugin junit
+2026-09-10T12:05:29.274Z,jenkins,2026-09-10 12:05:29.274+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jackson3-api for plugin echarts-api
+2026-09-10T12:05:29.275Z,jenkins,2026-09-10 12:05:29.274+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jackson-annotations2-api for plugin jackson3-api
+2026-09-10T12:05:29.275Z,jenkins,2026-09-10 12:05:29.275+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of snakeyaml-engine-api for plugin jackson3-api
+2026-09-10T12:05:29.275Z,jenkins,2026-09-10 12:05:29.275+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of woodstox-core-api for plugin jackson3-api
+2026-09-10T12:05:29.275Z,jenkins,2026-09-10 12:05:29.275+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jquery3-api for plugin echarts-api
+2026-09-10T12:05:29.276Z,jenkins,2026-09-10 12:05:29.275+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of prism-api for plugin junit
+2026-09-10T12:05:29.276Z,jenkins,2026-09-10 12:05:29.276+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of display-url-api for plugin junit
+2026-09-10T12:05:29.276Z,jenkins,2026-09-10 12:05:29.276+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of checks-api for plugin junit
+2026-09-10T12:05:29.276Z,jenkins,2026-09-10 12:05:29.276+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of resource-disposer for plugin ws-cleanup
+2026-09-10T12:05:29.277Z,jenkins,2026-09-10 12:05:29.277+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of okhttp-api for plugin gradle
+2026-09-10T12:05:29.277Z,jenkins,2026-09-10 12:05:29.277+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jackson2-api for plugin gradle
+2026-09-10T12:05:29.278Z,jenkins,2026-09-10 12:05:29.277+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jaxb for plugin jackson2-api
+2026-09-10T12:05:29.278Z,jenkins,2026-09-10 12:05:29.277+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of javax-activation-api for plugin jaxb
+2026-09-10T12:05:29.278Z,jenkins,2026-09-10 12:05:29.278+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of json-api for plugin jackson2-api
+2026-09-10T12:05:29.278Z,jenkins,2026-09-10 12:05:29.278+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jakarta-activation-api for plugin jackson2-api
+2026-09-10T12:05:29.278Z,jenkins,2026-09-10 12:05:29.278+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of snakeyaml-api for plugin jackson2-api
+2026-09-10T12:05:29.278Z,jenkins,2026-09-10 12:05:29.278+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jakarta-xml-bind-api for plugin jackson2-api
+2026-09-10T12:05:29.278Z,jenkins,2026-09-10 12:05:29.278+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of apache-httpcomponents-client-4-api for plugin gradle
+2026-09-10T12:05:29.279Z,jenkins,2026-09-10 12:05:29.279+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-job for plugin gradle
+2026-09-10T12:05:29.279Z,jenkins,2026-09-10 12:05:29.279+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-milestone-step for plugin workflow-aggregator
+2026-09-10T12:05:29.279Z,jenkins,2026-09-10 12:05:29.279+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-durable-task-step for plugin workflow-aggregator
+2026-09-10T12:05:29.280Z,jenkins,2026-09-10 12:05:29.279+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of durable-task for plugin workflow-durable-task-step
+2026-09-10T12:05:29.280Z,jenkins,2026-09-10 12:05:29.279+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-build-step for plugin workflow-aggregator
+2026-09-10T12:05:29.280Z,jenkins,2026-09-10 12:05:29.280+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-groovy-lib for plugin workflow-aggregator
+2026-09-10T12:05:29.281Z,jenkins,2026-09-10 12:05:29.280+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-scm-step for plugin pipeline-groovy-lib
+2026-09-10T12:05:29.281Z,jenkins,2026-09-10 12:05:29.280+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-cps for plugin pipeline-groovy-lib
+2026-09-10T12:05:29.281Z,jenkins,2026-09-10 12:05:29.280+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-model-definition for plugin workflow-aggregator
+2026-09-10T12:05:29.281Z,jenkins,2026-09-10 12:05:29.281+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-model-extensions for plugin pipeline-model-definition
+2026-09-10T12:05:29.281Z,jenkins,2026-09-10 12:05:29.281+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-model-api for plugin pipeline-model-extensions
+2026-09-10T12:05:29.281Z,jenkins,2026-09-10 12:05:29.281+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of joda-time-api for plugin pipeline-model-api
+2026-09-10T12:05:29.282Z,jenkins,2026-09-10 12:05:29.281+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-stage-step for plugin pipeline-model-extensions
+2026-09-10T12:05:29.283Z,jenkins,2026-09-10 12:05:29.282+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of mailer for plugin pipeline-model-definition
+2026-09-10T12:05:29.283Z,jenkins,2026-09-10 12:05:29.283+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jakarta-mail-api for plugin mailer
+2026-09-10T12:05:29.283Z,jenkins,2026-09-10 12:05:29.283+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of instance-identity for plugin mailer
+2026-09-10T12:05:29.283Z,jenkins,2026-09-10 12:05:29.283+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-multibranch for plugin pipeline-model-definition
+2026-09-10T12:05:29.284Z,jenkins,2026-09-10 12:05:29.283+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of branch-api for plugin workflow-multibranch
+2026-09-10T12:05:29.284Z,jenkins,2026-09-10 12:05:29.284+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-stage-tags-metadata for plugin pipeline-model-definition
+2026-09-10T12:05:29.284Z,jenkins,2026-09-10 12:05:29.284+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-input-step for plugin pipeline-model-definition
+2026-09-10T12:05:29.284Z,jenkins,2026-09-10 12:05:29.284+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-basic-steps for plugin pipeline-model-definition
+2026-09-10T12:05:29.286Z,jenkins,2026-09-10 12:05:29.285+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jjwt-api for plugin github-branch-source
+2026-09-10T12:05:29.287Z,jenkins,2026-09-10 12:05:29.286+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of github-api for plugin github-branch-source
+2026-09-10T12:05:29.289Z,jenkins,2026-09-10 12:05:29.288+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of github for plugin github-branch-source
+2026-09-10T12:05:29.289Z,jenkins,2026-09-10 12:05:29.289+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of git for plugin github
+2026-09-10T12:05:29.289Z,jenkins,2026-09-10 12:05:29.289+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of git-client for plugin git
+2026-09-10T12:05:29.290Z,jenkins,2026-09-10 12:05:29.289+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of mina-sshd-api-core for plugin git-client
+2026-09-10T12:05:29.290Z,jenkins,2026-09-10 12:05:29.289+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of mina-sshd-api-common for plugin mina-sshd-api-core
+2026-09-10T12:05:29.290Z,jenkins,2026-09-10 12:05:29.290+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of gson-api for plugin git-client
+2026-09-10T12:05:29.293Z,jenkins,2026-09-10 12:05:29.291+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of trilead-api for plugin ssh-slaves
+2026-09-10T12:05:29.293Z,jenkins,2026-09-10 12:05:29.291+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of eddsa-api for plugin trilead-api
+2026-09-10T12:05:29.293Z,jenkins,2026-09-10 12:05:29.292+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jsoup for plugin email-ext
+2026-09-10T12:05:29.293Z,jenkins,2026-09-10 12:05:29.292+0000 [id=29]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of theme-manager for plugin dark-theme
+2026-09-10T12:05:29.324Z,jenkins,2026-09-10 12:05:29.324+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: commons-lang3-api
+2026-09-10T12:05:29.324Z,jenkins,2026-09-10 12:05:29.324+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of ionicons-api on behalf of admin
+2026-09-10T12:05:29.338Z,jenkins,2026-09-10 12:05:29.338+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: ionicons-api
+2026-09-10T12:05:29.338Z,jenkins,2026-09-10 12:05:29.338+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of cloudbees-folder on behalf of admin
+2026-09-10T12:05:29.339Z,jenkins,2026-09-10 12:05:29.338+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading cloudbees-folder
+2026-09-10T12:05:35.912Z,jenkins,2026-09-10 12:05:35.911+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: cloudbees-folder
+2026-09-10T12:05:35.912Z,jenkins,2026-09-10 12:05:35.912+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of antisamy-markup-formatter on behalf of admin
+2026-09-10T12:05:35.919Z,jenkins,2026-09-10 12:05:35.919+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: antisamy-markup-formatter
+2026-09-10T12:05:35.919Z,jenkins,2026-09-10 12:05:35.919+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of asm-api on behalf of admin
+2026-09-10T12:05:35.929Z,jenkins,2026-09-10 12:05:35.929+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: asm-api
+2026-09-10T12:05:35.929Z,jenkins,2026-09-10 12:05:35.929+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of json-path-api on behalf of admin
+2026-09-10T12:05:35.929Z,jenkins,2026-09-10 12:05:35.929+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading json-path-api
+2026-09-10T12:05:39.258Z,jenkins,2026-09-10 12:05:39.250+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: json-path-api
+2026-09-10T12:05:39.259Z,jenkins,2026-09-10 12:05:39.251+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of structs on behalf of admin
+2026-09-10T12:05:39.265Z,jenkins,2026-09-10 12:05:39.264+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: structs
+2026-09-10T12:05:39.265Z,jenkins,2026-09-10 12:05:39.265+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-step-api on behalf of admin
+2026-09-10T12:05:39.273Z,jenkins,2026-09-10 12:05:39.273+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-step-api
+2026-09-10T12:05:39.273Z,jenkins,2026-09-10 12:05:39.273+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of commons-text-api on behalf of admin
+2026-09-10T12:05:39.285Z,jenkins,2026-09-10 12:05:39.285+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: commons-text-api
+2026-09-10T12:05:39.285Z,jenkins,2026-09-10 12:05:39.285+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of token-macro on behalf of admin
+2026-09-10T12:05:39.285Z,jenkins,2026-09-10 12:05:39.285+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading token-macro
+2026-09-10T12:05:42.987Z,jenkins,2026-09-10 12:05:42.986+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: token-macro
+2026-09-10T12:05:42.987Z,jenkins,2026-09-10 12:05:42.987+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of build-timeout on behalf of admin
+2026-09-10T12:05:42.988Z,jenkins,2026-09-10 12:05:42.987+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading build-timeout
+2026-09-10T12:05:46.309Z,jenkins,2026-09-10 12:05:46.308+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: build-timeout
+2026-09-10T12:05:46.309Z,jenkins,2026-09-10 12:05:46.309+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of bouncycastle-api on behalf of admin
+2026-09-10T12:05:46.358Z,jenkins,2026-09-10 12:05:46.358+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading bouncycastle-api
+2026-09-10T12:05:58.199Z,jenkins,2026-09-10 12:05:58.198+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: bouncycastle-api
+2026-09-10T12:05:58.199Z,jenkins,2026-09-10 12:05:58.198+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of credentials on behalf of admin
+2026-09-10T12:05:58.199Z,jenkins,2026-09-10 12:05:58.199+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading credentials
+2026-09-10T12:06:02.817Z,jenkins,2026-09-10 12:06:02.817+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: credentials
+2026-09-10T12:06:02.817Z,jenkins,2026-09-10 12:06:02.817+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of plain-credentials on behalf of admin
+2026-09-10T12:06:02.818Z,jenkins,2026-09-10 12:06:02.817+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading plain-credentials
+2026-09-10T12:06:06.569Z,jenkins,2026-09-10 12:06:06.568+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: plain-credentials
+2026-09-10T12:06:06.569Z,jenkins,2026-09-10 12:06:06.569+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of variant on behalf of admin
+2026-09-10T12:06:06.570Z,jenkins,2026-09-10 12:06:06.569+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading variant
+2026-09-10T12:06:08.705Z,jenkins,2026-09-10 12:06:08.703+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: variant
+2026-09-10T12:06:08.705Z,jenkins,2026-09-10 12:06:08.704+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of ssh-credentials on behalf of admin
+2026-09-10T12:06:08.705Z,jenkins,2026-09-10 12:06:08.705+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading ssh-credentials
+2026-09-10T12:06:12.338Z,jenkins,2026-09-10 12:06:12.337+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: ssh-credentials
+2026-09-10T12:06:12.338Z,jenkins,2026-09-10 12:06:12.338+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of credentials-binding on behalf of admin
+2026-09-10T12:06:12.339Z,jenkins,2026-09-10 12:06:12.338+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading credentials-binding
+2026-09-10T12:06:15.175Z,jenkins,2026-09-10 12:06:15.174+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: credentials-binding
+2026-09-10T12:06:15.175Z,jenkins,2026-09-10 12:06:15.175+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of scm-api on behalf of admin
+2026-09-10T12:06:15.191Z,jenkins,2026-09-10 12:06:15.190+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: scm-api
+2026-09-10T12:06:15.191Z,jenkins,2026-09-10 12:06:15.191+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-api on behalf of admin
+2026-09-10T12:06:15.204Z,jenkins,2026-09-10 12:06:15.203+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-api
+2026-09-10T12:06:15.204Z,jenkins,2026-09-10 12:06:15.203+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of timestamper on behalf of admin
+2026-09-10T12:06:15.204Z,jenkins,2026-09-10 12:06:15.204+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading timestamper
+2026-09-10T12:06:19.061Z,jenkins,2026-09-10 12:06:19.061+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: timestamper
+2026-09-10T12:06:19.061Z,jenkins,2026-09-10 12:06:19.061+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of caffeine-api on behalf of admin
+2026-09-10T12:06:19.065Z,jenkins,2026-09-10 12:06:19.064+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading caffeine-api
+2026-09-10T12:06:23.195Z,jenkins,2026-09-10 12:06:23.194+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: caffeine-api
+2026-09-10T12:06:23.195Z,jenkins,2026-09-10 12:06:23.194+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of script-security on behalf of admin
+2026-09-10T12:06:23.196Z,jenkins,2026-09-10 12:06:23.196+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading script-security
+2026-09-10T12:06:26.345Z,jenkins,2026-09-10 12:06:26.344+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: script-security
+2026-09-10T12:06:26.345Z,jenkins,2026-09-10 12:06:26.345+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-support on behalf of admin
+2026-09-10T12:06:26.364Z,jenkins,2026-09-10 12:06:26.364+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-support
+2026-09-10T12:06:26.364Z,jenkins,2026-09-10 12:06:26.364+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of plugin-util-api on behalf of admin
+2026-09-10T12:06:26.382Z,jenkins,2026-09-10 12:06:26.382+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: plugin-util-api
+2026-09-10T12:06:26.382Z,jenkins,2026-09-10 12:06:26.382+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of font-awesome-api on behalf of admin
+2026-09-10T12:06:26.387Z,jenkins,2026-09-10 12:06:26.387+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading font-awesome-api
+2026-09-10T12:06:30.019Z,jenkins,2026-09-10 12:06:30.018+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: font-awesome-api
+2026-09-10T12:06:30.019Z,jenkins,2026-09-10 12:06:30.019+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of bootstrap5-api on behalf of admin
+2026-09-10T12:06:30.021Z,jenkins,2026-09-10 12:06:30.021+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading bootstrap5-api
+2026-09-10T12:06:36.321Z,jenkins,2026-09-10 12:06:36.320+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: bootstrap5-api
+2026-09-10T12:06:36.321Z,jenkins,2026-09-10 12:06:36.320+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of jackson-annotations2-api on behalf of admin
+2026-09-10T12:06:36.322Z,jenkins,2026-09-10 12:06:36.322+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jackson-annotations2-api
+2026-09-10T12:06:38.285Z,jenkins,2026-09-10 12:06:38.284+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: jackson-annotations2-api
+2026-09-10T12:06:38.285Z,jenkins,2026-09-10 12:06:38.285+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of snakeyaml-engine-api on behalf of admin
+2026-09-10T12:06:38.287Z,jenkins,2026-09-10 12:06:38.287+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading snakeyaml-engine-api
+2026-09-10T12:06:43.759Z,jenkins,2026-09-10 12:06:43.758+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: snakeyaml-engine-api
+2026-09-10T12:06:43.759Z,jenkins,2026-09-10 12:06:43.759+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of woodstox-core-api on behalf of admin
+2026-09-10T12:06:43.769Z,jenkins,2026-09-10 12:06:43.768+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading woodstox-core-api
+2026-09-10T12:06:49.247Z,jenkins,2026-09-10 12:06:49.246+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: woodstox-core-api
+2026-09-10T12:06:49.248Z,jenkins,2026-09-10 12:06:49.247+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of jackson3-api on behalf of admin
+2026-09-10T12:06:49.263Z,jenkins,2026-09-10 12:06:49.262+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jackson3-api
+2026-09-10T12:06:56.279Z,jenkins,2026-09-10 12:06:56.276+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: jackson3-api
+2026-09-10T12:06:56.279Z,jenkins,2026-09-10 12:06:56.277+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of jquery3-api on behalf of admin
+2026-09-10T12:06:56.292Z,jenkins,2026-09-10 12:06:56.292+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: jquery3-api
+2026-09-10T12:06:56.292Z,jenkins,2026-09-10 12:06:56.292+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of echarts-api on behalf of admin
+2026-09-10T12:06:56.312Z,jenkins,2026-09-10 12:06:56.311+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading echarts-api
+2026-09-10T12:07:13.114Z,jenkins,2026-09-10 12:07:13.112+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: echarts-api
+2026-09-10T12:07:13.115Z,jenkins,2026-09-10 12:07:13.113+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of prism-api on behalf of admin
+2026-09-10T12:07:13.117Z,jenkins,2026-09-10 12:07:13.117+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading prism-api
+2026-09-10T12:07:20.746Z,jenkins,2026-09-10 12:07:20.745+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: prism-api
+2026-09-10T12:07:20.747Z,jenkins,2026-09-10 12:07:20.745+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of display-url-api on behalf of admin
+2026-09-10T12:07:20.752Z,jenkins,2026-09-10 12:07:20.752+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: display-url-api
+2026-09-10T12:07:20.752Z,jenkins,2026-09-10 12:07:20.752+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of checks-api on behalf of admin
+2026-09-10T12:07:20.753Z,jenkins,2026-09-10 12:07:20.752+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading checks-api
+2026-09-10T12:07:23.986Z,jenkins,2026-09-10 12:07:23.984+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: checks-api
+2026-09-10T12:07:23.986Z,jenkins,2026-09-10 12:07:23.985+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of junit on behalf of admin
+2026-09-10T12:07:23.989Z,jenkins,2026-09-10 12:07:23.989+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading junit
+2026-09-10T12:07:27.565Z,jenkins,2026-09-10 12:07:27.565+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: junit
+2026-09-10T12:07:27.565Z,jenkins,2026-09-10 12:07:27.565+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of matrix-project on behalf of admin
+2026-09-10T12:07:27.567Z,jenkins,2026-09-10 12:07:27.566+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading matrix-project
+2026-09-10T12:07:30.267Z,jenkins,2026-09-10 12:07:30.267+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: matrix-project
+2026-09-10T12:07:30.267Z,jenkins,2026-09-10 12:07:30.267+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of resource-disposer on behalf of admin
+2026-09-10T12:07:30.268Z,jenkins,2026-09-10 12:07:30.268+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading resource-disposer
+2026-09-10T12:07:32.552Z,jenkins,2026-09-10 12:07:32.551+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: resource-disposer
+2026-09-10T12:07:32.552Z,jenkins,2026-09-10 12:07:32.551+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of ws-cleanup on behalf of admin
+2026-09-10T12:07:32.552Z,jenkins,2026-09-10 12:07:32.552+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading ws-cleanup
+2026-09-10T12:07:35.851Z,jenkins,2026-09-10 12:07:35.850+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: ws-cleanup
+2026-09-10T12:07:35.851Z,jenkins,2026-09-10 12:07:35.850+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of ant on behalf of admin
+2026-09-10T12:07:35.851Z,jenkins,2026-09-10 12:07:35.851+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading ant
+2026-09-10T12:07:38.387Z,jenkins,2026-09-10 12:07:38.386+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: ant
+2026-09-10T12:07:38.388Z,jenkins,2026-09-10 12:07:38.387+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of okhttp-api on behalf of admin
+2026-09-10T12:07:38.388Z,jenkins,2026-09-10 12:07:38.388+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading okhttp-api
+2026-09-10T12:07:45.034Z,jenkins,2026-09-10 12:07:45.033+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: okhttp-api
+2026-09-10T12:07:45.034Z,jenkins,2026-09-10 12:07:45.034+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of javax-activation-api on behalf of admin
+2026-09-10T12:07:45.041Z,jenkins,2026-09-10 12:07:45.041+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: javax-activation-api
+2026-09-10T12:07:45.041Z,jenkins,2026-09-10 12:07:45.041+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of jaxb on behalf of admin
+2026-09-10T12:07:45.060Z,jenkins,2026-09-10 12:07:45.060+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: jaxb
+2026-09-10T12:07:45.060Z,jenkins,2026-09-10 12:07:45.060+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of json-api on behalf of admin
+2026-09-10T12:07:45.061Z,jenkins,2026-09-10 12:07:45.061+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading json-api
+2026-09-10T12:07:47.096Z,jenkins,2026-09-10 12:07:47.096+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: json-api
+2026-09-10T12:07:47.096Z,jenkins,2026-09-10 12:07:47.096+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of jakarta-activation-api on behalf of admin
+2026-09-10T12:07:47.101Z,jenkins,2026-09-10 12:07:47.101+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: jakarta-activation-api
+2026-09-10T12:07:47.101Z,jenkins,2026-09-10 12:07:47.101+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of snakeyaml-api on behalf of admin
+2026-09-10T12:07:47.108Z,jenkins,2026-09-10 12:07:47.108+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: snakeyaml-api
+2026-09-10T12:07:47.108Z,jenkins,2026-09-10 12:07:47.108+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of jakarta-xml-bind-api on behalf of admin
+2026-09-10T12:07:47.111Z,jenkins,2026-09-10 12:07:47.111+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jakarta-xml-bind-api
+2026-09-10T12:07:51.842Z,jenkins,2026-09-10 12:07:51.840+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: jakarta-xml-bind-api
+2026-09-10T12:07:51.842Z,jenkins,2026-09-10 12:07:51.841+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of jackson2-api on behalf of admin
+2026-09-10T12:07:51.853Z,jenkins,2026-09-10 12:07:51.852+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jackson2-api
+2026-09-10T12:08:02.060Z,jenkins,2026-09-10 12:08:02.058+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: jackson2-api
+2026-09-10T12:08:02.060Z,jenkins,2026-09-10 12:08:02.059+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of apache-httpcomponents-client-4-api on behalf of admin
+2026-09-10T12:08:02.095Z,jenkins,2026-09-10 12:08:02.095+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: apache-httpcomponents-client-4-api
+2026-09-10T12:08:02.095Z,jenkins,2026-09-10 12:08:02.095+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-job on behalf of admin
+2026-09-10T12:08:02.096Z,jenkins,2026-09-10 12:08:02.095+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-job
+2026-09-10T12:08:05.162Z,jenkins,2026-09-10 12:08:05.162+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-job
+2026-09-10T12:08:05.163Z,jenkins,2026-09-10 12:08:05.162+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of gradle on behalf of admin
+2026-09-10T12:08:05.163Z,jenkins,2026-09-10 12:08:05.163+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading gradle
+2026-09-10T12:08:11.622Z,jenkins,2026-09-10 12:08:11.620+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: gradle
+2026-09-10T12:08:11.622Z,jenkins,2026-09-10 12:08:11.621+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-milestone-step on behalf of admin
+2026-09-10T12:08:11.622Z,jenkins,2026-09-10 12:08:11.622+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-milestone-step
+2026-09-10T12:08:15.586Z,jenkins,2026-09-10 12:08:15.585+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-milestone-step
+2026-09-10T12:08:15.586Z,jenkins,2026-09-10 12:08:15.585+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of durable-task on behalf of admin
+2026-09-10T12:08:15.586Z,jenkins,2026-09-10 12:08:15.586+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading durable-task
+2026-09-10T12:08:33.989Z,jenkins,2026-09-10 12:08:33.987+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: durable-task
+2026-09-10T12:08:33.990Z,jenkins,2026-09-10 12:08:33.988+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-durable-task-step on behalf of admin
+2026-09-10T12:08:33.990Z,jenkins,2026-09-10 12:08:33.989+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-durable-task-step
+2026-09-10T12:08:37.105Z,jenkins,2026-09-10 12:08:37.104+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-durable-task-step
+2026-09-10T12:08:37.106Z,jenkins,2026-09-10 12:08:37.105+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-build-step on behalf of admin
+2026-09-10T12:08:37.106Z,jenkins,2026-09-10 12:08:37.106+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-build-step
+2026-09-10T12:08:41.500Z,jenkins,2026-09-10 12:08:41.499+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-build-step
+2026-09-10T12:08:41.500Z,jenkins,2026-09-10 12:08:41.499+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-scm-step on behalf of admin
+2026-09-10T12:08:41.500Z,jenkins,2026-09-10 12:08:41.500+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-scm-step
+2026-09-10T12:08:44.018Z,jenkins,2026-09-10 12:08:44.017+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-scm-step
+2026-09-10T12:08:44.018Z,jenkins,2026-09-10 12:08:44.018+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-cps on behalf of admin
+2026-09-10T12:08:44.019Z,jenkins,2026-09-10 12:08:44.018+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-cps
+2026-09-10T12:08:49.013Z,jenkins,2026-09-10 12:08:49.011+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-cps
+2026-09-10T12:08:49.013Z,jenkins,2026-09-10 12:08:49.012+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-groovy-lib on behalf of admin
+2026-09-10T12:08:49.013Z,jenkins,2026-09-10 12:08:49.013+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-groovy-lib
+2026-09-10T12:08:52.998Z,jenkins,2026-09-10 12:08:52.997+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-groovy-lib
+2026-09-10T12:08:52.998Z,jenkins,2026-09-10 12:08:52.997+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of joda-time-api on behalf of admin
+2026-09-10T12:08:52.998Z,jenkins,2026-09-10 12:08:52.998+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading joda-time-api
+2026-09-10T12:08:58.403Z,jenkins,2026-09-10 12:08:58.403+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: joda-time-api
+2026-09-10T12:08:58.403Z,jenkins,2026-09-10 12:08:58.403+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-model-api on behalf of admin
+2026-09-10T12:08:58.404Z,jenkins,2026-09-10 12:08:58.403+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-model-api
+2026-09-10T12:09:07.664Z,jenkins,2026-09-10 12:09:07.661+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-model-api
+2026-09-10T12:09:07.664Z,jenkins,2026-09-10 12:09:07.662+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-stage-step on behalf of admin
+2026-09-10T12:09:07.664Z,jenkins,2026-09-10 12:09:07.663+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-stage-step
+2026-09-10T12:09:09.825Z,jenkins,2026-09-10 12:09:09.825+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-stage-step
+2026-09-10T12:09:09.825Z,jenkins,2026-09-10 12:09:09.825+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-model-extensions on behalf of admin
+2026-09-10T12:09:09.826Z,jenkins,2026-09-10 12:09:09.825+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-model-extensions
+2026-09-10T12:09:12.735Z,jenkins,2026-09-10 12:09:12.734+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-model-extensions
+2026-09-10T12:09:12.735Z,jenkins,2026-09-10 12:09:12.735+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of jakarta-mail-api on behalf of admin
+2026-09-10T12:09:12.760Z,jenkins,2026-09-10 12:09:12.760+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: jakarta-mail-api
+2026-09-10T12:09:12.760Z,jenkins,2026-09-10 12:09:12.760+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of instance-identity on behalf of admin
+2026-09-10T12:09:12.768Z,jenkins,2026-09-10 12:09:12.768+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: instance-identity
+2026-09-10T12:09:12.769Z,jenkins,2026-09-10 12:09:12.768+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of mailer on behalf of admin
+2026-09-10T12:09:12.783Z,jenkins,2026-09-10 12:09:12.782+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: mailer
+2026-09-10T12:09:12.783Z,jenkins,2026-09-10 12:09:12.783+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of branch-api on behalf of admin
+2026-09-10T12:09:12.783Z,jenkins,2026-09-10 12:09:12.783+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading branch-api
+2026-09-10T12:09:16.351Z,jenkins,2026-09-10 12:09:16.350+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: branch-api
+2026-09-10T12:09:16.351Z,jenkins,2026-09-10 12:09:16.351+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-multibranch on behalf of admin
+2026-09-10T12:09:16.352Z,jenkins,2026-09-10 12:09:16.351+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-multibranch
+2026-09-10T12:09:19.395Z,jenkins,2026-09-10 12:09:19.394+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-multibranch
+2026-09-10T12:09:19.395Z,jenkins,2026-09-10 12:09:19.395+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-stage-tags-metadata on behalf of admin
+2026-09-10T12:09:19.396Z,jenkins,2026-09-10 12:09:19.395+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-stage-tags-metadata
+2026-09-10T12:09:22.318Z,jenkins,2026-09-10 12:09:22.317+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-stage-tags-metadata
+2026-09-10T12:09:22.318Z,jenkins,2026-09-10 12:09:22.317+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-input-step on behalf of admin
+2026-09-10T12:09:22.319Z,jenkins,2026-09-10 12:09:22.318+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-input-step
+2026-09-10T12:09:25.658Z,jenkins,2026-09-10 12:09:25.657+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-input-step
+2026-09-10T12:09:25.658Z,jenkins,2026-09-10 12:09:25.657+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-basic-steps on behalf of admin
+2026-09-10T12:09:25.658Z,jenkins,2026-09-10 12:09:25.658+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-basic-steps
+2026-09-10T12:09:34.004Z,jenkins,2026-09-10 12:09:34.003+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-basic-steps
+2026-09-10T12:09:34.004Z,jenkins,2026-09-10 12:09:34.004+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-model-definition on behalf of admin
+2026-09-10T12:09:34.004Z,jenkins,2026-09-10 12:09:34.004+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-model-definition
+2026-09-10T12:09:38.397Z,jenkins,2026-09-10 12:09:38.397+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-model-definition
+2026-09-10T12:09:38.397Z,jenkins,2026-09-10 12:09:38.397+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-aggregator on behalf of admin
+2026-09-10T12:09:38.398Z,jenkins,2026-09-10 12:09:38.397+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-aggregator
+2026-09-10T12:09:40.402Z,jenkins,2026-09-10 12:09:40.402+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-aggregator
+2026-09-10T12:09:40.402Z,jenkins,2026-09-10 12:09:40.402+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of jjwt-api on behalf of admin
+2026-09-10T12:09:40.403Z,jenkins,2026-09-10 12:09:40.402+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jjwt-api
+2026-09-10T12:09:44.898Z,jenkins,2026-09-10 12:09:44.898+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: jjwt-api
+2026-09-10T12:09:44.898Z,jenkins,2026-09-10 12:09:44.898+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of github-api on behalf of admin
+2026-09-10T12:09:44.899Z,jenkins,2026-09-10 12:09:44.898+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading github-api
+2026-09-10T12:09:48.517Z,jenkins,2026-09-10 12:09:48.516+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: github-api
+2026-09-10T12:09:48.517Z,jenkins,2026-09-10 12:09:48.516+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of mina-sshd-api-common on behalf of admin
+2026-09-10T12:09:48.521Z,jenkins,2026-09-10 12:09:48.521+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading mina-sshd-api-common
+2026-09-10T12:09:53.607Z,jenkins,2026-09-10 12:09:53.607+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: mina-sshd-api-common
+2026-09-10T12:09:53.608Z,jenkins,2026-09-10 12:09:53.607+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of mina-sshd-api-core on behalf of admin
+2026-09-10T12:09:53.615Z,jenkins,2026-09-10 12:09:53.614+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading mina-sshd-api-core
+2026-09-10T12:09:58.739Z,jenkins,2026-09-10 12:09:58.739+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: mina-sshd-api-core
+2026-09-10T12:09:58.739Z,jenkins,2026-09-10 12:09:58.739+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of gson-api on behalf of admin
+2026-09-10T12:09:58.750Z,jenkins,2026-09-10 12:09:58.750+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: gson-api
+2026-09-10T12:09:58.750Z,jenkins,2026-09-10 12:09:58.750+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of git-client on behalf of admin
+2026-09-10T12:09:58.751Z,jenkins,2026-09-10 12:09:58.750+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading git-client
+2026-09-10T12:10:08.417Z,jenkins,2026-09-10 12:10:08.415+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: git-client
+2026-09-10T12:10:08.417Z,jenkins,2026-09-10 12:10:08.416+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of git on behalf of admin
+2026-09-10T12:10:08.417Z,jenkins,2026-09-10 12:10:08.417+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading git
+2026-09-10T12:10:12.652Z,jenkins,2026-09-10 12:10:12.651+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: git
+2026-09-10T12:10:12.652Z,jenkins,2026-09-10 12:10:12.651+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of github on behalf of admin
+2026-09-10T12:10:12.652Z,jenkins,2026-09-10 12:10:12.652+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading github
+2026-09-10T12:10:16.701Z,jenkins,2026-09-10 12:10:16.700+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: github
+2026-09-10T12:10:16.701Z,jenkins,2026-09-10 12:10:16.701+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of github-branch-source on behalf of admin
+2026-09-10T12:10:16.702Z,jenkins,2026-09-10 12:10:16.701+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading github-branch-source
+2026-09-10T12:10:21.102Z,jenkins,2026-09-10 12:10:21.101+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: github-branch-source
+2026-09-10T12:10:21.102Z,jenkins,2026-09-10 12:10:21.101+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-github-lib on behalf of admin
+2026-09-10T12:10:21.102Z,jenkins,2026-09-10 12:10:21.102+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-github-lib
+2026-09-10T12:10:23.097Z,jenkins,2026-09-10 12:10:23.096+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-github-lib
+2026-09-10T12:10:23.097Z,jenkins,2026-09-10 12:10:23.096+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-graph-view on behalf of admin
+2026-09-10T12:10:23.098Z,jenkins,2026-09-10 12:10:23.097+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-graph-view
+2026-09-10T12:10:28.873Z,jenkins,2026-09-10 12:10:28.869+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-graph-view
+2026-09-10T12:10:28.874Z,jenkins,2026-09-10 12:10:28.871+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of git on behalf of admin
+2026-09-10T12:10:28.874Z,jenkins,2026-09-10 12:10:28.872+0000 [id=122]	INFO	h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Git@5.10.1
+2026-09-10T12:10:28.874Z,jenkins,2026-09-10 12:10:28.873+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: git
+2026-09-10T12:10:28.874Z,jenkins,2026-09-10 12:10:28.873+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of eddsa-api on behalf of admin
+2026-09-10T12:10:28.879Z,jenkins,2026-09-10 12:10:28.879+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: eddsa-api
+2026-09-10T12:10:28.879Z,jenkins,2026-09-10 12:10:28.879+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of trilead-api on behalf of admin
+2026-09-10T12:10:28.920Z,jenkins,2026-09-10 12:10:28.920+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: trilead-api
+2026-09-10T12:10:28.920Z,jenkins,2026-09-10 12:10:28.920+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of ssh-slaves on behalf of admin
+2026-09-10T12:10:28.921Z,jenkins,2026-09-10 12:10:28.920+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading ssh-slaves
+2026-09-10T12:10:31.795Z,jenkins,2026-09-10 12:10:31.793+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: ssh-slaves
+2026-09-10T12:10:31.795Z,jenkins,2026-09-10 12:10:31.794+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of matrix-auth on behalf of admin
+2026-09-10T12:10:31.799Z,jenkins,2026-09-10 12:10:31.798+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading matrix-auth
+2026-09-10T12:10:36.612Z,jenkins,2026-09-10 12:10:36.611+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: matrix-auth
+2026-09-10T12:10:36.612Z,jenkins,2026-09-10 12:10:36.612+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of ldap on behalf of admin
+2026-09-10T12:10:36.613Z,jenkins,2026-09-10 12:10:36.613+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading ldap
+2026-09-10T12:10:49.244Z,jenkins,2026-09-10 12:10:49.242+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: ldap
+2026-09-10T12:10:49.244Z,jenkins,2026-09-10 12:10:49.243+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of jsoup on behalf of admin
+2026-09-10T12:10:49.244Z,jenkins,2026-09-10 12:10:49.244+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jsoup
+2026-09-10T12:10:54.331Z,jenkins,2026-09-10 12:10:54.330+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: jsoup
+2026-09-10T12:10:54.331Z,jenkins,2026-09-10 12:10:54.330+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of email-ext on behalf of admin
+2026-09-10T12:10:54.331Z,jenkins,2026-09-10 12:10:54.331+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading email-ext
+2026-09-10T12:10:58.219Z,jenkins,2026-09-10 12:10:58.218+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: email-ext
+2026-09-10T12:10:58.219Z,jenkins,2026-09-10 12:10:58.218+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of mailer on behalf of admin
+2026-09-10T12:10:58.219Z,jenkins,2026-09-10 12:10:58.218+0000 [id=122]	INFO	h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Mailer@534.v1b_36f5864073
+2026-09-10T12:10:58.219Z,jenkins,2026-09-10 12:10:58.218+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: mailer
+2026-09-10T12:10:58.219Z,jenkins,2026-09-10 12:10:58.218+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of theme-manager on behalf of admin
+2026-09-10T12:10:58.219Z,jenkins,2026-09-10 12:10:58.219+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading theme-manager
+2026-09-10T12:11:00.743Z,jenkins,2026-09-10 12:11:00.742+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: theme-manager
+2026-09-10T12:11:00.744Z,jenkins,2026-09-10 12:11:00.743+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of dark-theme on behalf of admin
+2026-09-10T12:11:00.744Z,jenkins,2026-09-10 12:11:00.743+0000 [id=122]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading dark-theme
+2026-09-10T12:11:02.973Z,jenkins,2026-09-10 12:11:02.973+0000 [id=122]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: dark-theme
+2026-09-10T12:11:02.974Z,jenkins,2026-09-10 12:11:02.973+0000 [id=122]	INFO	h.m.UpdateCenter$CompleteBatchJob#run: Completing installing of plugin batch…
+2026-09-10T12:11:04.032Z,jenkins,2026-09-10 12:11:04.028+0000 [id=122]	INFO	h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+2026-09-10T12:11:06.325Z,jenkins,2026-09-10 12:11:06.324+0000 [id=122]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Ant.AntInstaller
+2026-09-10T12:11:08.703Z,jenkins,2026-09-10 12:11:08.703+0000 [id=122]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.plugins.gradle.GradleInstaller
+2026-09-10T12:11:09.149Z,jenkins,2026-09-10 12:11:09.149+0000 [id=274]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-09-10T12:11:09.155Z,jenkins,2026-09-10 12:11:09.154+0000 [id=287]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-09-10T12:11:09.160Z,jenkins,2026-09-10 12:11:09.160+0000 [id=287]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-09-10T12:11:09.176Z,jenkins,2026-09-10 12:11:09.176+0000 [id=274]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-09-10T12:11:09.178Z,jenkins,2026-09-10 12:11:09.178+0000 [id=274]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-09-10T12:11:09.186Z,jenkins,2026-09-10 12:11:09.184+0000 [id=280]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-09-10T12:11:09.186Z,jenkins,2026-09-10 12:11:09.184+0000 [id=280]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-09-10T12:11:09.192Z,jenkins,2026-09-10 12:11:09.192+0000 [id=288]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-09-10T12:11:09.192Z,jenkins,2026-09-10 12:11:09.192+0000 [id=289]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-09-10T12:11:09.351Z,jenkins,2026-09-10 12:11:09.350+0000 [id=287]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-09-10T12:11:09.351Z,jenkins,2026-09-10 12:11:09.351+0000 [id=122]	INFO	h.m.UpdateCenter$CompleteBatchJob#run: Completed installation of 92 plugins in 5 min 40 sec
+2026-09-10T13:16:57.157Z,jenkins,2026-09-10 13:16:57.145+0000 [id=41]	INFO	winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
+2026-09-10T13:16:57.159Z,jenkins,"2026-09-10 13:16:57.158+0000 [id=41]	INFO	org.eclipse.jetty.server.Server#doStop: Stopped oejs.Server@31ceba99{STOPPING}[12.1.12,sto=0]"
+2026-09-10T13:16:57.174Z,jenkins,"2026-09-10 13:16:57.173+0000 [id=41]	INFO	o.e.j.server.AbstractConnector#doStop: Stopped oejs.ServerConnector@2af46afd{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}"
+2026-09-10T13:16:57.195Z,jenkins,2026-09-10 13:16:57.193+0000 [id=41]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Stopping Jenkins
+2026-09-10T13:16:57.231Z,jenkins,2026-09-10 13:16:57.231+0000 [id=41]	INFO	jenkins.model.Jenkins$13#onAttained: Started termination
+2026-09-10T13:16:57.247Z,jenkins,2026-09-10 13:16:57.246+0000 [id=41]	INFO	h.p.b.global.Lifecycle#shutdown: Shutdown complete - Global TimeOut ScheduledExecutorService had 0 tasks pending
+2026-09-10T13:16:57.266Z,jenkins,2026-09-10 13:16:57.266+0000 [id=41]	INFO	jenkins.model.Jenkins$13#onAttained: Completed termination
+2026-09-10T13:16:57.266Z,jenkins,2026-09-10 13:16:57.266+0000 [id=41]	INFO	jenkins.model.Jenkins#_cleanUpDisconnectComputers: Starting node disconnection
+2026-09-10T13:16:57.299Z,jenkins,2026-09-10 13:16:57.299+0000 [id=41]	INFO	jenkins.model.Jenkins#_cleanUpShutdownPluginManager: Stopping plugin manager
+2026-09-10T13:16:57.328Z,jenkins,2026-09-10 13:16:57.327+0000 [id=41]	INFO	jenkins.model.Jenkins#_cleanUpPersistQueue: Persisting build queue
+2026-09-10T13:16:57.331Z,jenkins,2026-09-10 13:16:57.330+0000 [id=41]	INFO	jenkins.model.Jenkins#_cleanUpAwaitDisconnects: Waiting for node disconnection completion
+2026-09-10T13:16:57.331Z,jenkins,2026-09-10 13:16:57.331+0000 [id=41]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped
+2026-09-10T13:31:28.317Z,jenkins,Running from: /usr/share/jenkins/jenkins.war
+2026-09-10T13:31:28.318Z,jenkins,webroot: /var/jenkins_home/war
+2026-09-10T13:31:28.591Z,jenkins,2026-09-10 13:31:28.574+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-09-10T13:31:28.627Z,jenkins,2026-09-10 13:31:28.627+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-09-10T13:31:28.663Z,jenkins,2026-09-10 13:31:28.662+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.12; built: 2026-08-03T22:37:55.389Z; git: 10dd3948f37767b84cc2c62358364f042e51dbbe; jvm 21.0.12.1+1-LTS
+2026-09-10T13:31:28.939Z,jenkins,"2026-09-10 13:31:28.938+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet"
+2026-09-10T13:31:28.969Z,jenkins,2026-09-10 13:31:28.968+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-09-10T13:31:29.203Z,jenkins,"2026-09-10 13:31:29.202+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get(""JENKINS_HOME"")"
+2026-09-10T13:31:29.267Z,jenkins,"2026-09-10 13:31:29.267+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@319854f0{Jenkins v2.568.3,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@748fe51d{STARTED}}"
+2026-09-10T13:31:29.272Z,jenkins,"2026-09-10 13:31:29.272+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1a5152{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}"
+2026-09-10T13:31:29.273Z,jenkins,"2026-09-10 13:31:29.272+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@43effd89{STARTING}[12.1.12,sto=0] @611ms"
+2026-09-10T13:31:29.274Z,jenkins,2026-09-10 13:31:29.274+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-09-10T13:31:29.370Z,jenkins,2026-09-10 13:31:29.370+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.568.3
+2026-09-10T13:31:29.439Z,jenkins,2026-09-10 13:31:29.438+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-09-10T13:31:29.579Z,jenkins,2026-09-10 13:31:29.578+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-09-10T13:31:31.374Z,jenkins,2026-09-10 13:31:31.372+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-09-10T13:31:31.393Z,jenkins,2026-09-10 13:31:31.392+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-09-10T13:31:31.396Z,jenkins,2026-09-10 13:31:31.394+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-09-10T13:31:31.687Z,jenkins,2026-09-10 13:31:31.685+0000 [id=56]	INFO	h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+2026-09-10T13:31:32.124Z,jenkins,2026-09-10 13:31:32.124+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-09-10T13:31:32.124Z,jenkins,2026-09-10 13:31:32.124+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-09-10T13:31:32.141Z,jenkins,2026-09-10 13:31:32.141+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-09-10T13:31:32.146Z,jenkins,2026-09-10 13:31:32.146+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-09-10T13:31:32.168Z,jenkins,2026-09-10 13:31:32.168+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-09-10T13:31:32.215Z,jenkins,2026-09-10 13:31:32.215+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2026-09-10T13:55:48.213Z,jenkins,2026-09-10 13:55:48.211+0000 [id=126]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#unregister: credit task 1#1 was not in the list to begin with: []
+2026-09-10T14:06:38.961Z,jenkins,2026-09-10 14:06:38.956+0000 [id=109]	WARNING	o.e.j.e.n.ContextHandler$APIContext#log: Error while serving http://localhost:8089/job/credit%20task%201/configSubmit
+2026-09-10T14:06:38.961Z,jenkins,org.antlr.v4.runtime.InputMismatchException
+2026-09-10T14:06:38.961Z,jenkins,	at org.antlr.v4.runtime.DefaultErrorStrategy.recoverInline(DefaultErrorStrategy.java:485)
+2026-09-10T14:06:38.961Z,jenkins,	at org.antlr.v4.runtime.Parser.match(Parser.java:208)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.scheduler.CrontabParser.startRule(CrontabParser.java:173)
+2026-09-10T14:06:38.961Z,jenkins,"Caused: antlr.ANTLRException: line 1:11: mismatched input ' ' expecting {<EOF>, '/', ','}"
+2026-09-10T14:06:38.961Z,jenkins,	at jenkins.util.antlr.JenkinsANTLRErrorListener.syntaxError(JenkinsANTLRErrorListener.java:36)
+2026-09-10T14:06:38.961Z,jenkins,	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41)
+2026-09-10T14:06:38.961Z,jenkins,	at org.antlr.v4.runtime.Parser.notifyErrorListeners(Parser.java:544)
+2026-09-10T14:06:38.961Z,jenkins,	at org.antlr.v4.runtime.DefaultErrorStrategy.reportInputMismatch(DefaultErrorStrategy.java:327)
+2026-09-10T14:06:38.961Z,jenkins,	at org.antlr.v4.runtime.DefaultErrorStrategy.reportError(DefaultErrorStrategy.java:139)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.scheduler.CrontabParser.startRule(CrontabParser.java:260)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.scheduler.CronTab.set(CronTab.java:139)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.scheduler.CronTab.<init>(CronTab.java:117)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.scheduler.CronTabList.create(CronTabList.java:129)
+2026-09-10T14:06:38.961Z,jenkins,"Caused: antlr.ANTLRException: Invalid input: ""H/5 * * * * *"": line 1:11: mismatched input ' ' expecting {<EOF>, '/', ','}"
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.scheduler.CronTabList.create(CronTabList.java:131)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.scheduler.CronTabList.create(CronTabList.java:99)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.triggers.Trigger.<init>(Trigger.java:180)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.triggers.SCMTrigger.<init>(SCMTrigger.java:113)
+2026-09-10T14:06:38.961Z,jenkins,	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source)
+2026-09-10T14:06:38.961Z,jenkins,	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+2026-09-10T14:06:38.961Z,jenkins,	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.RequestImpl.invokeConstructor(RequestImpl.java:689)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.RequestImpl.instantiate(RequestImpl.java:1018)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.RequestImpl$TypePair.convertJSON(RequestImpl.java:869)
+2026-09-10T14:06:38.961Z,jenkins,"Caused: java.lang.IllegalArgumentException: Failed to instantiate class hudson.triggers.SCMTrigger from {""scmpoll_spec"":"" H/5 * * * * *"",""ignorePostCommitHooks"":false}"
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.RequestImpl$TypePair.convertJSON(RequestImpl.java:873)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.RequestImpl.bindJSON(RequestImpl.java:636)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.RequestImpl.bindJSON(RequestImpl.java:631)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.model.Descriptor.bindJSON(Descriptor.java:662)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.model.Descriptor.newInstanceImpl(Descriptor.java:620)
+2026-09-10T14:06:38.961Z,jenkins,"Caused: java.lang.LinkageError: Failed to instantiate class hudson.triggers.SCMTrigger from {""scmpoll_spec"":"" H/5 * * * * *"",""ignorePostCommitHooks"":false}"
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.model.Descriptor.newInstanceImpl(Descriptor.java:626)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.model.Descriptor.newInstance(Descriptor.java:594)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.util.DescribableList.rebuild(DescribableList.java:184)
+2026-09-10T14:06:38.961Z,jenkins,	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty.reconfigure(PipelineTriggersJobProperty.java:159)
+2026-09-10T14:06:38.961Z,jenkins,	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty.reconfigure(PipelineTriggersJobProperty.java:54)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.util.DescribableList.rebuild(DescribableList.java:182)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.model.Job.doConfigSubmit(Job.java:1420)
+2026-09-10T14:06:38.961Z,jenkins,	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(Unknown Source)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Function$MethodFunction.invoke(Function.java:484)
+2026-09-10T14:06:38.961Z,jenkins,Caused: java.lang.reflect.InvocationTargetException
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Function$MethodFunction.invoke(Function.java:488)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Function$InstanceFunction.invoke(Function.java:497)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Function.bindAndInvoke(Function.java:218)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.SelectionInterceptedFunction$Adapter.invoke(SelectionInterceptedFunction.java:37)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.verb.HttpVerbInterceptor.invoke(HttpVerbInterceptor.java:48)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.SelectionInterceptedFunction.bindAndInvoke(SelectionInterceptedFunction.java:26)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Function.bindAndInvokeAndServeResponse(Function.java:140)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.MetaClass$12.doDispatch(MetaClass.java:686)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:61)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.MetaClass$5.doDispatch(MetaClass.java:369)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:61)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:721)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.Stapler.service(Stapler.java:253)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHolder.handle(ServletHolder.java:783)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1670)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:200)
+2026-09-10T14:06:38.961Z,jenkins,	at jenkins.util.HttpServletFilter$1.doFilter(HttpServletFilter.java:77)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:197)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.util.PluginServletFilter.doFilter(PluginServletFilter.java:203)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.961Z,jenkins,	at jenkins.ErrorAttributeFilter.doFilter(ErrorAttributeFilter.java:29)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.csrf.CrumbFilter.doFilter(CrumbFilter.java:153)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.961Z,jenkins,	at jenkins.security.csp.impl.CspFilter.doFilter(CspFilter.java:83)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:94)
+2026-09-10T14:06:38.961Z,jenkins,	at jenkins.security.AcegiSecurityExceptionFilter.doFilter(AcegiSecurityExceptionFilter.java:52)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.UnwrapSecurityExceptionFilter.doFilter(UnwrapSecurityExceptionFilter.java:54)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.961Z,jenkins,	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+2026-09-10T14:06:38.961Z,jenkins,	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.961Z,jenkins,	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.961Z,jenkins,	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:115)
+2026-09-10T14:06:38.961Z,jenkins,	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:106)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.961Z,jenkins,	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:245)
+2026-09-10T14:06:38.961Z,jenkins,	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.961Z,jenkins,	at jenkins.security.BasicHeaderProcessor.doFilter(BasicHeaderProcessor.java:106)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.961Z,jenkins,	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:117)
+2026-09-10T14:06:38.961Z,jenkins,	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.HttpSessionContextIntegrationFilter2.doFilter(HttpSessionContextIntegrationFilter2.java:63)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.ChainedServletFilter2.doFilter(ChainedServletFilter2.java:111)
+2026-09-10T14:06:38.961Z,jenkins,	at hudson.security.HudsonFilter.doFilter(HudsonFilter.java:173)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.961Z,jenkins,	at org.kohsuke.stapler.UncaughtExceptionFilter.doFilter(UncaughtExceptionFilter.java:26)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.961Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:85)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.DiagnosticThreadNameFilter.doFilter(DiagnosticThreadNameFilter.java:31)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at jenkins.security.SuspiciousRequestFilter.doFilter(SuspiciousRequestFilter.java:38)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler.doHandle(ServletHandler.java:526)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.handle(ScopedHandler.java:125)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.security.SecurityHandler.handle(SecurityHandler.java:574)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HandlerWrapper.handle(HandlerWrapper.java:124)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextHandle(ScopedHandler.java:195)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.SessionHandler.doHandle(SessionHandler.java:612)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextHandle(ScopedHandler.java:193)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.doHandle(ContextHandler.java:1047)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:162)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler.doScope(ServletHandler.java:483)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:160)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.SessionHandler.doScope(SessionHandler.java:589)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:160)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.doScope(ContextHandler.java:962)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.handle(ScopedHandler.java:123)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.handle(ContextHandler.java:1738)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1586)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel.dispatch(HttpChannel.java:737)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel.handle(HttpChannel.java:520)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextHandler$CoreToNestedHandler.handle(ContextHandler.java:3098)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1253)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:621)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.Server.handle(Server.java:197)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:804)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1790)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+2026-09-10T14:06:38.962Z,jenkins,	at java.base/java.lang.Thread.run(Unknown Source)
+2026-09-10T14:06:38.962Z,jenkins,2026-09-10 14:06:38.960+0000 [id=109]	WARNING	h.i.i.InstallUncaughtExceptionHandler#handleException: Caught unhandled exception with ID a0ee5c16-acac-43be-8962-8362f18237c6
+2026-09-10T14:06:38.962Z,jenkins,org.antlr.v4.runtime.InputMismatchException
+2026-09-10T14:06:38.962Z,jenkins,	at org.antlr.v4.runtime.DefaultErrorStrategy.recoverInline(DefaultErrorStrategy.java:485)
+2026-09-10T14:06:38.962Z,jenkins,	at org.antlr.v4.runtime.Parser.match(Parser.java:208)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.scheduler.CrontabParser.startRule(CrontabParser.java:173)
+2026-09-10T14:06:38.962Z,jenkins,"Caused: antlr.ANTLRException: line 1:11: mismatched input ' ' expecting {<EOF>, '/', ','}"
+2026-09-10T14:06:38.962Z,jenkins,	at jenkins.util.antlr.JenkinsANTLRErrorListener.syntaxError(JenkinsANTLRErrorListener.java:36)
+2026-09-10T14:06:38.962Z,jenkins,	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41)
+2026-09-10T14:06:38.962Z,jenkins,	at org.antlr.v4.runtime.Parser.notifyErrorListeners(Parser.java:544)
+2026-09-10T14:06:38.962Z,jenkins,	at org.antlr.v4.runtime.DefaultErrorStrategy.reportInputMismatch(DefaultErrorStrategy.java:327)
+2026-09-10T14:06:38.962Z,jenkins,	at org.antlr.v4.runtime.DefaultErrorStrategy.reportError(DefaultErrorStrategy.java:139)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.scheduler.CrontabParser.startRule(CrontabParser.java:260)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.scheduler.CronTab.set(CronTab.java:139)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.scheduler.CronTab.<init>(CronTab.java:117)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.scheduler.CronTabList.create(CronTabList.java:129)
+2026-09-10T14:06:38.962Z,jenkins,"Caused: antlr.ANTLRException: Invalid input: ""H/5 * * * * *"": line 1:11: mismatched input ' ' expecting {<EOF>, '/', ','}"
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.scheduler.CronTabList.create(CronTabList.java:131)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.scheduler.CronTabList.create(CronTabList.java:99)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.triggers.Trigger.<init>(Trigger.java:180)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.triggers.SCMTrigger.<init>(SCMTrigger.java:113)
+2026-09-10T14:06:38.962Z,jenkins,	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source)
+2026-09-10T14:06:38.962Z,jenkins,	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+2026-09-10T14:06:38.962Z,jenkins,	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.RequestImpl.invokeConstructor(RequestImpl.java:689)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.RequestImpl.instantiate(RequestImpl.java:1018)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.RequestImpl$TypePair.convertJSON(RequestImpl.java:869)
+2026-09-10T14:06:38.962Z,jenkins,"Caused: java.lang.IllegalArgumentException: Failed to instantiate class hudson.triggers.SCMTrigger from {""scmpoll_spec"":"" H/5 * * * * *"",""ignorePostCommitHooks"":false}"
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.RequestImpl$TypePair.convertJSON(RequestImpl.java:873)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.RequestImpl.bindJSON(RequestImpl.java:636)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.RequestImpl.bindJSON(RequestImpl.java:631)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.model.Descriptor.bindJSON(Descriptor.java:662)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.model.Descriptor.newInstanceImpl(Descriptor.java:620)
+2026-09-10T14:06:38.962Z,jenkins,"Caused: java.lang.LinkageError: Failed to instantiate class hudson.triggers.SCMTrigger from {""scmpoll_spec"":"" H/5 * * * * *"",""ignorePostCommitHooks"":false}"
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.model.Descriptor.newInstanceImpl(Descriptor.java:626)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.model.Descriptor.newInstance(Descriptor.java:594)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.util.DescribableList.rebuild(DescribableList.java:184)
+2026-09-10T14:06:38.962Z,jenkins,	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty.reconfigure(PipelineTriggersJobProperty.java:159)
+2026-09-10T14:06:38.962Z,jenkins,	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty.reconfigure(PipelineTriggersJobProperty.java:54)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.util.DescribableList.rebuild(DescribableList.java:182)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.model.Job.doConfigSubmit(Job.java:1420)
+2026-09-10T14:06:38.962Z,jenkins,	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(Unknown Source)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Function$MethodFunction.invoke(Function.java:484)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Function$InstanceFunction.invoke(Function.java:497)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Function.bindAndInvoke(Function.java:218)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.SelectionInterceptedFunction$Adapter.invoke(SelectionInterceptedFunction.java:37)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.verb.HttpVerbInterceptor.invoke(HttpVerbInterceptor.java:48)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.SelectionInterceptedFunction.bindAndInvoke(SelectionInterceptedFunction.java:26)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Function.bindAndInvokeAndServeResponse(Function.java:140)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.MetaClass$12.doDispatch(MetaClass.java:686)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:61)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
+2026-09-10T14:06:38.962Z,jenkins,Caused: jakarta.servlet.ServletException
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:851)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.MetaClass$5.doDispatch(MetaClass.java:369)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:61)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:721)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.Stapler.service(Stapler.java:253)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHolder.handle(ServletHolder.java:783)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1670)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:200)
+2026-09-10T14:06:38.962Z,jenkins,	at jenkins.util.HttpServletFilter$1.doFilter(HttpServletFilter.java:77)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:197)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.util.PluginServletFilter.doFilter(PluginServletFilter.java:203)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at jenkins.ErrorAttributeFilter.doFilter(ErrorAttributeFilter.java:29)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.csrf.CrumbFilter.doFilter(CrumbFilter.java:153)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at jenkins.security.csp.impl.CspFilter.doFilter(CspFilter.java:83)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:94)
+2026-09-10T14:06:38.962Z,jenkins,	at jenkins.security.AcegiSecurityExceptionFilter.doFilter(AcegiSecurityExceptionFilter.java:52)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.UnwrapSecurityExceptionFilter.doFilter(UnwrapSecurityExceptionFilter.java:54)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.962Z,jenkins,	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+2026-09-10T14:06:38.962Z,jenkins,	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.962Z,jenkins,	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.962Z,jenkins,	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:115)
+2026-09-10T14:06:38.962Z,jenkins,	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:106)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.962Z,jenkins,	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:245)
+2026-09-10T14:06:38.962Z,jenkins,	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.962Z,jenkins,	at jenkins.security.BasicHeaderProcessor.doFilter(BasicHeaderProcessor.java:106)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.962Z,jenkins,	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:117)
+2026-09-10T14:06:38.962Z,jenkins,	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.HttpSessionContextIntegrationFilter2.doFilter(HttpSessionContextIntegrationFilter2.java:63)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.ChainedServletFilter2.doFilter(ChainedServletFilter2.java:111)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.security.HudsonFilter.doFilter(HudsonFilter.java:173)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.UncaughtExceptionFilter.doFilter(UncaughtExceptionFilter.java:26)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at hudson.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:85)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at org.kohsuke.stapler.DiagnosticThreadNameFilter.doFilter(DiagnosticThreadNameFilter.java:31)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at jenkins.security.SuspiciousRequestFilter.doFilter(SuspiciousRequestFilter.java:38)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler.doHandle(ServletHandler.java:526)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.handle(ScopedHandler.java:125)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.security.SecurityHandler.handle(SecurityHandler.java:574)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HandlerWrapper.handle(HandlerWrapper.java:124)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextHandle(ScopedHandler.java:195)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.SessionHandler.doHandle(SessionHandler.java:612)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextHandle(ScopedHandler.java:193)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.doHandle(ContextHandler.java:1047)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:162)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler.doScope(ServletHandler.java:483)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:160)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.SessionHandler.doScope(SessionHandler.java:589)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:160)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.doScope(ContextHandler.java:962)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.handle(ScopedHandler.java:123)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.handle(ContextHandler.java:1738)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1586)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel.dispatch(HttpChannel.java:737)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel.handle(HttpChannel.java:520)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextHandler$CoreToNestedHandler.handle(ContextHandler.java:3098)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1253)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:621)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.Server.handle(Server.java:197)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:804)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1790)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
+2026-09-10T14:06:38.962Z,jenkins,	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+2026-09-10T14:06:38.962Z,jenkins,	at java.base/java.lang.Thread.run(Unknown Source)
+2026-09-10T14:09:00.794Z,jenkins,2026-09-10 14:09:00.792+0000 [id=240]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in credit task 1. Triggering  #3
+2026-09-10T14:15:00.900Z,jenkins,2026-09-10 14:15:00.897+0000 [id=397]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in credit task 1. Triggering  #7
+2026-09-10T14:16:00.924Z,jenkins,2026-09-10 14:16:00.921+0000 [id=458]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in credit task 1. Triggering  #8
+2026-09-10T14:18:01.663Z,jenkins,2026-09-10 14:18:01.659+0000 [id=529]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in credit task 1. Triggering  #9
+2026-09-10T14:56:27.226Z,jenkins,2026-09-10 14:56:27.223+0000 [id=934]	INFO	h.p.b.g.GlobalTimeOutConfiguration#configure: global timeout has been cleared
+2026-09-10T15:05:36.500Z,jenkins,2026-09-10 15:05:36.495+0000 [id=103]	INFO	h.p.b.g.GlobalTimeOutConfiguration#configure: global timeout has been cleared
+2026-09-10T15:05:46.713Z,jenkins,DEBUG: setDebug: Jakarta Mail version 2.1.5
+2026-09-10T15:05:54.477Z,jenkins,DEBUG: setDebug: Jakarta Mail version 2.1.5
+2026-09-11T14:50:23.816Z,jenkins,DEBUG: setDebug: Jakarta Mail version 2.1.5
+2026-09-11T14:50:47.395Z,jenkins,DEBUG: setDebug: Jakarta Mail version 2.1.5
+2026-09-11T15:35:57.185Z,jenkins,DEBUG: setDebug: Jakarta Mail version 2.1.5
+2026-09-11T15:36:24.782Z,jenkins,DEBUG: setDebug: Jakarta Mail version 2.1.5
+2026-09-11T19:34:13.894Z,jenkins,2026-09-11 19:34:13.893+0000 [id=9780]	INFO	hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2026-09-11T19:34:23.600Z,jenkins,2026-09-11 19:34:23.599+0000 [id=9780]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+2026-09-11T19:34:26.458Z,jenkins,2026-09-11 19:34:26.458+0000 [id=9780]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Ant.AntInstaller
+2026-09-11T19:34:28.725Z,jenkins,2026-09-11 19:34:28.725+0000 [id=9780]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.plugins.gradle.GradleInstaller
+2026-09-11T19:34:28.725Z,jenkins,2026-09-11 19:34:28.725+0000 [id=9780]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+2026-09-22T07:20:44.818Z,jenkins,2026-09-22 07:20:44.708+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.844Z,jenkins,2026-09-22 07:20:44.833+0000 [id=16263]	INFO	hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2026-09-22T07:20:44.898Z,jenkins,2026-09-22 07:20:44.896+0000 [id=65]	INFO	hudson.model.AsyncPeriodicWork#doRun: Workspace clean-up thread is still running. Execution aborted.
+2026-09-22T07:20:44.939Z,jenkins,2026-09-22 07:20:44.938+0000 [id=66]	INFO	hudson.model.AsyncPeriodicWork#doRun: Download metadata thread is still running. Execution aborted.
+2026-09-22T07:20:44.954Z,jenkins,2026-09-22 07:20:44.952+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.954Z,jenkins,2026-09-22 07:20:44.953+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.954Z,jenkins,2026-09-22 07:20:44.953+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.954Z,jenkins,2026-09-22 07:20:44.953+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.954Z,jenkins,2026-09-22 07:20:44.953+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.954Z,jenkins,2026-09-22 07:20:44.954+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.954Z,jenkins,2026-09-22 07:20:44.954+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.954Z,jenkins,2026-09-22 07:20:44.954+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.954Z,jenkins,2026-09-22 07:20:44.954+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.955Z,jenkins,2026-09-22 07:20:44.954+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.963Z,jenkins,2026-09-22 07:20:44.955+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.963Z,jenkins,2026-09-22 07:20:44.962+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.963Z,jenkins,2026-09-22 07:20:44.963+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.964Z,jenkins,2026-09-22 07:20:44.963+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.964Z,jenkins,2026-09-22 07:20:44.963+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.964Z,jenkins,2026-09-22 07:20:44.964+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.965Z,jenkins,2026-09-22 07:20:44.964+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.965Z,jenkins,2026-09-22 07:20:44.964+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.966Z,jenkins,2026-09-22 07:20:44.965+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.971Z,jenkins,2026-09-22 07:20:44.970+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.971Z,jenkins,2026-09-22 07:20:44.970+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:44.975Z,jenkins,2026-09-22 07:20:44.974+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.132Z,jenkins,2026-09-22 07:20:45.130+0000 [id=74]	INFO	hudson.model.AsyncPeriodicWork#doRun: telemetry collection thread is still running. Execution aborted.
+2026-09-22T07:20:45.133Z,jenkins,2026-09-22 07:20:45.133+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.133Z,jenkins,2026-09-22 07:20:45.133+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.133Z,jenkins,2026-09-22 07:20:45.133+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.134Z,jenkins,2026-09-22 07:20:45.133+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.134Z,jenkins,2026-09-22 07:20:45.133+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.134Z,jenkins,2026-09-22 07:20:45.133+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.134Z,jenkins,2026-09-22 07:20:45.134+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.135Z,jenkins,2026-09-22 07:20:45.134+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.135Z,jenkins,2026-09-22 07:20:45.134+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.135Z,jenkins,2026-09-22 07:20:45.134+0000 [id=73]	INFO	hudson.model.AsyncPeriodicWork#doRun: Workspace clean-up thread is still running. Execution aborted.
+2026-09-22T07:20:45.135Z,jenkins,2026-09-22 07:20:45.134+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.135Z,jenkins,2026-09-22 07:20:45.135+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.135Z,jenkins,2026-09-22 07:20:45.135+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.135Z,jenkins,2026-09-22 07:20:45.135+0000 [id=73]	INFO	hudson.model.AsyncPeriodicWork#doRun: Download metadata thread is still running. Execution aborted.
+2026-09-22T07:20:45.137Z,jenkins,2026-09-22 07:20:45.136+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.137Z,jenkins,2026-09-22 07:20:45.136+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.152Z,jenkins,2026-09-22 07:20:45.152+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.158Z,jenkins,2026-09-22 07:20:45.157+0000 [id=44]	INFO	hudson.model.AsyncPeriodicWork#doRun: Fingerprint cleanup thread is still running. Execution aborted.
+2026-09-22T07:20:45.166Z,jenkins,2026-09-22 07:20:45.165+0000 [id=65]	INFO	hudson.model.AsyncPeriodicWork#doRun: telemetry collection thread is still running. Execution aborted.
+2026-09-22T07:20:45.169Z,jenkins,2026-09-22 07:20:45.169+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.170Z,jenkins,2026-09-22 07:20:45.170+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.170Z,jenkins,2026-09-22 07:20:45.170+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.180Z,jenkins,2026-09-22 07:20:45.179+0000 [id=65]	INFO	hudson.model.AsyncPeriodicWork#doRun: Workspace clean-up thread is still running. Execution aborted.
+2026-09-22T07:20:45.182Z,jenkins,2026-09-22 07:20:45.181+0000 [id=73]	INFO	hudson.model.AsyncPeriodicWork#doRun: Download metadata thread is still running. Execution aborted.
+2026-09-22T07:20:45.192Z,jenkins,2026-09-22 07:20:45.191+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.198Z,jenkins,2026-09-22 07:20:45.197+0000 [id=64]	INFO	hudson.model.AsyncPeriodicWork#doRun: telemetry collection thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.206+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.206+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.206+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.206+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.206+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.206+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.207Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.208Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.208Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.208Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.208Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.208Z,jenkins,2026-09-22 07:20:45.207+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.208Z,jenkins,2026-09-22 07:20:45.208+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.213Z,jenkins,2026-09-22 07:20:45.212+0000 [id=44]	INFO	hudson.model.AsyncPeriodicWork#doRun: Workspace clean-up thread is still running. Execution aborted.
+2026-09-22T07:20:45.222Z,jenkins,2026-09-22 07:20:45.221+0000 [id=74]	INFO	hudson.model.AsyncPeriodicWork#doRun: Download metadata thread is still running. Execution aborted.
+2026-09-22T07:20:45.226Z,jenkins,2026-09-22 07:20:45.224+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.226Z,jenkins,2026-09-22 07:20:45.225+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.226Z,jenkins,2026-09-22 07:20:45.225+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.237Z,jenkins,2026-09-22 07:20:45.225+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.238Z,jenkins,2026-09-22 07:20:45.237+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.238Z,jenkins,2026-09-22 07:20:45.237+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.238Z,jenkins,2026-09-22 07:20:45.237+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.238Z,jenkins,2026-09-22 07:20:45.237+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.239Z,jenkins,2026-09-22 07:20:45.238+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.241Z,jenkins,2026-09-22 07:20:45.240+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.241Z,jenkins,2026-09-22 07:20:45.241+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.241Z,jenkins,2026-09-22 07:20:45.241+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.241Z,jenkins,2026-09-22 07:20:45.241+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.241Z,jenkins,2026-09-22 07:20:45.241+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.241Z,jenkins,2026-09-22 07:20:45.241+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.241Z,jenkins,2026-09-22 07:20:45.241+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.247Z,jenkins,2026-09-22 07:20:45.243+0000 [id=62]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.252Z,jenkins,2026-09-22 07:20:45.252+0000 [id=66]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.253Z,jenkins,2026-09-22 07:20:45.252+0000 [id=66]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.253Z,jenkins,2026-09-22 07:20:45.253+0000 [id=66]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.253Z,jenkins,2026-09-22 07:20:45.253+0000 [id=66]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.253Z,jenkins,2026-09-22 07:20:45.253+0000 [id=66]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.253Z,jenkins,2026-09-22 07:20:45.253+0000 [id=66]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.254Z,jenkins,2026-09-22 07:20:45.254+0000 [id=66]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.261Z,jenkins,2026-09-22 07:20:45.254+0000 [id=66]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:45.262Z,jenkins,2026-09-22 07:20:45.261+0000 [id=73]	INFO	hudson.model.AsyncPeriodicWork#doRun: Periodic background build discarder thread is still running. Execution aborted.
+2026-09-22T07:20:53.449Z,jenkins,2026-09-22 07:20:53.438+0000 [id=16263]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+2026-09-22T07:20:55.381Z,jenkins,2026-09-22 07:20:55.378+0000 [id=16263]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Ant.AntInstaller
+2026-09-22T07:20:57.531Z,jenkins,2026-09-22 07:20:57.527+0000 [id=16263]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.plugins.gradle.GradleInstaller
+2026-09-22T07:20:57.531Z,jenkins,2026-09-22 07:20:57.529+0000 [id=16263]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+2026-09-22T07:21:20.888Z,jenkins,2026-09-22 07:21:20.877+0000 [id=41]	INFO	winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
+2026-09-22T07:21:20.893Z,jenkins,"2026-09-22 07:21:20.892+0000 [id=41]	INFO	org.eclipse.jetty.server.Server#doStop: Stopped oejs.Server@43effd89{STOPPING}[12.1.12,sto=0]"
+2026-09-22T07:21:20.916Z,jenkins,"2026-09-22 07:21:20.915+0000 [id=41]	INFO	o.e.j.server.AbstractConnector#doStop: Stopped oejs.ServerConnector@1a5152{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}"
+2026-09-22T07:21:20.941Z,jenkins,2026-09-22 07:21:20.939+0000 [id=41]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Stopping Jenkins
+2026-09-22T07:21:20.999Z,jenkins,2026-09-22 07:21:20.998+0000 [id=41]	INFO	jenkins.model.Jenkins$13#onAttained: Started termination
+2026-09-22T07:21:21.013Z,jenkins,2026-09-22 07:21:21.012+0000 [id=41]	INFO	h.p.b.global.Lifecycle#shutdown: Shutdown complete - Global TimeOut ScheduledExecutorService had 0 tasks pending
+2026-09-22T07:21:21.035Z,jenkins,2026-09-22 07:21:21.035+0000 [id=41]	INFO	jenkins.model.Jenkins$13#onAttained: Completed termination
+2026-09-22T07:21:21.035Z,jenkins,2026-09-22 07:21:21.035+0000 [id=41]	INFO	jenkins.model.Jenkins#_cleanUpDisconnectComputers: Starting node disconnection
+2026-09-22T07:21:21.068Z,jenkins,2026-09-22 07:21:21.067+0000 [id=41]	INFO	jenkins.model.Jenkins#_cleanUpShutdownPluginManager: Stopping plugin manager
+2026-09-22T07:21:21.111Z,jenkins,2026-09-22 07:21:21.110+0000 [id=41]	INFO	jenkins.model.Jenkins#_cleanUpPersistQueue: Persisting build queue
+2026-09-22T07:21:21.120Z,jenkins,2026-09-22 07:21:21.120+0000 [id=41]	INFO	jenkins.model.Jenkins#_cleanUpAwaitDisconnects: Waiting for node disconnection completion
+2026-09-22T07:21:21.120Z,jenkins,2026-09-22 07:21:21.120+0000 [id=41]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped
+2026-09-22T07:21:42.853Z,chinmayapjain,[internal] load build definition from Dockerfile
+2026-09-22T07:21:42.853Z,chinmayapjain,[internal] load build definition from Dockerfile
+2026-09-22T07:21:42.876Z,chinmayapjain,transferring (2 bytes)
+2026-09-22T07:29:59.551Z,jenkins,Running from: /usr/share/jenkins/jenkins.war
+2026-09-22T07:29:59.551Z,jenkins,webroot: /var/jenkins_home/war
+2026-09-22T07:29:59.978Z,jenkins,2026-09-22 07:29:59.952+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-09-22T07:30:00.043Z,jenkins,2026-09-22 07:30:00.042+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-09-22T07:30:00.104Z,jenkins,2026-09-22 07:30:00.104+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.12; built: 2026-08-03T22:37:55.389Z; git: 10dd3948f37767b84cc2c62358364f042e51dbbe; jvm 21.0.12.1+1-LTS
+2026-09-22T07:30:00.529Z,jenkins,"2026-09-22 07:30:00.528+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet"
+2026-09-22T07:30:00.576Z,jenkins,2026-09-22 07:30:00.576+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-09-22T07:30:00.925Z,jenkins,"2026-09-22 07:30:00.924+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get(""JENKINS_HOME"")"
+2026-09-22T07:30:01.025Z,jenkins,"2026-09-22 07:30:01.024+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@319854f0{Jenkins v2.568.3,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@748fe51d{STARTED}}"
+2026-09-22T07:30:01.032Z,jenkins,"2026-09-22 07:30:01.032+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@77886067{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}"
+2026-09-22T07:30:01.033Z,jenkins,"2026-09-22 07:30:01.033+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@43effd89{STARTING}[12.1.12,sto=0] @931ms"
+2026-09-22T07:30:01.034Z,jenkins,2026-09-22 07:30:01.033+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-09-22T07:30:01.140Z,jenkins,2026-09-22 07:30:01.140+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.568.3
+2026-09-22T07:30:01.207Z,jenkins,2026-09-22 07:30:01.206+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-09-22T07:30:01.381Z,jenkins,2026-09-22 07:30:01.381+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-09-22T07:30:03.863Z,jenkins,2026-09-22 07:30:03.862+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-09-22T07:30:03.885Z,jenkins,2026-09-22 07:30:03.885+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-09-22T07:30:03.889Z,jenkins,2026-09-22 07:30:03.889+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-09-22T07:30:04.191Z,jenkins,2026-09-22 07:30:04.190+0000 [id=47]	INFO	h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+2026-09-22T07:30:04.910Z,jenkins,2026-09-22 07:30:04.909+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-09-22T07:30:04.910Z,jenkins,2026-09-22 07:30:04.910+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-09-22T07:30:04.979Z,jenkins,2026-09-22 07:30:04.979+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-09-22T07:30:04.991Z,jenkins,2026-09-22 07:30:04.990+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-09-22T07:30:05.025Z,jenkins,2026-09-22 07:30:05.025+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-09-22T07:30:05.097Z,jenkins,2026-09-22 07:30:05.097+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2026-09-22T07:33:01.730Z,chinmayapjain,[internal] load build definition from Dockerfile
+2026-09-22T07:33:01.731Z,chinmayapjain,[internal] load build definition from Dockerfile
+2026-09-22T07:33:01.747Z,chinmayapjain,transferring (2 bytes)
+2026-09-22T07:48:30.166Z,chinmayapjain,[internal] load build definition from Dockerfile
+2026-09-22T07:48:30.167Z,chinmayapjain,[internal] load build definition from Dockerfile
+2026-09-22T07:48:30.180Z,chinmayapjain,transferring (2 bytes)
+2026-09-22T07:49:01.968Z,jenkins,2026-09-22 07:49:01.966+0000 [id=160]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in credit task 1. Triggering  #10
+2026-09-22T07:49:57.056Z,chinmayapjain,[internal] load build definition from Dockerfile
+2026-09-22T07:49:57.057Z,chinmayapjain,[internal] load build definition from Dockerfile
+2026-09-22T07:49:57.070Z,chinmayapjain,transferring (31 bytes)
+2026-09-22T07:50:21.922Z,chinmayapjain,[internal] load build definition from Dockerfile
+2026-09-22T07:50:21.923Z,chinmayapjain,[internal] load build definition from Dockerfile
+2026-09-22T07:50:21.931Z,chinmayapjain,transferring (31 bytes)
+2026-09-23T06:32:55.616Z,jenkins,Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+2026-09-23T06:32:56.155Z,jenkins,Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+2026-09-23T06:32:56.335Z,jenkins,Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+2026-09-23T06:32:56.408Z,jenkins,Get:4 http://deb.debian.org/debian trixie/main arm64 Packages [9614 kB]
+2026-09-23T06:33:51.788Z,jenkins,Get:5 http://deb.debian.org/debian trixie-updates/main arm64 Packages [4424 B]
+2026-09-23T06:33:51.909Z,jenkins,Get:6 http://deb.debian.org/debian-security trixie-security/main arm64 Packages [263 kB]
+2026-09-23T06:33:54.337Z,jenkins,Fetched 10.1 MB in 59s (172 kB/s)
+2026-09-23T06:33:54.337Z,jenkins,Reading package lists...
+2026-09-23T06:33:55.131Z,jenkins,
+2026-09-23T06:33:55.163Z,jenkins,Reading package lists...
+2026-09-23T06:33:55.879Z,jenkins,
+2026-09-23T06:33:55.898Z,jenkins,Building dependency tree...
+2026-09-23T06:33:56.045Z,jenkins,
+2026-09-23T06:33:56.045Z,jenkins,Reading state information...
+2026-09-23T06:33:56.046Z,jenkins,
+2026-09-23T06:33:56.316Z,jenkins,ca-certificates is already the newest version (20250419).
+2026-09-23T06:33:56.316Z,jenkins,The following additional packages will be installed:
+2026-09-23T06:33:56.316Z,jenkins,containerd iptables libcurl3t64-gnutls libcurl4t64 libip4tc2 libip6tc2
+2026-09-23T06:33:56.317Z,jenkins,libmnl0 libnetfilter-conntrack3 libnfnetlink0 libnftnl11 libxtables12
+2026-09-23T06:33:56.317Z,jenkins,netbase runc
+2026-09-23T06:33:56.319Z,jenkins,Suggested packages:
+2026-09-23T06:33:56.319Z,jenkins,containernetworking-plugins docker-doc aufs-tools btrfs-progs cgroupfs-mount
+2026-09-23T06:33:56.319Z,jenkins,debootstrap e2fsprogs rinse rootlesskit xfsprogs zfs-fuse | zfsutils-linux
+2026-09-23T06:33:56.319Z,jenkins,firewalld kmod
+2026-09-23T06:33:56.319Z,jenkins,Recommended packages:
+2026-09-23T06:33:56.319Z,jenkins,apparmor dbus-user-session docker-cli needrestart xz-utils nftables criu
+2026-09-23T06:33:56.511Z,jenkins,The following NEW packages will be installed:
+2026-09-23T06:33:56.512Z,jenkins,containerd docker.io iptables libip4tc2 libip6tc2 libmnl0
+2026-09-23T06:33:56.513Z,jenkins,libnetfilter-conntrack3 libnfnetlink0 libnftnl11 libxtables12 netbase runc
+2026-09-23T06:33:56.513Z,jenkins,The following packages will be upgraded:
+2026-09-23T06:33:56.515Z,jenkins,curl libcurl3t64-gnutls libcurl4t64
+2026-09-23T06:33:56.767Z,jenkins,"3 upgraded, 12 newly installed, 0 to remove and 18 not upgraded."
+2026-09-23T06:33:56.767Z,jenkins,Need to get 39.1 MB of archives.
+2026-09-23T06:33:56.767Z,jenkins,"After this operation, 176 MB of additional disk space will be used."
+2026-09-23T06:33:56.767Z,jenkins,Get:1 http://deb.debian.org/debian trixie/main arm64 runc arm64 1.1.15+ds1-2+b4 [2764 kB]
+2026-09-23T06:34:02.029Z,jenkins,Get:2 http://deb.debian.org/debian trixie/main arm64 containerd arm64 1.7.24~ds1-6+deb13u1 [19.7 MB]
+2026-09-23T06:37:35.750Z,jenkins,Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+2026-09-23T06:37:37.936Z,jenkins,Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+2026-09-23T06:37:39.219Z,jenkins,Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+2026-09-23T06:37:41.647Z,jenkins,Get:4 http://deb.debian.org/debian trixie/main arm64 Packages [9614 kB]
+2026-09-23T06:39:16.383Z,jenkins,Get:5 http://deb.debian.org/debian trixie-updates/main arm64 Packages [4424 B]
+2026-09-23T06:39:16.468Z,jenkins,Get:6 http://deb.debian.org/debian-security trixie-security/main arm64 Packages [263 kB]
+2026-09-23T06:39:18.028Z,jenkins,Fetched 10.1 MB in 1min 44s (97.6 kB/s)
+2026-09-23T06:39:18.028Z,jenkins,Reading package lists...
+2026-09-23T06:39:18.765Z,jenkins,
+2026-09-23T06:39:18.791Z,jenkins,Reading package lists...
+2026-09-23T06:39:19.526Z,jenkins,
+2026-09-23T06:39:19.544Z,jenkins,Building dependency tree...
+2026-09-23T06:39:19.710Z,jenkins,
+2026-09-23T06:39:19.710Z,jenkins,Reading state information...
+2026-09-23T06:39:19.711Z,jenkins,
+2026-09-23T06:39:19.936Z,jenkins,ca-certificates is already the newest version (20250419).
+2026-09-23T06:39:19.936Z,jenkins,The following additional packages will be installed:
+2026-09-23T06:39:19.937Z,jenkins,libcurl3t64-gnutls libcurl4t64
+2026-09-23T06:39:19.938Z,jenkins,Suggested packages:
+2026-09-23T06:39:19.938Z,jenkins,docker-doc
+2026-09-23T06:39:19.938Z,jenkins,Recommended packages:
+2026-09-23T06:39:19.938Z,jenkins,docker-buildx
+2026-09-23T06:39:19.968Z,jenkins,The following NEW packages will be installed:
+2026-09-23T06:39:19.968Z,jenkins,docker-cli
+2026-09-23T06:39:19.969Z,jenkins,The following packages will be upgraded:
+2026-09-23T06:39:19.970Z,jenkins,curl libcurl3t64-gnutls libcurl4t64
+2026-09-23T06:39:20.132Z,jenkins,"3 upgraded, 1 newly installed, 0 to remove and 18 not upgraded."
+2026-09-23T06:39:20.132Z,jenkins,Need to get 7293 kB of archives.
+2026-09-23T06:39:20.132Z,jenkins,"After this operation, 29.7 MB of additional disk space will be used."
+2026-09-23T06:39:20.132Z,jenkins,Get:1 http://deb.debian.org/debian trixie/main arm64 curl arm64 8.14.1-2+deb13u5 [262 kB]
+2026-09-23T06:39:24.361Z,jenkins,Get:2 http://deb.debian.org/debian trixie/main arm64 libcurl4t64 arm64 8.14.1-2+deb13u5 [360 kB]
+2026-09-23T06:39:33.958Z,jenkins,Get:3 http://deb.debian.org/debian trixie/main arm64 docker-cli arm64 26.1.5+dfsg1-9+deb13u1 [6317 kB]
+2026-09-23T06:40:15.887Z,jenkins,Get:4 http://deb.debian.org/debian trixie/main arm64 libcurl3t64-gnutls arm64 8.14.1-2+deb13u5 [354 kB]
+2026-09-23T06:40:18.683Z,jenkins,debconf: unable to initialize frontend: Dialog
+2026-09-23T06:40:18.683Z,jenkins,"debconf: (TERM is not set, so the dialog frontend is not usable.)"
+2026-09-23T06:40:18.683Z,jenkins,debconf: falling back to frontend: Readline
+2026-09-23T06:40:18.697Z,jenkins,debconf: unable to initialize frontend: Readline
+2026-09-23T06:40:18.697Z,jenkins,debconf: (This frontend requires a controlling tty.)
+2026-09-23T06:40:18.697Z,jenkins,debconf: falling back to frontend: Teletype
+2026-09-23T06:40:18.703Z,jenkins,debconf: unable to initialize frontend: Teletype
+2026-09-23T06:40:18.703Z,jenkins,debconf: (This frontend requires a controlling tty.)
+2026-09-23T06:40:18.703Z,jenkins,debconf: falling back to frontend: Noninteractive
+2026-09-23T06:40:19.560Z,jenkins,Fetched 7293 kB in 58s (125 kB/s)
+2026-09-23T06:40:19.584Z,jenkins,(Reading database ...
+2026-09-23T06:40:19.592Z,jenkins,"(Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%"
+2026-09-23T06:40:19.595Z,jenkins,(Reading database ... 75%
+2026-09-23T06:40:19.599Z,jenkins,(Reading database ... 80%
+2026-09-23T06:40:19.602Z,jenkins,(Reading database ... 85%
+2026-09-23T06:40:19.606Z,jenkins,(Reading database ... 90%
+2026-09-23T06:40:19.609Z,jenkins,(Reading database ... 95%
+2026-09-23T06:40:19.616Z,jenkins,"(Reading database ... 100%(Reading database ... 9620 files and directories currently installed.)"
+2026-09-23T06:40:19.617Z,jenkins,Preparing to unpack .../curl_8.14.1-2+deb13u5_arm64.deb ...
+2026-09-23T06:40:19.624Z,jenkins,Unpacking curl (8.14.1-2+deb13u5) over (8.14.1-2+deb13u4) ...
+2026-09-23T06:40:19.688Z,jenkins,Preparing to unpack .../libcurl4t64_8.14.1-2+deb13u5_arm64.deb ...
+2026-09-23T06:40:19.695Z,jenkins,Unpacking libcurl4t64:arm64 (8.14.1-2+deb13u5) over (8.14.1-2+deb13u4) ...
+2026-09-23T06:40:19.751Z,jenkins,Selecting previously unselected package docker-cli.
+2026-09-23T06:40:19.753Z,jenkins,Preparing to unpack .../docker-cli_26.1.5+dfsg1-9+deb13u1_arm64.deb ...
+2026-09-23T06:40:19.755Z,jenkins,Unpacking docker-cli (26.1.5+dfsg1-9+deb13u1) ...
+2026-09-23T06:40:20.310Z,jenkins,Preparing to unpack .../libcurl3t64-gnutls_8.14.1-2+deb13u5_arm64.deb ...
+2026-09-23T06:40:20.317Z,jenkins,Unpacking libcurl3t64-gnutls:arm64 (8.14.1-2+deb13u5) over (8.14.1-2+deb13u4) ...
+2026-09-23T06:40:20.381Z,jenkins,Setting up docker-cli (26.1.5+dfsg1-9+deb13u1) ...
+2026-09-23T06:40:20.385Z,jenkins,Setting up libcurl4t64:arm64 (8.14.1-2+deb13u5) ...
+2026-09-23T06:40:20.392Z,jenkins,Setting up libcurl3t64-gnutls:arm64 (8.14.1-2+deb13u5) ...
+2026-09-23T06:40:20.397Z,jenkins,Setting up curl (8.14.1-2+deb13u5) ...
+2026-09-23T06:40:20.405Z,jenkins,Processing triggers for libc-bin (2.41-12+deb13u3) ...
+2026-09-23T06:41:01.714Z,jenkins,Done
+2026-09-23T06:50:23.280Z,self-hd/jenkins,Running from: /usr/share/jenkins/jenkins.war
+2026-09-23T06:50:23.280Z,self-hd/jenkins,webroot: /var/jenkins_home/war
+2026-09-23T06:50:24.173Z,self-hd/jenkins,2026-09-23 06:50:24.144+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-09-23T06:50:25.379Z,self-hd/jenkins,2026-09-23 06:50:25.377+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-09-23T06:50:25.433Z,self-hd/jenkins,2026-09-23 06:50:25.432+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.12; built: 2026-08-03T22:37:55.389Z; git: 10dd3948f37767b84cc2c62358364f042e51dbbe; jvm 21.0.12.1+1-LTS
+2026-09-23T06:50:25.913Z,self-hd/jenkins,"2026-09-23 06:50:25.912+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet"
+2026-09-23T06:50:25.968Z,self-hd/jenkins,2026-09-23 06:50:25.967+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-09-23T06:50:26.483Z,self-hd/jenkins,"2026-09-23 06:50:26.482+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get(""JENKINS_HOME"")"
+2026-09-23T06:50:26.652Z,self-hd/jenkins,"2026-09-23 06:50:26.651+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@692e028d{Jenkins v2.568.3,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@6629ad09{STARTED}}"
+2026-09-23T06:50:26.664Z,self-hd/jenkins,"2026-09-23 06:50:26.664+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@2af46afd{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}"
+2026-09-23T06:50:26.665Z,self-hd/jenkins,"2026-09-23 06:50:26.664+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@31ceba99{STARTING}[12.1.12,sto=0] @1234ms"
+2026-09-23T06:50:26.666Z,self-hd/jenkins,2026-09-23 06:50:26.665+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-09-23T06:50:26.798Z,self-hd/jenkins,2026-09-23 06:50:26.797+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.568.3
+2026-09-23T06:50:26.886Z,self-hd/jenkins,2026-09-23 06:50:26.885+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-09-23T06:50:28.550Z,self-hd/jenkins,2026-09-23 06:50:28.548+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-09-23T06:50:33.388Z,self-hd/jenkins,2026-09-23 06:50:33.382+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-09-23T06:50:33.625Z,self-hd/jenkins,2026-09-23 06:50:33.619+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-09-23T06:50:33.634Z,self-hd/jenkins,2026-09-23 06:50:33.629+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-09-23T06:50:38.057Z,self-hd/jenkins,2026-09-23 06:50:38.052+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-09-23T06:50:38.057Z,self-hd/jenkins,2026-09-23 06:50:38.055+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-09-23T06:50:38.058Z,self-hd/jenkins,2026-09-23 06:50:38.056+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-09-23T06:50:38.080Z,self-hd/jenkins,2026-09-23 06:50:38.079+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-09-23T06:50:38.139Z,self-hd/jenkins,2026-09-23 06:50:38.128+0000 [id=55]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/01-security.groovy
+2026-09-23T06:50:38.268Z,self-hd/jenkins,2026-09-23 06:50:38.262+0000 [id=75]	INFO	hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2026-09-23T06:50:40.448Z,self-hd/jenkins,2026-09-23 06:50:40.432+0000 [id=55]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/02-seed-job.groovy
+2026-09-23T06:50:41.181Z,self-hd/jenkins,2026-09-23 06:50:41.174+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-09-23T06:50:41.401Z,self-hd/jenkins,2026-09-23 06:50:41.399+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2026-09-23T06:50:49.771Z,self-hd/jenkins,2026-09-23 06:50:49.768+0000 [id=75]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+2026-09-23T06:50:49.771Z,self-hd/jenkins,2026-09-23 06:50:49.770+0000 [id=75]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+2026-09-23T06:54:35.706Z,self-hd (code-quality),npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-09-23T06:54:35.706Z,self-hd (test),npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-09-23T06:54:35.936Z,self-hd (code-quality),npm warn deprecated prom-client@15.1.3: prom-client has been replaced by @prometheus-io/client
+2026-09-23T06:54:35.936Z,self-hd (test),npm warn deprecated prom-client@15.1.3: prom-client has been replaced by @prometheus-io/client
+2026-09-23T06:54:37.474Z,self-hd (code-quality),"npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful."
+2026-09-23T06:54:37.474Z,self-hd (test),"npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful."
+2026-09-23T06:54:37.629Z,self-hd (code-quality),"npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me"
+2026-09-23T06:54:37.629Z,self-hd (test),"npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me"
+2026-09-23T06:54:38.525Z,self-hd (code-quality),npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-09-23T06:54:38.525Z,self-hd (test),npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-09-23T06:54:39.887Z,self-hd (code-quality),npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2026-09-23T06:54:39.887Z,self-hd (test),npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2026-09-23T06:54:40.013Z,self-hd (code-quality),npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-09-23T06:54:40.013Z,self-hd (test),npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-09-23T06:54:41.101Z,self-hd (code-quality),
+2026-09-23T06:54:41.101Z,self-hd (code-quality),"added 446 packages, and audited 447 packages in 9s"
+2026-09-23T06:54:41.101Z,self-hd (code-quality),
+2026-09-23T06:54:41.101Z,self-hd (code-quality),74 packages are looking for funding
+2026-09-23T06:54:41.101Z,self-hd (code-quality),run `npm fund` for details
+2026-09-23T06:54:41.101Z,self-hd (test),
+2026-09-23T06:54:41.101Z,self-hd (test),"added 446 packages, and audited 447 packages in 9s"
+2026-09-23T06:54:41.101Z,self-hd (test),
+2026-09-23T06:54:41.101Z,self-hd (test),74 packages are looking for funding
+2026-09-23T06:54:41.101Z,self-hd (test),run `npm fund` for details
+2026-09-23T06:54:41.103Z,self-hd (code-quality),
+2026-09-23T06:54:41.103Z,self-hd (code-quality),found 0 vulnerabilities
+2026-09-23T06:54:41.103Z,self-hd (test),
+2026-09-23T06:54:41.103Z,self-hd (test),found 0 vulnerabilities
+2026-09-23T06:54:41.106Z,self-hd (code-quality),npm notice
+2026-09-23T06:54:41.106Z,self-hd (code-quality),npm notice New major version of npm available! 10.9.8 -> 12.1.0
+2026-09-23T06:54:41.106Z,self-hd (code-quality),npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+2026-09-23T06:54:41.106Z,self-hd (code-quality),npm notice To update run: npm install -g npm@12.1.0
+2026-09-23T06:54:41.106Z,self-hd (code-quality),npm notice
+2026-09-23T06:54:41.106Z,self-hd (test),npm notice
+2026-09-23T06:54:41.106Z,self-hd (test),npm notice New major version of npm available! 10.9.8 -> 12.1.0
+2026-09-23T06:54:41.106Z,self-hd (test),npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+2026-09-23T06:54:41.106Z,self-hd (test),npm notice To update run: npm install -g npm@12.1.0
+2026-09-23T06:54:41.106Z,self-hd (test),npm notice
+2026-09-23T06:54:42.226Z,self-hd (code-quality),
+2026-09-23T06:54:42.226Z,self-hd (code-quality),> self-hd@1.0.0 lint
+2026-09-23T06:54:42.226Z,self-hd (code-quality),> eslint src test scripts
+2026-09-23T06:54:42.229Z,self-hd (test),
+2026-09-23T06:54:42.229Z,self-hd (test),> self-hd@1.0.0 test
+2026-09-23T06:54:42.229Z,self-hd (test),> jest --runInBand --coverage --coverage=false
+2026-09-23T06:54:43.847Z,self-hd (test),PASS test/app.test.js
+2026-09-23T06:54:43.848Z,self-hd (test),self-hd service
+2026-09-23T06:54:43.848Z,self-hd (test),✓ returns service health (30 ms)
+2026-09-23T06:54:43.848Z,self-hd (test),✓ lists existing tasks (6 ms)
+2026-09-23T06:54:43.848Z,self-hd (test),✓ creates a task with validation (15 ms)
+2026-09-23T06:54:43.848Z,self-hd (test),✓ rejects invalid task titles (7 ms)
+2026-09-23T06:54:43.848Z,self-hd (test),✓ exposes Prometheus metrics (12 ms)
+2026-09-23T06:54:43.852Z,self-hd (test),"Test Suites: 1 passed, 1 total"
+2026-09-23T06:54:43.852Z,self-hd (test),"Tests:       5 passed, 5 total"
+2026-09-23T06:54:43.852Z,self-hd (test),Snapshots:   0 total
+2026-09-23T06:54:43.852Z,self-hd (test),Time:        1.235 s
+2026-09-23T06:54:43.852Z,self-hd (test),Ran all test suites.
+2026-09-23T06:55:00.736Z,self-hd,
+2026-09-23T06:55:00.736Z,self-hd,> self-hd@1.0.0 build
+2026-09-23T06:55:00.736Z,self-hd,> node scripts/build.js
+2026-09-23T06:55:00.797Z,self-hd,Build artefact created at /app/dist/build-info.json
+2026-09-23T06:55:05.130Z,self-hd,npm warn deprecated prom-client@15.1.3: prom-client has been replaced by @prometheus-io/client
+2026-09-23T06:55:06.767Z,self-hd (security-audit),found 0 vulnerabilities
+2026-09-23T06:55:06.940Z,self-hd,
+2026-09-23T06:55:06.940Z,self-hd,"added 79 packages, and audited 80 packages in 6s"
+2026-09-23T06:55:06.941Z,self-hd,
+2026-09-23T06:55:06.941Z,self-hd,16 packages are looking for funding
+2026-09-23T06:55:06.941Z,self-hd,run `npm fund` for details
+2026-09-23T06:55:06.945Z,self-hd,
+2026-09-23T06:55:06.945Z,self-hd,found 0 vulnerabilities
+2026-09-23T06:55:06.947Z,self-hd,npm notice
+2026-09-23T06:55:06.947Z,self-hd,npm notice New major version of npm available! 10.9.8 -> 12.1.0
+2026-09-23T06:55:06.947Z,self-hd,npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+2026-09-23T06:55:06.947Z,self-hd,npm notice To update run: npm install -g npm@12.1.0
+2026-09-23T06:55:06.947Z,self-hd,npm notice
+2026-09-23T07:05:31.834Z,self-hd-production,self-hd service listening on port 3000
+2026-09-23T10:24:59.691Z,self-hd/jenkins,"2026-09-23 10:24:59.672+0000 [id=76]	WARNING	hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb 5a3dbb5945ecbfea9fa06a987a6b5e62e6740edd9b7540f26432d90c51e365c0. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script"
+2026-09-23T10:24:59.693Z,self-hd/jenkins,2026-09-23 10:24:59.690+0000 [id=76]	WARNING	hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /job/self-hd-pipeline/build by admin. Returning 403.
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error code EUSAGE
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error Invalid: lock file's jest-junit@17.0.0 does not satisfy jest-junit@16.0.0
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error Invalid: lock file's uuid@14.0.2 does not satisfy uuid@8.3.2
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error Clean install a project
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error Usage:
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error npm ci
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error Options:
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error [--no-bin-links] [--no-fund] [--dry-run]
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error
+2026-09-23T11:12:27.860Z,self-hd (code-quality),"npm error aliases: clean-install, ic, install-clean, isntall-clean"
+2026-09-23T11:12:27.860Z,self-hd (code-quality),npm error
+2026-09-23T11:12:27.860Z,self-hd (code-quality),"npm error Run ""npm help ci"" for more info"
+2026-09-23T11:12:27.861Z,self-hd (code-quality),npm notice
+2026-09-23T11:12:27.861Z,self-hd (code-quality),npm notice New major version of npm available! 10.9.8 -> 12.1.0
+2026-09-23T11:12:27.861Z,self-hd (code-quality),npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+2026-09-23T11:12:27.861Z,self-hd (code-quality),npm notice To update run: npm install -g npm@12.1.0
+2026-09-23T11:12:27.861Z,self-hd (code-quality),npm notice
+2026-09-23T11:12:27.862Z,self-hd (code-quality),npm error A complete log of this run can be found in: /root/.npm/_logs/2026-09-23T11_12_26_577Z-debug-0.log
+2026-09-23T11:18:48.496Z,self-hd (code-quality),npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-09-23T11:18:48.599Z,self-hd (code-quality),npm warn deprecated prom-client@15.1.3: prom-client has been replaced by @prometheus-io/client
+2026-09-23T11:18:49.379Z,self-hd (code-quality),"npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful."
+2026-09-23T11:18:49.509Z,self-hd (code-quality),"npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me"
+2026-09-23T11:18:50.370Z,self-hd (code-quality),npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-09-23T11:18:50.935Z,self-hd (code-quality),npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-09-23T11:18:50.983Z,self-hd (code-quality),npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2026-09-23T11:18:51.996Z,self-hd (code-quality),
+2026-09-23T11:18:51.996Z,self-hd (code-quality),"added 450 packages, and audited 451 packages in 6s"
+2026-09-23T11:18:51.996Z,self-hd (code-quality),
+2026-09-23T11:18:51.996Z,self-hd (code-quality),75 packages are looking for funding
+2026-09-23T11:18:51.996Z,self-hd (code-quality),run `npm fund` for details
+2026-09-23T11:18:51.997Z,self-hd (code-quality),
+2026-09-23T11:18:51.997Z,self-hd (code-quality),found 0 vulnerabilities
+2026-09-23T11:18:51.998Z,self-hd (code-quality),npm notice
+2026-09-23T11:18:51.998Z,self-hd (code-quality),npm notice New major version of npm available! 10.9.8 -> 12.1.0
+2026-09-23T11:18:51.998Z,self-hd (code-quality),npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+2026-09-23T11:18:51.998Z,self-hd (code-quality),npm notice To update run: npm install -g npm@12.1.0
+2026-09-23T11:18:51.998Z,self-hd (code-quality),npm notice
+2026-09-23T13:26:29.046Z,self-hd (test),npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-09-23T13:26:29.194Z,self-hd (test),npm warn deprecated prom-client@15.1.3: prom-client has been replaced by @prometheus-io/client
+2026-09-23T13:26:29.973Z,self-hd (test),"npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful."
+2026-09-23T13:26:30.167Z,self-hd (test),"npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me"
+2026-09-23T13:26:31.155Z,self-hd (test),npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2026-09-23T13:26:31.156Z,self-hd (test),npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-09-23T13:26:31.156Z,self-hd (test),npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-09-23T13:26:31.839Z,self-hd (test),
+2026-09-23T13:26:31.839Z,self-hd (test),"added 450 packages, and audited 451 packages in 5s"
+2026-09-23T13:26:31.839Z,self-hd (test),
+2026-09-23T13:26:31.839Z,self-hd (test),75 packages are looking for funding
+2026-09-23T13:26:31.839Z,self-hd (test),run `npm fund` for details
+2026-09-23T13:26:31.840Z,self-hd (test),
+2026-09-23T13:26:31.840Z,self-hd (test),found 0 vulnerabilities
+2026-09-23T13:26:31.841Z,self-hd (test),npm notice
+2026-09-23T13:26:31.841Z,self-hd (test),npm notice New major version of npm available! 10.9.8 -> 12.1.0
+2026-09-23T13:26:31.841Z,self-hd (test),npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+2026-09-23T13:26:31.841Z,self-hd (test),npm notice To update run: npm install -g npm@12.1.0
+2026-09-23T13:26:31.841Z,self-hd (test),npm notice
+2026-09-23T13:26:32.910Z,self-hd (test),
+2026-09-23T13:26:32.910Z,self-hd (test),> self-hd@1.0.0 test
+2026-09-23T13:26:32.910Z,self-hd (test),> jest --runInBand --coverage --coverage
+2026-09-23T13:26:33.838Z,self-hd (test),PASS test/app.test.js
+2026-09-23T13:26:33.839Z,self-hd (test),self-hd service
+2026-09-23T13:26:33.839Z,self-hd (test),✓ returns service health (13 ms)
+2026-09-23T13:26:33.839Z,self-hd (test),✓ lists existing tasks (3 ms)
+2026-09-23T13:26:33.839Z,self-hd (test),✓ creates a task with validation (8 ms)
+2026-09-23T13:26:33.839Z,self-hd (test),✓ rejects invalid task titles (5 ms)
+2026-09-23T13:26:33.839Z,self-hd (test),✓ exposes Prometheus metrics (5 ms)
+2026-09-23T13:26:33.854Z,self-hd (test),"'----------|---------|----------|---------|---------|-------------------"
+2026-09-23T13:26:33.854Z,self-hd (test),File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+2026-09-23T13:26:33.854Z,self-hd (test),"'----------|---------|----------|---------|---------|-------------------"
+2026-09-23T13:26:33.854Z,self-hd (test),All files |     100 |       70 |     100 |     100 |
+2026-09-23T13:26:33.854Z,self-hd (test),"app.js   |     100 |       70 |     100 |     100 | 36,48-57"
+2026-09-23T13:26:33.854Z,self-hd (test),"'----------|---------|----------|---------|---------|-------------------"
+2026-09-23T13:26:33.864Z,self-hd (test),"Test Suites: 1 passed, 1 total"
+2026-09-23T13:26:33.864Z,self-hd (test),"Tests:       5 passed, 5 total"
+2026-09-23T13:26:33.864Z,self-hd (test),Snapshots:   0 total
+2026-09-23T13:26:33.864Z,self-hd (test),Time:        0.603 s
+2026-09-23T13:26:33.864Z,self-hd (test),Ran all test suites.
+2026-09-23T13:44:18.673Z,chinmayapjain (dependencies),[internal] load build definition from Dockerfile
+2026-09-23T13:44:18.679Z,chinmayapjain (dependencies),[internal] load build definition from Dockerfile
+2026-09-23T13:44:18.709Z,chinmayapjain (dependencies),transferring (145 bytes)
+2026-09-23T13:46:38.730Z,.docker/cagent/working_directories/https-3a-2f-2fai-backend-service-docker-com-2fproxy-2fgordon-agent-3fgordontag-3dv15-26desktopversion-3d4-92-0-26origin-3ddesktop/54d4fec5-7f12-477a-87eb-c873e702ee27/default (test),npm error code ENOENT
+2026-09-23T13:46:38.731Z,.docker/cagent/working_directories/https-3a-2f-2fai-backend-service-docker-com-2fproxy-2fgordon-agent-3fgordontag-3dv15-26desktopversion-3d4-92-0-26origin-3ddesktop/54d4fec5-7f12-477a-87eb-c873e702ee27/default (test),npm error syscall open
+2026-09-23T13:46:38.731Z,.docker/cagent/working_directories/https-3a-2f-2fai-backend-service-docker-com-2fproxy-2fgordon-agent-3fgordontag-3dv15-26desktopversion-3d4-92-0-26origin-3ddesktop/54d4fec5-7f12-477a-87eb-c873e702ee27/default (test),npm error path /app/package.json
+2026-09-23T13:46:38.731Z,.docker/cagent/working_directories/https-3a-2f-2fai-backend-service-docker-com-2fproxy-2fgordon-agent-3fgordontag-3dv15-26desktopversion-3d4-92-0-26origin-3ddesktop/54d4fec5-7f12-477a-87eb-c873e702ee27/default (test),npm error errno -2
+2026-09-23T13:46:38.731Z,.docker/cagent/working_directories/https-3a-2f-2fai-backend-service-docker-com-2fproxy-2fgordon-agent-3fgordontag-3dv15-26desktopversion-3d4-92-0-26origin-3ddesktop/54d4fec5-7f12-477a-87eb-c873e702ee27/default (test),"npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/app/package.json'"
+2026-09-23T13:46:38.732Z,.docker/cagent/working_directories/https-3a-2f-2fai-backend-service-docker-com-2fproxy-2fgordon-agent-3fgordontag-3dv15-26desktopversion-3d4-92-0-26origin-3ddesktop/54d4fec5-7f12-477a-87eb-c873e702ee27/default (test),npm error enoent This is related to npm not being able to find a file.
+2026-09-23T13:46:38.732Z,.docker/cagent/working_directories/https-3a-2f-2fai-backend-service-docker-com-2fproxy-2fgordon-agent-3fgordontag-3dv15-26desktopversion-3d4-92-0-26origin-3ddesktop/54d4fec5-7f12-477a-87eb-c873e702ee27/default (test),npm error enoent
+2026-09-23T13:46:38.733Z,.docker/cagent/working_directories/https-3a-2f-2fai-backend-service-docker-com-2fproxy-2fgordon-agent-3fgordontag-3dv15-26desktopversion-3d4-92-0-26origin-3ddesktop/54d4fec5-7f12-477a-87eb-c873e702ee27/default (test),npm error A complete log of this run can be found in: /root/.npm/_logs/2026-09-23T13_46_38_062Z-debug-0.log
+2026-09-23T13:48:41.797Z,chinmayapjain (dependencies),[internal] load build definition from Dockerfile
+2026-09-23T13:48:41.800Z,chinmayapjain (dependencies),[internal] load build definition from Dockerfile
+2026-09-23T13:48:41.826Z,chinmayapjain (dependencies),transferring (145 bytes)
+2026-09-23T13:50:01.170Z,self-hd (dependencies),[internal] load build definition from Dockerfile
+2026-09-23T13:50:01.170Z,self-hd (dependencies),[internal] load build definition from Dockerfile
+2026-09-23T13:50:01.181Z,self-hd (dependencies),transferring (778 bytes)
+2026-09-23T13:50:01.186Z,self-hd (dependencies),[internal] load metadata for docker.io/library/node:22-alpine
+2026-09-23T13:50:01.197Z,self-hd (dependencies),[internal] load .dockerignore
+2026-09-23T13:50:01.197Z,self-hd (dependencies),[internal] load .dockerignore
+2026-09-23T13:50:01.217Z,self-hd (dependencies),[dependencies 1/4] FROM docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d364bb5536a634f85
+2026-09-23T13:50:01.218Z,self-hd (dependencies),[internal] load build context
+2026-09-23T13:50:01.241Z,self-hd (dependencies),resolve docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d364bb5536a634f85
+2026-09-23T13:50:01.244Z,self-hd (dependencies),[internal] load build context
+2026-09-23T13:50:01.255Z,self-hd (dependencies),transferring (72 bytes)
+2026-09-23T13:50:01.266Z,self-hd (dependencies),[dependencies 2/4] WORKDIR /app
+2026-09-23T13:50:01.266Z,self-hd (dependencies),[dependencies 3/4] COPY package*.json ./
+2026-09-23T13:50:01.266Z,self-hd (dependencies),[dependencies 4/4] RUN npm ci
+2026-09-23T13:50:01.270Z,self-hd (dependencies),exporting to image
+2026-09-23T13:50:01.273Z,self-hd (dependencies),exporting layers
+2026-09-23T13:50:01.283Z,self-hd (dependencies),exporting manifest sha256:ebe3dd1a6ec324131db61ccd8975ee30327ab6e98c2e8893e803b6743c844c4f
+2026-09-23T13:50:01.289Z,self-hd (dependencies),exporting config sha256:32da232353fef8f936ce3ff4078c1d902208d05ca128ecf825d517fb8c9e2fe4
+2026-09-23T13:50:01.303Z,self-hd (dependencies),exporting attestation manifest sha256:e5c7844cdef5cd8595d9fdf451bce387c6418d3d14e941bca16913482e87de4b
+2026-09-23T13:50:01.310Z,self-hd (dependencies),exporting manifest list sha256:08a7196fc26c95cc0ac09d2d34bd38b6fec87e6731dc0bcaa7f7816af65c3c7f
+2026-09-23T13:50:01.312Z,self-hd (dependencies),naming to docker.io/library/self-hd:deps-check
+2026-09-23T13:50:01.320Z,self-hd (dependencies),unpacking to docker.io/library/self-hd:deps-check
+2026-09-23T13:59:08.383Z,self-hd (dependencies),npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-09-23T13:59:08.568Z,self-hd (dependencies),npm warn deprecated prom-client@15.1.3: prom-client has been replaced by @prometheus-io/client
+2026-09-23T13:59:08.968Z,self-hd (dependencies),"npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful."
+2026-09-23T13:59:09.054Z,self-hd (dependencies),"npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me"
+2026-09-23T13:59:09.617Z,self-hd (dependencies),npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-09-23T13:59:09.948Z,self-hd (dependencies),npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-09-23T13:59:09.970Z,self-hd (dependencies),npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2026-09-23T13:59:10.817Z,self-hd (dependencies),
+2026-09-23T13:59:10.817Z,self-hd (dependencies),"added 450 packages, and audited 451 packages in 4s"
+2026-09-23T13:59:10.817Z,self-hd (dependencies),
+2026-09-23T13:59:10.817Z,self-hd (dependencies),75 packages are looking for funding
+2026-09-23T13:59:10.817Z,self-hd (dependencies),run `npm fund` for details
+2026-09-23T13:59:10.818Z,self-hd (dependencies),
+2026-09-23T13:59:10.818Z,self-hd (dependencies),found 0 vulnerabilities
+2026-09-23T13:59:10.820Z,self-hd (dependencies),npm notice
+2026-09-23T13:59:10.820Z,self-hd (dependencies),npm notice New major version of npm available! 10.9.8 -> 12.1.0
+2026-09-23T13:59:10.820Z,self-hd (dependencies),npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+2026-09-23T13:59:10.820Z,self-hd (dependencies),npm notice To update run: npm install -g npm@12.1.0
+2026-09-23T13:59:10.820Z,self-hd (dependencies),npm notice
+2026-09-23T14:26:26.701Z,jenkins,2026-09-23 14:26:26.687+0000 [id=9248]	INFO	hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2026-09-23T14:26:38.663Z,jenkins,2026-09-23 14:26:38.658+0000 [id=9248]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+2026-09-23T14:26:40.829Z,jenkins,2026-09-23 14:26:40.816+0000 [id=9248]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Ant.AntInstaller
+2026-09-23T14:26:43.045Z,jenkins,2026-09-23 14:26:43.041+0000 [id=9248]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.plugins.gradle.GradleInstaller
+2026-09-23T14:26:43.048Z,jenkins,2026-09-23 14:26:43.048+0000 [id=9248]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+2026-09-23T15:57:27.707Z,self-hd-production,self-hd service listening on port 3000
+2026-09-23T17:15:35.029Z,self-hd-staging,self-hd service listening on port 3000
+2026-09-23T17:15:44.881Z,self-hd-alertmanager,"ts=2026-09-23T17:15:44.880Z caller=main.go:181 level=info msg=""Starting Alertmanager"" version=""(version=0.27.0, branch=HEAD, revision=0aa3c2aad14cff039931923ab16b26b7481783b5)"""
+2026-09-23T17:15:44.881Z,self-hd-alertmanager,"ts=2026-09-23T17:15:44.881Z caller=main.go:182 level=info build_context=""(go=go1.21.7, platform=linux/arm64, user=root@2024b1e0f6e3, date=20240228-11:47:50, tags=netgo)"""
+2026-09-23T17:15:44.883Z,self-hd-alertmanager,"ts=2026-09-23T17:15:44.883Z caller=cluster.go:186 level=info component=cluster msg=""setting advertise address explicitly"" addr=172.17.0.5 port=9094"
+2026-09-23T17:15:44.893Z,self-hd-alertmanager,"ts=2026-09-23T17:15:44.892Z caller=cluster.go:683 level=info component=cluster msg=""Waiting for gossip to settle..."" interval=2s"
+2026-09-23T17:15:45.015Z,self-hd-alertmanager,"ts=2026-09-23T17:15:45.012Z caller=coordinator.go:113 level=info component=configuration msg=""Loading configuration file"" file=/etc/alertmanager/alertmanager.yml"
+2026-09-23T17:15:45.022Z,self-hd-alertmanager,"ts=2026-09-23T17:15:45.017Z caller=coordinator.go:126 level=info component=configuration msg=""Completed loading of configuration file"" file=/etc/alertmanager/alertmanager.yml"
+2026-09-23T17:15:45.056Z,self-hd-alertmanager,"ts=2026-09-23T17:15:45.052Z caller=tls_config.go:313 level=info msg=""Listening on"" address=[::]:9093"
+2026-09-23T17:15:45.056Z,self-hd-alertmanager,"ts=2026-09-23T17:15:45.052Z caller=tls_config.go:316 level=info msg=""TLS is disabled."" http2=false address=[::]:9093"
+2026-09-23T17:15:45.881Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.880Z caller=main.go:627 level=info msg=""No time or size retention was set so using the default time retention"" duration=15d"
+2026-09-23T17:15:45.881Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.880Z caller=main.go:671 level=info msg=""Starting Prometheus Server"" mode=server version=""(version=2.55.1, branch=HEAD, revision=6d7569113f1ca814f1e149f74176656540043b8d)"""
+2026-09-23T17:15:45.881Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.880Z caller=main.go:676 level=info build_context=""(go=go1.23.2, platform=linux/arm64, user=root@194e0f5dd5e8, date=20241106-10:11:03, tags=netgo,builtinassets,stringlabels)"""
+2026-09-23T17:15:45.881Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.880Z caller=main.go:677 level=info host_details=""(Linux 7.0.12-linuxkit #1 SMP PREEMPT Thu Aug 27 14:02:21 UTC 2026 aarch64 dfa59ddb9b39 (none))"""
+2026-09-23T17:15:45.881Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.881Z caller=main.go:678 level=info fd_limits=""(soft=1048576, hard=1048576)"""
+2026-09-23T17:15:45.881Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.881Z caller=main.go:679 level=info vm_limits=""(soft=unlimited, hard=unlimited)"""
+2026-09-23T17:15:45.887Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.887Z caller=web.go:585 level=info component=web msg=""Start listening for connections"" address=0.0.0.0:9090"
+2026-09-23T17:15:45.890Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.890Z caller=main.go:1197 level=info msg=""Starting TSDB ..."""
+2026-09-23T17:15:45.895Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.894Z caller=tls_config.go:348 level=info component=web msg=""Listening on"" address=[::]:9090"
+2026-09-23T17:15:45.895Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.894Z caller=tls_config.go:351 level=info component=web msg=""TLS is disabled."" http2=false address=[::]:9090"
+2026-09-23T17:15:45.899Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.898Z caller=head.go:627 level=info component=tsdb msg=""Replaying on-disk memory mappable chunks if any"""
+2026-09-23T17:15:45.899Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.899Z caller=head.go:714 level=info component=tsdb msg=""On-disk memory mappable chunks replay completed"" duration=20.042µs"
+2026-09-23T17:15:45.899Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.899Z caller=head.go:722 level=info component=tsdb msg=""Replaying WAL, this may take a while"""
+2026-09-23T17:15:45.900Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.900Z caller=head.go:794 level=info component=tsdb msg=""WAL segment loaded"" segment=0 maxSegment=0"
+2026-09-23T17:15:45.900Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.900Z caller=head.go:831 level=info component=tsdb msg=""WAL replay completed"" checkpoint_replay_duration=38.292µs wal_replay_duration=888.041µs wbl_replay_duration=292ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=20.042µs total_replay_duration=977.375µs"
+2026-09-23T17:15:45.903Z,self-hd-prometheus,ts=2026-09-23T17:15:45.903Z caller=main.go:1218 level=info fs_type=EXT4_SUPER_MAGIC
+2026-09-23T17:15:45.903Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.903Z caller=main.go:1221 level=info msg=""TSDB started"""
+2026-09-23T17:15:45.903Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.903Z caller=main.go:1404 level=info msg=""Loading configuration file"" filename=/etc/prometheus/prometheus.yml"
+2026-09-23T17:15:45.908Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.908Z caller=main.go:1441 level=info msg=""updated GOGC"" old=100 new=75"
+2026-09-23T17:15:45.909Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.908Z caller=main.go:1452 level=info msg=""Completed loading of configuration file"" filename=/etc/prometheus/prometheus.yml totalDuration=4.901334ms db_storage=13.083µs remote_storage=20.833µs web_handler=666ns query_engine=10.958µs scrape=1.168208ms scrape_sd=45.958µs notify=61.375µs notify_sd=8.875µs rules=2.341917ms tracing=36.292µs"
+2026-09-23T17:15:45.909Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.909Z caller=main.go:1182 level=info msg=""Server is ready to receive web requests."""
+2026-09-23T17:15:45.911Z,self-hd-prometheus,"ts=2026-09-23T17:15:45.910Z caller=manager.go:164 level=info component=""rule manager"" msg=""Starting rule manager..."""
+2026-09-23T17:15:46.895Z,self-hd-alertmanager,"ts=2026-09-23T17:15:46.894Z caller=cluster.go:708 level=info component=cluster msg=""gossip not settled"" polls=0 before=0 now=1 elapsed=2.000385209s"
+2026-09-23T17:15:54.901Z,self-hd-alertmanager,"ts=2026-09-23T17:15:54.899Z caller=cluster.go:700 level=info component=cluster msg=""gossip settled; proceeding"" elapsed=10.00602713s"
+2026-09-23T17:16:45.323Z,self-hd-production,self-hd service listening on port 3000

@@ -1,0 +1,1009 @@
+Last login: Tue Sep 22 17:04:07 on ttys002
+(base) chinmayapjain@Krantis-MacBook-Air ~ % cd /Users/chinmayapjain/Desktop/223/7.3hd/self-hd
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % export JENKINS_ADMIN_PASSWORD='aaCHUUUUU@999'           
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker compose -f docker-compose.jenkins.yml up -d
+WARN[0000] Found orphan containers (self-hd-prometheus, self-hd-production, self-hd-staging) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[+] up 2/2
+ ✔ Volume self-hd_self-hd-jenkins-home Created                              0.0s
+ ✔ Container self-hd-jenkins           Started                              0.4s
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm install --save-dev jest-junit
+zsh: command not found: npm
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % node -v
+zsh: command not found: node
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % node -v
+v24.21.0
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm install --save-dev jest-junit
+
+added 5 packages, and audited 452 packages in 2s
+
+75 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+npm notice
+npm notice New major version of npm available! 11.19.0 -> 12.1.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+npm notice To update run: npm install -g npm@12.1.0
+npm notice
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % 
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % "jest": {
+  "reporters": ["default", ["jest-junit", { "outputName": "junit.xml" }]]
+}
+zsh: parse error near `}'
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % "jest": {
+  "reporters": ["default", ["jest-junit", { "outputName": "junit.xml" }]]}
+zsh: parse error near `}'
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm install -g npm@12.1.0
+npm error code EACCES
+npm error syscall rename
+npm error path /usr/local/lib/node_modules/npm
+npm error dest /usr/local/lib/node_modules/.npm-i9nnxROI
+npm error errno -13
+npm error Error: EACCES: permission denied, rename '/usr/local/lib/node_modules/npm' -> '/usr/local/lib/node_modules/.npm-i9nnxROI'
+npm error     at async Object.rename (node:internal/fs/promises:1490:10)
+npm error     at async moveFile (/usr/local/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)
+npm error     at async Promise.allSettled (index 0)
+npm error     at async #reifyPackages (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:353:11)
+npm error     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:139:7)
+npm error     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:158:5)
+npm error     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:193:9)
+npm error     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:67:5) {
+npm error   errno: -13,
+npm error   code: 'EACCES',
+npm error   syscall: 'rename',
+npm error   path: '/usr/local/lib/node_modules/npm',
+npm error   dest: '/usr/local/lib/node_modules/.npm-i9nnxROI'
+npm error }
+npm error
+npm error The operation was rejected by your operating system.
+npm error It is likely you do not have the permissions to access this file as the current user
+npm error
+npm error If you believe this might be a permissions issue, please double-check the permissions of the file and its containing directories, or try running the command again as root/Administrator.
+npm error A complete log of this run can be found in: /Users/chinmayapjain/.npm/_logs/2026-09-23T09_55_32_796Z-debug-0.log
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm test
+
+> self-hd@1.0.0 test
+> jest --runInBand --coverage
+
+ PASS  test/app.test.js
+  self-hd service
+    ✓ returns service health (21 ms)
+    ✓ lists existing tasks (6 ms)
+    ✓ creates a task with validation (10 ms)
+    ✓ rejects invalid task titles (2 ms)
+    ✓ exposes Prometheus metrics (4 ms)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |     100 |       70 |     100 |     100 |                   
+ app.js   |     100 |       70 |     100 |     100 | 36,48-57          
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.641 s
+Ran all test suites.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % parse errors
+zsh: command not found: parse
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm test          # should now produce junit.xml with no parse errors
+git add package.json package-lock.json
+git commit -m "Fix jest-junit config placement"
+git push
+
+> self-hd@1.0.0 test
+> jest --runInBand --coverage # should now produce junit.xml with no parse errors
+
+No tests found, exiting with code 1
+Run with `--passWithNoTests` to exit with code 0
+In /Users/chinmayapjain/Desktop/223/7.3hd/self-hd
+  12 files checked.
+  testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 1 match
+  testPathIgnorePatterns: /node_modules/ - 12 matches
+  testRegex:  - 0 matches
+Pattern: #|should|now|produce|junit.xml|with|no|parse|errors - 0 matches
+[main 1f0c3b0] Fix jest-junit config placement
+ 2 files changed, 52 insertions(+), 1 deletion(-)
+To https://github.com/cpj-cpj/self-hd.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/cpj-cpj/self-hd.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git pull
+remote: Enumerating objects: 26, done.
+remote: Counting objects: 100% (26/26), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 20 (delta 10), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (20/20), 9.28 KiB | 380.00 KiB/s, done.
+From https://github.com/cpj-cpj/self-hd
+   6e1136e..8ea2fc0  main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git config pull.rebase false
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git pull --no-edit
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+Automatic merge failed; fix conflicts and then commit the result.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm test          # should now produce junit.xml with no parse errors
+git add package.json package-lock.json
+git commit -m "Fix jest-junit config placement"
+git push
+npm error code EJSONPARSE
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 835 (line 33 column 1) while parsing near "... \"jest\": \"^29.7.0\",\n<<<<<<< HEAD\n    \"je..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
+npm error A complete log of this run can be found in: /Users/chinmayapjain/.npm/_logs/2026-09-23T11_04_40_922Z-debug-0.log
+[main 1314b8d] Fix jest-junit config placement
+Enumerating objects: 13, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.47 KiB | 1.47 MiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 4 local objects.
+To https://github.com/cpj-cpj/self-hd.git
+   8ea2fc0..1314b8d  main -> main
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add package.json
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push
+Everything up-to-date
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm test 
+
+> self-hd@1.0.0 test
+> jest --runInBand --coverage
+
+ PASS  test/app.test.js
+  self-hd service
+    ✓ returns service health (26 ms)
+    ✓ lists existing tasks (5 ms)
+    ✓ creates a task with validation (8 ms)
+    ✓ rejects invalid task titles (1 ms)
+    ✓ exposes Prometheus metrics (3 ms)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |     100 |       70 |     100 |     100 |                   
+ app.js   |     100 |       70 |     100 |     100 | 36,48-57          
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.424 s, estimated 1 s
+Ran all test suites.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % ls -la junit.xml
+-rw-r--r--  1 chinmayapjain  staff  1008 23 Sep 21:10 junit.xml
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % cat junit.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="0.404">
+  <testsuite name="self-hd service" errors="0" failures="0" skipped="0" timestamp="2026-09-23T11:10:11" time="0.357" tests="5">
+    <testcase classname="self-hd service returns service health" name="self-hd service returns service health" time="0.026">
+    </testcase>
+    <testcase classname="self-hd service lists existing tasks" name="self-hd service lists existing tasks" time="0.005">
+    </testcase>
+    <testcase classname="self-hd service creates a task with validation" name="self-hd service creates a task with validation" time="0.008">
+    </testcase>
+    <testcase classname="self-hd service rejects invalid task titles" name="self-hd service rejects invalid task titles" time="0.001">
+    </testcase>
+    <testcase classname="self-hd service exposes Prometheus metrics" name="self-hd service exposes Prometheus metrics" time="0.003">
+    </testcase>
+  </testsuite>
+</testsuites>%                                                                                                              (base) chinmayapjain@Krantis-MacBook-Air self-hd % git add package.json package-lock.json
+git commit -m "Add jest-junit reporter, confirmed junit.xml output"
+git push
+[main e906704] Add jest-junit reporter, confirmed junit.xml output
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 331 bytes | 331.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/cpj-cpj/self-hd.git
+   1314b8d..e906704  main -> main
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --target code-quality -t self-hd:quality-test .
+docker create --name quality-check self-hd:quality-test
+docker cp quality-check:/app/eslint-report.json ./eslint-report.json
+docker rm quality-check
+cat eslint-report.json
+[+] Building 2.7s (8/10)                                                                               docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                   0.0s
+ => => transferring dockerfile: 784B                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/node:22-alpine                                                      0.1s
+ => [internal] load .dockerignore                                                                                      0.0s
+ => => transferring context: 105B                                                                                      0.0s
+ => [dependencies 1/4] FROM docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d3  0.0s
+ => => resolve docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d364bb5536a634f  0.0s
+ => [internal] load build context                                                                                      0.0s
+ => => transferring context: 229.94kB                                                                                  0.0s
+ => CACHED [dependencies 2/4] WORKDIR /app                                                                             0.0s
+ => [dependencies 3/4] COPY package*.json ./                                                                           0.0s
+ => ERROR [dependencies 4/4] RUN npm ci                                                                                2.4s
+------                                                                                                                      
+ > [dependencies 4/4] RUN npm ci:                                                                                           
+2.182 npm error code EUSAGE                                                                                                 
+2.182 npm error                                                                                                             
+2.182 npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.                                                  
+2.182 npm error
+2.182 npm error Invalid: lock file's jest-junit@17.0.0 does not satisfy jest-junit@16.0.0
+2.182 npm error Invalid: lock file's uuid@14.0.2 does not satisfy uuid@8.3.2
+2.182 npm error
+2.182 npm error Clean install a project
+2.182 npm error
+2.182 npm error Usage:
+2.182 npm error npm ci
+2.182 npm error
+2.182 npm error Options:
+2.182 npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+2.182 npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+2.182 npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+2.182 npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+2.182 npm error [--no-bin-links] [--no-fund] [--dry-run]
+2.182 npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+2.182 npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+2.182 npm error
+2.182 npm error aliases: clean-install, ic, install-clean, isntall-clean
+2.182 npm error
+2.182 npm error Run "npm help ci" for more info
+2.183 npm notice
+2.183 npm notice New major version of npm available! 10.9.8 -> 12.1.0
+2.183 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+2.183 npm notice To update run: npm install -g npm@12.1.0
+2.183 npm notice
+2.183 npm error A complete log of this run can be found in: /root/.npm/_logs/2026-09-23T11_12_26_577Z-debug-0.log
+------
+Dockerfile:5
+--------------------
+   3 |     WORKDIR /app
+   4 |     COPY package*.json ./
+   5 | >>> RUN npm ci
+   6 |     
+   7 |     FROM dependencies AS source
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c npm ci" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/fh6bfsmm46n03ex0a4ec4ptdf
+
+What's next:
+    Debug this build failure with Gordon → docker ai "help me fix this build failure"
+Unable to find image 'self-hd:quality-test' locally
+Error response from daemon: pull access denied for self-hd, repository does not exist or may require 'docker login'
+Error response from daemon: No such container: quality-check
+Error response from daemon: No such container: quality-check
+cat: eslint-report.json: No such file or directory
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm test                                                    
+
+> self-hd@1.0.0 test
+> jest --runInBand --coverage
+
+ PASS  test/app.test.js
+  self-hd service
+    ✓ returns service health (14 ms)
+    ✓ lists existing tasks (4 ms)
+    ✓ creates a task with validation (7 ms)
+    ✓ rejects invalid task titles (1 ms)
+    ✓ exposes Prometheus metrics (3 ms)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |     100 |       70 |     100 |     100 |                   
+ app.js   |     100 |       70 |     100 |     100 | 36,48-57          
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.35 s, estimated 1 s
+Ran all test suites.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % rm -rf node_modules && npm ci
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated prom-client@15.1.3: prom-client has been replaced by @prometheus-io/client
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+
+added 451 packages, and audited 452 packages in 5s
+
+75 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm install-scripts approve <pkg>
+zsh: parse error near `\n'
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add package.json package-lock.json
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git commit -m "Sync package-lock.json with jest-junit/uuid versions"
+[main 29b6bf6] Sync package-lock.json with jest-junit/uuid versions
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+ create mode 100644 junit.xml
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 688 bytes | 688.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/cpj-cpj/self-hd.git
+   e906704..29b6bf6  main -> main
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --target code-quality -t self-hd:quality-test
+ERROR: docker: 'docker buildx build' requires 1 argument
+
+Usage:  docker buildx build [OPTIONS] PATH | URL | -
+
+Run 'docker buildx build --help' for more information
+
+What's next:
+    Debug this build failure with Gordon → docker ai "help me fix this build failure"
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --target code-quality -t self-hd:quality-tes 
+ERROR: docker: 'docker buildx build' requires 1 argument
+
+Usage:  docker buildx build [OPTIONS] PATH | URL | -
+
+Run 'docker buildx build --help' for more information
+
+What's next:
+    Debug this build failure with Gordon → docker ai "help me fix this build failure"
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --target code-quality                       
+ERROR: docker: 'docker buildx build' requires 1 argument
+
+Usage:  docker buildx build [OPTIONS] PATH | URL | -
+
+Run 'docker buildx build --help' for more information
+
+What's next:
+    Debug this build failure with Gordon → docker ai "help me fix this build failure"
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --target code-quality
+ERROR: docker: 'docker buildx build' requires 1 argument
+
+Usage:  docker buildx build [OPTIONS] PATH | URL | -
+
+Run 'docker buildx build --help' for more information
+
+What's next:
+    Debug this build failure with Gordon → docker ai "help me fix this build failure"
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --target code-quality -t self-hd:quality-test .
+[+] Building 11.2s (11/11) FINISHED                                                                    docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                   0.0s
+ => => transferring dockerfile: 784B                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/node:22-alpine                                                      0.1s
+ => [internal] load .dockerignore                                                                                      0.0s
+ => => transferring context: 105B                                                                                      0.0s
+ => [dependencies 1/4] FROM docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d3  0.0s
+ => => resolve docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d364bb5536a634f  0.0s
+ => [internal] load build context                                                                                      0.0s
+ => => transferring context: 2.71kB                                                                                    0.0s
+ => CACHED [dependencies 2/4] WORKDIR /app                                                                             0.0s
+ => [dependencies 3/4] COPY package*.json ./                                                                           0.0s
+ => [dependencies 4/4] RUN npm ci                                                                                      6.4s
+ => [source 1/1] COPY . .                                                                                              0.1s 
+ => [code-quality 1/1] RUN npx eslint src test scripts --format json --output-file eslint-report.json || true          0.8s 
+ => exporting to image                                                                                                 3.5s 
+ => => exporting layers                                                                                                2.1s 
+ => => exporting manifest sha256:427592afe3cecb7331650cb08b2e2ae0585115f75791c2c2b84e520a0c4b3bfc                      0.0s 
+ => => exporting config sha256:0971a129b0abfe872fbeb00fc67b3a14fb06dad64cff8e01fc4641a039b79714                        0.0s 
+ => => exporting attestation manifest sha256:3c03ee5f7969fd05cf47950bd8d076a8d6ea1e92f655c53006877669d2a62e61          0.0s
+ => => exporting manifest list sha256:91c2dba0951d1dd202781c4356d2ff28171a33a786bb00aef249000f6c2ccb13                 0.0s
+ => => naming to docker.io/library/self-hd:quality-test                                                                0.0s
+ => => unpacking to docker.io/library/self-hd:quality-test                                                             1.4s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ag8vpfgb8tz09zh12yh1zpix8
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker create --name quality-check self-hd:quality-test
+docker cp quality-check:/app/eslint-report.json ./eslint-report.json
+docker rm quality-check
+cat eslint-report.json
+908497e730b4f56f7b3dfe264c2894f97721e41ee6e0baa34cbc223fa868dcd4
+Successfully copied 1.17kB (transferred 3.07kB) to /Users/chinmayapjain/Desktop/223/7.3hd/self-hd/eslint-report.json
+quality-check
+[{"filePath":"/app/scripts/build.js","messages":[],"suppressedMessages":[],"errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":[{"ruleId":"no-extra-semi","replacedBy":[]},{"ruleId":"no-mixed-spaces-and-tabs","replacedBy":[]}]},{"filePath":"/app/src/app.js","messages":[],"suppressedMessages":[],"errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":[{"ruleId":"no-extra-semi","replacedBy":[]},{"ruleId":"no-mixed-spaces-and-tabs","replacedBy":[]}]},{"filePath":"/app/src/server.js","messages":[],"suppressedMessages":[],"errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":[{"ruleId":"no-extra-semi","replacedBy":[]},{"ruleId":"no-mixed-spaces-and-tabs","replacedBy":[]}]},{"filePath":"/app/test/app.test.js","messages":[],"suppressedMessages":[],"errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":[{"ruleId":"no-extra-semi","replacedBy":[]},{"ruleId":"no-mixed-spaces-and-tabs","replacedBy":[]}]}]%                                                                       (base) chinmayapjain@Krantis-MacBook-Air self-hd % docker create --name quality-check self-hd:quality-test
+9e5730d677e0cf914e2d8ebc506ba55d947dd22969eaf68f4ed1513ffbf62746
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker cp quality-check:/app/eslint-report.json ./eslint-report.json
+Successfully copied 1.17kB (transferred 3.07kB) to /Users/chinmayapjain/Desktop/223/7.3hd/self-hd/eslint-report.json
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker rm quality-check
+quality-check
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % cat eslint-report.json
+[{"filePath":"/app/scripts/build.js","messages":[],"suppressedMessages":[],"errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":[{"ruleId":"no-extra-semi","replacedBy":[]},{"ruleId":"no-mixed-spaces-and-tabs","replacedBy":[]}]},{"filePath":"/app/src/app.js","messages":[],"suppressedMessages":[],"errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":[{"ruleId":"no-extra-semi","replacedBy":[]},{"ruleId":"no-mixed-spaces-and-tabs","replacedBy":[]}]},{"filePath":"/app/src/server.js","messages":[],"suppressedMessages":[],"errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":[{"ruleId":"no-extra-semi","replacedBy":[]},{"ruleId":"no-mixed-spaces-and-tabs","replacedBy":[]}]},{"filePath":"/app/test/app.test.js","messages":[],"suppressedMessages":[],"errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0,"usedDeprecatedRules":[{"ruleId":"no-extra-semi","replacedBy":[]},{"ruleId":"no-mixed-spaces-and-tabs","replacedBy":[]}]}]%                                                                       (base) chinmayapjain@Krantis-MacBook-Air self-hd % npm test -- --coverage
+
+> self-hd@1.0.0 test
+> jest --runInBand --coverage --coverage
+
+ PASS  test/app.test.js
+  self-hd service
+    ✓ returns service health (14 ms)
+    ✓ lists existing tasks (4 ms)
+    ✓ creates a task with validation (8 ms)
+    ✓ rejects invalid task titles (1 ms)
+    ✓ exposes Prometheus metrics (3 ms)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |     100 |       70 |     100 |     100 |                   
+ app.js   |     100 |       70 |     100 |     100 | 36,48-57          
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.371 s, estimated 1 s
+Ran all test suites.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % jest
+zsh: command not found: jest
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % jest test
+zsh: command not found: jest
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npx jest --terminal
+● Unrecognized CLI Parameter:
+
+  Unrecognized option "terminal".
+
+  CLI Options Documentation:
+  https://jestjs.io/docs/cli
+
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npx jest --version 
+29.7.0
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm ls jest
+self-hd@1.0.0 /Users/chinmayapjain/Desktop/223/7.3hd/self-hd
+└── jest@29.7.0
+
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % /app/coverage/
+zsh: no such file or directory: /app/coverage/
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker run --rm self-hd:test-7 ls -la /app
+total 308
+drwxr-xr-x    1 root     root          4096 Sep 23 11:24 .
+drwxr-xr-x    1 root     root          4096 Sep 23 12:53 ..
+-rw-r--r--    1 root     root            65 Sep 23 06:52 .dockerignore
+-rw-r--r--    1 root     root           257 Sep 23 06:52 .eslintrc.json
+-rw-r--r--    1 root     root            75 Sep 23 06:52 .gitignore
+-rw-r--r--    1 root     root           745 Sep 23 10:25 Dockerfile
+-rw-r--r--    1 root     root         10923 Sep 23 10:25 Jenkinsfile
+-rw-r--r--    1 root     root          1793 Sep 23 06:52 README.md
+-rw-r--r--    1 root     root           727 Sep 23 10:25 alert.rules.yml
+-rw-r--r--    1 root     root           525 Sep 23 10:25 alertmanager.yml
+-rw-r--r--    1 root     root           605 Sep 23 06:52 docker-compose.jenkins.yml
+-rw-r--r--    1 root     root          1057 Sep 23 06:52 docker-compose.yml
+-rw-r--r--    1 root     root          1168 Sep 23 11:21 eslint-report.json
+-rw-r--r--    1 root     root          1008 Sep 23 11:24 junit.xml
+drwxr-xr-x    2 root     root          4096 Sep 23 10:25 monitoring
+drwxr-xr-x  345 root     root         12288 Sep 23 11:20 node_modules
+-rw-r--r--    1 root     root        213888 Sep 23 11:20 package-lock.json
+-rw-r--r--    1 root     root           961 Sep 23 11:20 package.json
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 scripts
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 src
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 test
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker run --rm self-hd:test-7 ls -la /app
+
+total 308
+drwxr-xr-x    1 root     root          4096 Sep 23 11:24 .
+drwxr-xr-x    1 root     root          4096 Sep 23 12:58 ..
+-rw-r--r--    1 root     root            65 Sep 23 06:52 .dockerignore
+-rw-r--r--    1 root     root           257 Sep 23 06:52 .eslintrc.json
+-rw-r--r--    1 root     root            75 Sep 23 06:52 .gitignore
+-rw-r--r--    1 root     root           745 Sep 23 10:25 Dockerfile
+-rw-r--r--    1 root     root         10923 Sep 23 10:25 Jenkinsfile
+-rw-r--r--    1 root     root          1793 Sep 23 06:52 README.md
+-rw-r--r--    1 root     root           727 Sep 23 10:25 alert.rules.yml
+-rw-r--r--    1 root     root           525 Sep 23 10:25 alertmanager.yml
+-rw-r--r--    1 root     root           605 Sep 23 06:52 docker-compose.jenkins.yml
+-rw-r--r--    1 root     root          1057 Sep 23 06:52 docker-compose.yml
+-rw-r--r--    1 root     root          1168 Sep 23 11:21 eslint-report.json
+-rw-r--r--    1 root     root          1008 Sep 23 11:24 junit.xml
+drwxr-xr-x    2 root     root          4096 Sep 23 10:25 monitoring
+drwxr-xr-x  345 root     root         12288 Sep 23 11:20 node_modules
+-rw-r--r--    1 root     root        213888 Sep 23 11:20 package-lock.json
+-rw-r--r--    1 root     root           961 Sep 23 11:20 package.json
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 scripts
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 src
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 test
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker run --rm self-hd:test-7 ls -la /app
+
+total 308
+drwxr-xr-x    1 root     root          4096 Sep 23 11:24 .
+drwxr-xr-x    1 root     root          4096 Sep 23 13:00 ..
+-rw-r--r--    1 root     root            65 Sep 23 06:52 .dockerignore
+-rw-r--r--    1 root     root           257 Sep 23 06:52 .eslintrc.json
+-rw-r--r--    1 root     root            75 Sep 23 06:52 .gitignore
+-rw-r--r--    1 root     root           745 Sep 23 10:25 Dockerfile
+-rw-r--r--    1 root     root         10923 Sep 23 10:25 Jenkinsfile
+-rw-r--r--    1 root     root          1793 Sep 23 06:52 README.md
+-rw-r--r--    1 root     root           727 Sep 23 10:25 alert.rules.yml
+-rw-r--r--    1 root     root           525 Sep 23 10:25 alertmanager.yml
+-rw-r--r--    1 root     root           605 Sep 23 06:52 docker-compose.jenkins.yml
+-rw-r--r--    1 root     root          1057 Sep 23 06:52 docker-compose.yml
+-rw-r--r--    1 root     root          1168 Sep 23 11:21 eslint-report.json
+-rw-r--r--    1 root     root          1008 Sep 23 11:24 junit.xml
+drwxr-xr-x    2 root     root          4096 Sep 23 10:25 monitoring
+drwxr-xr-x  345 root     root         12288 Sep 23 11:20 node_modules
+-rw-r--r--    1 root     root        213888 Sep 23 11:20 package-lock.json
+-rw-r--r--    1 root     root           961 Sep 23 11:20 package.json
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 scripts
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 src
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 test
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker run --rm self-hd:test-7 ls -la /app
+
+total 308
+drwxr-xr-x    1 root     root          4096 Sep 23 11:24 .
+drwxr-xr-x    1 root     root          4096 Sep 23 13:06 ..
+-rw-r--r--    1 root     root            65 Sep 23 06:52 .dockerignore
+-rw-r--r--    1 root     root           257 Sep 23 06:52 .eslintrc.json
+-rw-r--r--    1 root     root            75 Sep 23 06:52 .gitignore
+-rw-r--r--    1 root     root           745 Sep 23 10:25 Dockerfile
+-rw-r--r--    1 root     root         10923 Sep 23 10:25 Jenkinsfile
+-rw-r--r--    1 root     root          1793 Sep 23 06:52 README.md
+-rw-r--r--    1 root     root           727 Sep 23 10:25 alert.rules.yml
+-rw-r--r--    1 root     root           525 Sep 23 10:25 alertmanager.yml
+-rw-r--r--    1 root     root           605 Sep 23 06:52 docker-compose.jenkins.yml
+-rw-r--r--    1 root     root          1057 Sep 23 06:52 docker-compose.yml
+-rw-r--r--    1 root     root          1168 Sep 23 11:21 eslint-report.json
+-rw-r--r--    1 root     root          1008 Sep 23 11:24 junit.xml
+drwxr-xr-x    2 root     root          4096 Sep 23 10:25 monitoring
+drwxr-xr-x  345 root     root         12288 Sep 23 11:20 node_modules
+-rw-r--r--    1 root     root        213888 Sep 23 11:20 package-lock.json
+-rw-r--r--    1 root     root           961 Sep 23 11:20 package.json
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 scripts
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 src
+drwxr-xr-x    2 root     root          4096 Sep 23 06:52 test
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --no-cache --target test -t ${APP_NAME}:test-${IMAGE_TAG} .
+
+[+] Building 0.0s (0/0)                                                                                docker:desktop-linux
+ERROR: failed to build: invalid tag ":test-": invalid reference format
+
+What's next:
+    Debug this build failure with Gordon → docker ai "help me fix this build failure"
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --no-cache --target test -t ${APP_NAME}:test-${IMAGE_TAG} .
+
+[+] Building 0.0s (0/0)                                                                                docker:desktop-linux
+ERROR: failed to build: invalid tag ":test-": invalid reference format
+
+What's next:
+    Debug this build failure with Gordon → docker ai "help me fix this build failure"
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --no-cache --target test -t ${APP_NAME}:test-${IMAGE_TAG} .
+
+[+] Building 0.0s (0/0)                                                                                docker:desktop-linux
+ERROR: failed to build: invalid tag ":test-": invalid reference format
+
+What's next:
+    Debug this build failure with Gordon → docker ai "help me fix this build failure"
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --no-cache --target test -t ${APP_NAME}:test-${IMAGE_TAG} .
+
+[+] Building 0.0s (0/0)                                                                                docker:desktop-linux
+ERROR: failed to build: invalid tag ":test-": invalid reference format
+
+What's next:
+    Debug this build failure with Gordon → docker ai "help me fix this build failure"
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --no-cache --target test -t self-hd:test-12 .
+
+[+] Building 11.1s (11/11) FINISHED                                                                    docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                   0.0s
+ => => transferring dockerfile: 778B                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/node:22-alpine                                                      0.1s
+ => [internal] load .dockerignore                                                                                      0.0s
+ => => transferring context: 105B                                                                                      0.0s
+ => [dependencies 1/4] FROM docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d3  0.0s
+ => => resolve docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d364bb5536a634f  0.0s
+ => [internal] load build context                                                                                      0.0s
+ => => transferring context: 15.06kB                                                                                   0.0s
+ => CACHED [dependencies 2/4] WORKDIR /app                                                                             0.0s
+ => [dependencies 3/4] COPY package*.json ./                                                                           0.0s
+ => [dependencies 4/4] RUN npm ci                                                                                      5.8s
+ => [source 1/1] COPY . .                                                                                              0.1s 
+ => [test 1/1] RUN npm test -- --coverage                                                                              1.5s 
+ => exporting to image                                                                                                 3.3s 
+ => => exporting layers                                                                                                1.9s 
+ => => exporting manifest sha256:7ed51a273d545fea5acf2d30aaf42fec02e392d5afffd04a1c8960889e760f92                      0.0s 
+ => => exporting config sha256:685b038f581f37f3692f361b5594c4c6732eac2021bae90b83d2e17314016323                        0.0s 
+ => => exporting attestation manifest sha256:14abf066fbec4e42744d3910630693069b6c6b86ca971109575e492c5fc61610          0.0s
+ => => exporting manifest list sha256:bb91f5f7691484165c6d59762f61b4bbdcef3cc53546eb51f8447f6926fc7719                 0.0s
+ => => naming to docker.io/library/self-hd:test-12                                                                     0.0s
+ => => unpacking to docker.io/library/self-hd:test-12                                                                  1.3s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/qco7p4u6iyno6loocqxe12ykn
+(base) chinmayapjain@Krantis-MacBook-Air self-hd %    docker build --target dependencies -t self-hd:deps-check .           
+[+] Building 0.3s (9/9) FINISHED                                                                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                   0.0s
+ => => transferring dockerfile: 778B                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/node:22-alpine                                                      0.0s
+ => [internal] load .dockerignore                                                                                      0.0s
+ => => transferring context: 105B                                                                                      0.0s
+ => [dependencies 1/4] FROM docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d3  0.0s
+ => => resolve docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d364bb5536a634f  0.0s
+ => [internal] load build context                                                                                      0.0s
+ => => transferring context: 72B                                                                                       0.0s
+ => CACHED [dependencies 2/4] WORKDIR /app                                                                             0.0s
+ => CACHED [dependencies 3/4] COPY package*.json ./                                                                    0.0s
+ => CACHED [dependencies 4/4] RUN npm ci                                                                               0.0s
+ => exporting to image                                                                                                 0.1s
+ => => exporting layers                                                                                                0.0s
+ => => exporting manifest sha256:ebe3dd1a6ec324131db61ccd8975ee30327ab6e98c2e8893e803b6743c844c4f                      0.0s
+ => => exporting config sha256:32da232353fef8f936ce3ff4078c1d902208d05ca128ecf825d517fb8c9e2fe4                        0.0s
+ => => exporting attestation manifest sha256:e5c7844cdef5cd8595d9fdf451bce387c6418d3d14e941bca16913482e87de4b          0.0s
+ => => exporting manifest list sha256:08a7196fc26c95cc0ac09d2d34bd38b6fec87e6731dc0bcaa7f7816af65c3c7f                 0.0s
+ => => naming to docker.io/library/self-hd:deps-check                                                                  0.0s
+ => => unpacking to docker.io/library/self-hd:deps-check                                                               0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/pigp2tk5d8ma11lhirofvc2qr
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % grep -n "npm install" Dockerfile
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % grep -n "npm install" Dockerfile
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % docker build --no-cache --target dependencies -t self-hd:deps-check .
+[+] Building 9.0s (9/9) FINISHED                                                                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                   0.0s
+ => => transferring dockerfile: 778B                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/node:22-alpine                                                      0.2s
+ => [internal] load .dockerignore                                                                                      0.0s
+ => => transferring context: 105B                                                                                      0.0s
+ => [dependencies 1/4] FROM docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d3  0.0s
+ => => resolve docker.io/library/node:22-alpine@sha256:b6f26b36c8ff49624cfdac716b8ea1138d606df02586a77d364bb5536a634f  0.0s
+ => [internal] load build context                                                                                      0.0s
+ => => transferring context: 72B                                                                                       0.0s
+ => CACHED [dependencies 2/4] WORKDIR /app                                                                             0.0s
+ => [dependencies 3/4] COPY package*.json ./                                                                           0.0s
+ => [dependencies 4/4] RUN npm ci                                                                                      5.2s
+ => exporting to image                                                                                                 3.3s 
+ => => exporting layers                                                                                                2.1s 
+ => => exporting manifest sha256:0ceea85c25a18fc49ec98df697a91c42b9d9bc3bdbf84c598397fc8f087ca147                      0.0s 
+ => => exporting config sha256:5ce94ea0af67f941b81d2117eb4416f8cbffa9f597f949ebbb6f895a87254f99                        0.0s 
+ => => exporting attestation manifest sha256:3cfa2f2ec7fca3d9a12eab31ee5941720367b56aa91504ea579ecac9f65528e2          0.0s 
+ => => exporting manifest list sha256:e07ce1aa15e9fef450fc035d40a4c2bed2602692dc732c524b78bdd1655b9189                 0.0s 
+ => => naming to docker.io/library/self-hd:deps-check                                                                  0.0s
+ => => unpacking to docker.io/library/self-hd:deps-check                                                               1.2s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/j9i1kxus2t2kg7xfaei4fbc3p
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % grep -n "npm install" Dockerfile                                     
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm install
+
+
+up to date, audited 452 packages in 1s
+
+75 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add package.json package-lock.json
+git commit -m "chore: add jest and jest-junit devDependencies"
+git push origin main
+
+[main c8d11d3] chore: add jest and jest-junit devDependencies
+ 3 files changed, 18 insertions(+), 15 deletions(-)
+ create mode 100644 eslint-report.json
+To https://github.com/cpj-cpj/self-hd.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/cpj-cpj/self-hd.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git pull
+remote: Enumerating objects: 64, done.
+remote: Counting objects: 100% (64/64), done.
+remote: Compressing objects: 100% (60/60), done.
+remote: Total 60 (delta 39), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (60/60), 19.18 KiB | 385.00 KiB/s, done.
+From https://github.com/cpj-cpj/self-hd
+   29b6bf6..45f2b9d  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+	Dockerfile
+	Jenkinsfile
+Please commit your changes or stash them before you merge.
+Aborting
+Merge with strategy ort failed.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git commit -m
+error: switch `m' requires a value
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push     
+To https://github.com/cpj-cpj/self-hd.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/cpj-cpj/self-hd.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add Dockerfile Jenkinsfile
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git commit -m "chore: save local pipeline and dockerfile changes"
+
+[main 083ae79] chore: save local pipeline and dockerfile changes
+ 2 files changed, 10 insertions(+), 8 deletions(-)
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git pull origin main --no-rebase
+From https://github.com/cpj-cpj/self-hd
+ * branch            main       -> FETCH_HEAD
+Auto-merging Dockerfile
+CONFLICT (content): Merge conflict in Dockerfile
+Auto-merging Jenkinsfile
+Automatic merge failed; fix conflicts and then commit the result.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git pull origin main --no-rebase
+From https://github.com/cpj-cpj/self-hd
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push origin main
+Enumerating objects: 21, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 2.23 KiB | 2.23 MiB/s, done.
+Total 13 (delta 9), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (9/9), completed with 5 local objects.
+To https://github.com/cpj-cpj/self-hd.git
+   45f2b9d..4c75a38  main -> main
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add Dockerfile
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git commit -m "fix: resolve Dockerfile merge conflict and enforce npm ci" 
+[main 66e3eae] fix: resolve Dockerfile merge conflict and enforce npm ci
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 384 bytes | 384.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/cpj-cpj/self-hd.git
+   4c75a38..66e3eae  main -> main
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % jest --version      
+zsh: command not found: jest
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm install --save-dev jest-junit
+npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+
+removed 100 packages, changed 2 packages, and audited 352 packages in 2s
+
+47 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm install-scripts ls
+1 package has install scripts not yet covered by allowScripts:
+  fsevents@2.3.3 (install: (install scripts present))
+
+Run `npm install-scripts approve <pkg>` to allow, or `npm install-scripts deny <pkg>` to deny.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % 
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % 
+npm install-scripts approve fsevents
+
+Approved fsevents:
+  added fsevents@2.3.3
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm install
+
+up to date, audited 352 packages in 1s
+
+47 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm audit fix --force
+npm warn using --force Recommended protections disabled.
+npm warn audit Updating jest-junit to 17.0.0, which is a SemVer major change.
+
+changed 2 packages, and audited 352 packages in 1s
+
+48 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add package-lock.json package.json
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git commit -m "chore: synchronize package.json and package-lock dependencies"
+[main 9b2890c] chore: synchronize package.json and package-lock dependencies
+ 2 files changed, 40 insertions(+), 1345 deletions(-)
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 841 bytes | 841.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/cpj-cpj/self-hd.git
+   66e3eae..9b2890c  main -> main
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm install --save-dev supertest
+
+added 18 packages, and audited 370 packages in 3s
+
+52 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add package.json package-lock.json
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git commit -m "test: add missing supertest development dependency"
+
+[main 05fa9a7] test: add missing supertest development dependency
+ 2 files changed, 225 insertions(+), 2 deletions(-)
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 2.91 KiB | 2.91 MiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/cpj-cpj/self-hd.git
+   9b2890c..05fa9a7  main -> main
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm install tar@7.5.19                                            
+
+added 6 packages, and audited 376 packages in 2s
+
+52 packages are looking for funding
+  run `npm fund` for details
+
+1 high severity vulnerability
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add package.json package-lock.json
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git commit -m "security: patch node-tar vulnerability CVE-2026-59873"
+[main 07a2687] security: patch node-tar vulnerability CVE-2026-59873
+ 2 files changed, 71 insertions(+), 2 deletions(-)
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.28 KiB | 1.28 MiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/cpj-cpj/self-hd.git
+   05fa9a7..07a2687  main -> main
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm audit
+# npm audit report
+
+tar  <=7.5.20
+Severity: high
+node-tar: Uncontrolled recursion in mapHas/filesFilter allows uncatchable stack-overflow DoS via crafted long-path tar with member selection - https://github.com/advisories/GHSA-r292-9mhp-454m
+fix available via `npm audit fix`
+node_modules/tar
+
+1 high severity vulnerability
+
+To address all issues, run:
+  npm audit fix
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm audit fix
+
+changed 1 package, and audited 376 packages in 2s
+
+52 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % npm audit fix
+
+up to date, audited 376 packages in 1s
+
+52 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+(base) chinmayapjain@Krantis-MacBook-Air self-hd %  git add package.json package-lock.json
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git commit -m "security: patch node-tar vulnerability CVE-2026-59873"
+[main 1865d99] security: patch node-tar vulnerability CVE-2026-59873
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push origin main                                                 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 456 bytes | 456.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/cpj-cpj/self-hd.git
+   07a2687..1865d99  main -> main
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % /usr/local/lib/node_modules/npm/node_modules/...
+
+zsh: no such file or directory: /usr/local/lib/node_modules/npm/node_modules/...
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add .trivyignore
+fatal: pathspec '.trivyignore' did not match any files
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add .trivyignore
+fatal: pathspec '.trivyignore' did not match any files
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git commit -m "security: ignore global build server tools vulnerability"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add .trivyignore
+git commit -m "security: ignore global build server tools vulnerability"
+git push origin main
+
+fatal: pathspec '.trivyignore' did not match any files
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+To https://github.com/cpj-cpj/self-hd.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/cpj-cpj/self-hd.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 1.97 KiB | 252.00 KiB/s, done.
+From https://github.com/cpj-cpj/self-hd
+   1865d99..ebe338c  main       -> origin/main
+Updating 1865d99..ebe338c
+Fast-forward
+ .trivyignore | 2 ++
+ Dockerfile   | 3 +++
+ 2 files changed, 5 insertions(+)
+ create mode 100644 .trivyignore
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push
+Everything up-to-date
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % mv alertmanager.yml monitoring/
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % mv alert.rules.yml monitoring/
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git add alertmanager.yml alert.rules.yml monitoring/
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git commit -m "chore: move alert files into monitoring directory"
+[main 199723c] chore: move alert files into monitoring directory
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ rename alert.rules.yml => monitoring/alert.rules.yml (100%)
+ rename alertmanager.yml => monitoring/alertmanager.yml (100%)
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push origin main
+To https://github.com/cpj-cpj/self-hd.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/cpj-cpj/self-hd.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.21 KiB | 247.00 KiB/s, done.
+From https://github.com/cpj-cpj/self-hd
+   ebe338c..d775dde  main       -> origin/main
+Merge made by the 'ort' strategy.
+ Jenkinsfile | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % git push 
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 669 bytes | 669.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/cpj-cpj/self-hd.git
+   d775dde..d31224c  main -> main
+(base) chinmayapjain@Krantis-MacBook-Air self-hd % 
